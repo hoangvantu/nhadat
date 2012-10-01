@@ -6,20 +6,23 @@ $db = new dbmanager();
 $db->connect();
 $thongbaoloi = '';
 
+
+        
    
 if(isset($_POST['btnsubmit']))
 {
     
     if(isset($_POST['txtemail']))
     {
-        if($_POST['txtemail']="")
+        if($_POST['txtemail']=="")
         {
         $thongbaoloi=$thongbaoloi."Bạn chưa điền email</br>";
       
         }
         else  if(!(filter_var($_POST['txtemail'], FILTER_VALIDATE_EMAIL)))
          {
-           $thongbaoloi =$thongbaoloi. '<br/> Email bạn điền không đúng định dạng</br>';
+           // echo $_POST['txtemail'];
+           $thongbaoloi =$thongbaoloi.'<br/> Email  bạn điền không đúng định dạng</br>';
         }
         else $email = $_POST['txtemail'];
     }
@@ -63,12 +66,26 @@ if(isset($_POST['btnsubmit']))
       else $thongbaoloi = $thongbaoloi."Ban la hacker a.</br>";
    if($thongbaoloi!="")
    {
-       $qlgiaodien->assign('thongbaoloi',$thongbaoloi);
+       
    }
    else      
    {
+     $caulenh = "INSERT INTO `nhadat`.`user` (`UserID`, `Email`, `Password`, `Name`, `Telephone`, `TimeRegister`, `active`, `activestring`) VALUES (NULL, '".$email."', '".$pass."', '".$name."', '".$_POST['txtphone']."', CURRENT_TIMESTAMP, '1', '')";
+     if($db->querry($caulenh))
+     {
+         echo "chuyen trang";
+         //header("Location: index.php");
+     }
+     else 
+     {
+         $thongbaoloi="Loi khong xac dinh";
+         $qlgiaodien->assign('thongbaoloi',$thongbaoloi);
+     }
      
    }
+  
+   
+    
     
 }
 
