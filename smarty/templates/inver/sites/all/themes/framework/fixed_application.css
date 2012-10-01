@@ -1,0 +1,306 @@
+/* Style here should be used for your specific application
+----------------------------------------------------------------
+
+/*
+General parameters for webpage, left column, and right column
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+body {
+  /*background: url(images/bg2.jpg) repeat*/;
+  /*background-color: #FEFCED;*/
+  background-color: #F4F5F6;
+}  
+
+#ground{
+	/*margin: 0 auto;
+	background: url(images/ground-top.jpg) no-repeat;
+	padding-top: 5px;
+	width: 1003px;
+	width: 800px;*/
+	background-color: #F4F5F6;
+}
+
+#inner-ground{
+	/*background: url(images/ground-midle.jpg) repeat-y;	*/	
+	 background-color: #F4F5F6;
+}
+#bottom-ground{
+	/*background: url(images/bgtet.jpg) no-repeat scroll center top;	*/
+
+	/*margin-bottom: 11px;*/
+	/*background-color: #680001;*/
+}
+#header #block-buildweb_services-vinno_header .header{
+	background-color: #F4F5F6;
+}
+/* 
+Web page layout info 
+---------------------------------------------------------*/
+#wrapper{
+	/* --Webpage background --*/ 	
+	background-color: #F4F5F6;
+	background-image: none;
+	/* --Webpage width --*/				
+	width: 969px;	
+	width: 1003px;	
+	/*border: 1px dotted red;*/
+	
+}
+/* BACKGROUND /////////////////////////
+/////////////////////////////////////////*/
+#wrapper .node, #ad-block-details{
+	 background-color: #FFFFFF;
+}
+#block-block-4 .ad-item {
+	background:none repeat scroll 0 0 #FFFFFF;
+	
+}
+#wrapper .property_details{
+	 background-color: #F4F5F6;
+}
+/*////////////////////////////////////////*/
+
+#container{
+	/*border: 1px dotted red;*/
+	margin: 0;
+	padding: 0;	
+}
+#container-shell
+{
+	margin: 0;
+	padding: 0;	
+}
+
+#header{	
+	padding: 0;
+}
+
+/* Spacing between module in Header */
+#header .block{
+	margin: 0 0 0px;		
+}
+
+/* Spacing between module in Footer */
+#footer .block{
+	margin: 0 0 0px;
+}
+
+/* Spacing between module in center */
+#center .block{
+	margin: 0 0 0px;
+}
+
+
+/* 1 column */
+#center {
+  
+}
+
+/* 
+3 columns Layout - menu left , center, right
+--------------------------------------------------------*/
+body.sidebars #center {		
+    width: 825px;/* Content width */	
+	margin: 0;
+	padding: 0;
+	margin-left: 8px;
+	_margin-left: 4px;
+	/*border: 1px dotted red;*/
+	
+}
+body.sidebars #center .main-content{	
+	float: left;	
+	width: 477px;
+}
+body.sidebars #center .sidebar-right{	
+	float: right;
+	
+	
+}
+
+/* 
+Layout menu left 
+--------------------------------------------------------*/
+/* 2 columns - sidebar-left */
+body.sidebar-left #center {   
+	width: 772px; /* Content width */	
+	width: 827px;	
+	margin: 0;
+	padding: 0;	
+}
+
+#sidebar-left {
+	/*width: 249px; */
+	width: 195px; /* Left menu width*/	
+	width: 170px;		
+	background-color: none;/* --Left background color--*/ 
+	background-image: none;/* --Left background image--*/ 	
+	margin: 0;
+	padding: 0;	
+	margin-top: 0px; 		
+}
+/* Spacing between module in left menu */
+#sidebar-left .block{
+	margin: 0; /* Reset Spacing between module in left menu */	
+}
+/* 
+Layout menu right 
+----------------------------------------------------------------*/
+/* 2 columns - sidebar-right */
+body.sidebar-right #center {   
+	width: 772px;/* Content width */
+	width: 710px;		
+	padding-right: 0px;
+	border-right: none;
+	
+	/*border: 1px dotted red;*/
+}
+#sidebar-right {	
+	/*width: 249px;*/
+	width: 338px;/* Right menu width*/	
+	background-color: none;/* --Right background color--*/ 
+	background-image: none;/* --Right background image--*/ 
+	/*border: 1px dotted red;*/
+	/*border-left: 1px double #00A617;*/
+	margin: 0;
+	padding: 0;	   
+	
+}
+#sidebar-right .block{
+	margin: 0 0 0px; /* Reset Spacing between module in right menu */
+}
+
+/* General spacing H3
+---------------------------------------*/ 
+.block h3
+{
+	margin: 0;
+}
+/* END General spacing H3
+---------------------------------------*/ 
+
+/*
+Front page Hide default
+------------------------------------------------------------------*/
+#first-time{
+	display: none;
+
+}
+#footer{	
+	padding: 0;
+	border: none;
+}
+
+/*
+* Application spacing
+*/
+
+
+
+/* Spacing 7px between block on right, left and on content */
+#sidebar-right .block,
+#sidebar-left .block
+{
+	margin-bottom: 5px;
+}
+
+#container #center .block
+{
+	margin-bottom: 4px;
+}
+
+/* Spacing 7px from top */
+#container{
+	margin-top: 5px;
+}
+
+
+
+/* Spacing 5px from left and right */
+/*
+#center .block{
+	margin-left: 5px;
+}
+#sidebar-left .block
+{
+	margin-left: 5px;
+}
+#sidebar-right .block,
+#center .block
+{
+	margin-right: 5px;	
+}
+
+
+body.sidebar-left #center .shell{
+	margin-right: 5px;
+	margin-left: 5px;
+}
+body.sidebar-right #center .shell{
+	margin-right: 5px;
+	margin-left: 5px;
+} 
+body.sidebar-right #center .shell .block{
+	margin-right: 0px;
+	margin-left: 0px;
+
+}
+
+#footer .block{
+	margin-right: 5px;
+	margin-left: 5px;	
+	background-color: #cab796;
+}
+*/
+
+/* Spacing 10px from bottom */
+#sidebar-right,
+#center,
+#sidebar-left,
+body.sidebars #center,
+body.sidebar-left #center,
+body.sidebar-right #center  
+ {
+	margin-bottom: 10px;
+	#margin-bottom: 2px;
+	
+}
+
+/*
+*  Fix some errors of spacing
+*/
+#header .clear{
+	display: none;
+}
+
+#wrapper #nav{
+	display: none;
+}
+
+body.sidebar-left #center {
+ border-left: none;
+}
+
+/*
+P.I.E. FLOAT CLEARING
+See http://www.positioniseverything.net/easyclearing.html 
+--------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.clearfix:after {
+  content: ".";
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+.clearfix {
+  display: inline-block; /* Fixes IE/Mac */
+}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */		
+
+.hotro-tructuyen P{
+margin: 0px;
+}
+

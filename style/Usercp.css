@@ -1,0 +1,307 @@
+@charset "utf-8";
+/* CSS Document */
+#usercp, #usercp table{
+	margin-top:10px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#000;
+	line-height: 135%;
+	text-align:left;
+}
+
+#usercp a{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+ 
+#usercp .button{
+	background:#EEEEEE;
+	border-color:#CCCCCC #777777 #777777 #CCCCCC;
+	border-style:solid;
+	border-width:1px;
+	color:#000;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	padding:3px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+.simple_page{}
+.simple_page a:link, .simple_page a:active, .simple_page a:visited{
+	color:#336699;
+	text-decoration:none;
+}
+.simple_page a:hover{
+	text-decoration:underline;
+}
+
+
+
+#usercp .left_cp{
+	width: 180px;
+	float: left;
+}
+#usercp .left_menu{
+	border: none;
+	border-top: none;
+}
+
+#usercp .menu_top{
+	background:#ECECEC;
+	color:#3B589A;
+	font-weight:bold;
+	padding:6px;
+}
+#usercp .ucp_top{
+	background:#ECECEC;
+	color:#3B589A;
+	font-weight:bold;
+	padding:6px;
+	border-top: 1px solid #CCC;
+	text-align:left;
+}
+
+#usercp .ucp_bottom{
+	margin-top:10px;
+	background:#F3F3F3;
+	color:#3B589A;
+	padding:7px 5px;
+	text-align:center;	
+	border-bottom: 1px solid #CCC;
+}
+
+#usercp .left_cp .ucp_menu .menu_row{
+	height: 25px;
+	border-bottom: 1px solid #EEEEEE;
+	line-height:11px;
+	text-align:left;
+}
+#usercp .left_cp .ucp_menu .menu_row a{
+	display: block;
+	padding: 5px 0px 5px 5px;
+	height: 11px;
+	border: 2px solid #fff;
+	color:#000;
+	text-decoration:none;		
+
+}
+#usercp .left_cp .ucp_menu .menu_row a:hover{
+	background: #488FCD;
+	color:#fff;
+}
+#usercp .left_cp .ucp_menu .menu_row a.selected{
+	background: #488FCD;
+	color:#fff;
+}
+
+#usercp .right_cp{
+	margin-left:10px;
+	/*border-bottom: 1px solid #DEDEDE;
+	border-top: 1px solid #CCC;*/
+	width: 790px;
+	float: left;
+}
+
+#usercp .my_items{
+	padding:0;
+}
+#usercp .my_items .Odd{
+	background:#F4F9FF;
+}
+#usercp .my_items .Even{
+	background:#FFFFFF;
+}
+
+#usercp .my_items a{
+	color:#000;
+	text-decoration:none;	
+}
+#usercp .my_items a:hover{
+	text-decoration:underline;	
+}
+#usercp .my_items td.item_header{
+	background-color:#288FB8;
+	color:#FFFFFF;
+	font-family:"Tahoma",verdana,arial,serif;
+	font-size:8pt;
+	font-weight:bold;
+	padding:5px 5px 5px 8px;
+	text-align:left;
+}
+#usercp .my_items table.list {
+	border:1px solid #CCCCCC;
+	width:100%;
+}
+
+#usercp .my_items td.item {
+	border-top:1px solid #DDDDDD;
+	color:#666666;
+	font-size:8pt;
+	padding:5px 5px 5px 8px;
+	text-align:left;
+}
+#usercp .my_items td.item a:hover {
+	color:#ffcc00;
+	
+}
+#usercp .my_items td.bullet {
+	background:transparent url(images/usercp/arrow.gif) no-repeat scroll left 10px;
+	padding-left:12px;
+}
+
+#usercp .error_msg,#usercp .error_msg_bg {
+	margin:15px 15px 5px;
+	border:1px solid #DD3C10;
+	padding:10px;
+	background:#FFEBE8;
+}
+#usercp .error_msg_bg{background:#FFEBE8 url(images/usercp/error.png) left center no-repeat;padding-left: 25px;}
+#usercp .standard_msg,#usercp .standard_msg_bg {
+	margin:15px 15px 5px;
+	padding:10px;
+    background:#FFF9D7;
+	border:1px solid #E2C822;
+}
+#usercp .standard_msg_bg{background:#FFF9D7 url(images/usercp/accept.png) left center no-repeat;padding-left: 25px;}
+#usercp .my_msg {
+	padding:10px;
+	background:#FFF9D7;
+	border:1px solid #E2C822;
+}
+
+#usercp .inputtext, #usercp .inputpassword {
+	border:1px solid #BDC7D8;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+	padding:3px;
+}
+
+/*
+*------------------------
+*   Confirm Blue box
+*------------------------
+*/
+
+.cleanbluewarning .cleanblue{ background-color: #acb4c4; }
+.cleanbluefade{ position: absolute; background-color: #aaaaaa; }
+div.cleanblue{ font-family:"Trebuchet MS",verdana,arial,serif; position: absolute; background-color: #ffffff; width: 300px; font-size: 9pt; text-align: left; border: solid 1px #288FB8; }
+div.cleanblue .cleanbluecontainer{ text-align: center;background-color: #ffffff; border-top: solid 14px #288FB8; padding: 5px; font-weight: normal; }
+div.cleanblue .cleanblueclose{ float: right; width: 18px; cursor:pointer; margin: -19px -10px 5 3; color: #ffffff; font-weight: bold; font-family:tahoma,verdana,arial,sans-serif;}
+div.cleanblue .cleanbluemessage{ padding: 10px; line-height: 20px; font-size: 11px; color: #333333; }
+div.cleanblue .cleanbluebuttons{ text-align: center; padding: 5px 0 5px 0; border: solid 1px #eeeeee; background-color: #f4f4f4; }
+div.cleanblue button{ padding: 3px 10px; margin: 0 10px; background-color: #488FCD; border: solid 1px #f4f4f4; color: #ffffff; font-weight: bold; font-size: 12px; }
+div.cleanblue button:hover{ border: solid 1px #d4d4d4; }
+
+.ucp_msg {
+	background:#FFFFFF;
+	border:1px dashed #CCCCCC;
+	padding:7px 8px 7px 7px;
+	text-align:center;
+}
+element.style {
+	display:none;
+}
+
+/*.aqTip {
+	background:#FFFFCC url(images/usercp/pointer2.gif) no-repeat -20px 5px;
+	border:1px solid #CC9933;
+	display:none;
+	margin-top:-4px;
+	padding:10px 12px;
+	position:absolute;
+	width:200px;
+}*/
+#aqTip .hint-pointer {
+    position: absolute;
+    left: -10px;
+    top: 3px;
+    width: 10px;
+    height: 19px;
+    background: url(images/usercp/pointer2.gif) left top no-repeat;
+}
+
+
+#aqTip2 .hint-pointer {
+    position: absolute;
+    right:-10px;
+    top: 3px;
+    width: 10px;
+    height: 19px;
+    background: url(images/usercp/pointer3.gif) left top no-repeat;
+}
+
+.top_name_up {padding:10px; padding-left:5px;}
+.top_name_up a, .top_name_up a:link, .top_name_up a:visited { color:#000000;font-size:13px; font-weight:bold; text-decoration:none}
+.top_name_up a:hover { text-decoration:underline; color:#FF3300}
+
+.my_items_old_note {padding:5px;background-color:#FFF9D7; color:#0066CC; border:#FFCC00 solid 1px; margin-top:3px;font-size:11px; width:778px;}
+
+
+
+
+
+
+
+
+
+/*tuannk add 20110927*/
+.manage_transaction {
+    margin: 8px 0 0 5px;
+    min-height: 300px;
+}
+.p_action {
+    color: #6B6B6B;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.p_action:hover {
+    color: #FF8C03;
+    text-decoration: underline;
+}
+.p_info {
+    color: #6B6B6B;
+    line-height: 150%;
+    padding: 8px 0;
+}
+.p_info a {
+    color: #3B5A9A;
+    text-decoration: none;
+}
+.p_info a:hover {
+    color: #FF8C03;
+    text-decoration: underline;
+}
+.p_info .high_light {
+    color: #3B5A9A;
+}
+
+.btn_upconfig{background:url(images/btn_mess_detail.gif) repeat top;height:22px;cursor:pointer;border: 1px solid #a3a6a7;  text-align:center; padding:3px 10px; color:#a3a6a7; line-height:22px; font-family:Tahoma, arial, sans-serif; font-size:10px}
+
+.theader{background-color:#6d6b6e;color:#fff; font-size:11px}
+
+#acc_vip{background:#F0F0F0;margin-top:2px;border:1px solid #C9C9C9; margin-top:10px; float:left; width:768px; padding:10px}
+#acc_vip .label_type{color:#3B589A;font-weight:bold; font-size:11px; padding:5px 0 5px 10px; float:left}
+#acc_vip .cbo_type{margin-left:10px;float:left; padding-top:2px}
+#acc_vip .accept{float:left; margin-left:5px}
+#acc_vip .description{font-size:11px; color:#3B589A; padding:5px 0 0 10px;}
+#acc_vip select{width:170px; padding-left:2px}
+/*leftmenu by Luong H?i Vi?t*/
+h4, h3.head {
+		border-bottom: 1px solid #DEDEDE;
+		color: #333333;
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 12px;
+		padding-bottom: 2px;
+	}
+
+*html .module_ucp1{border:1px solid #c5d1e8 !important}
+.module_ucp1 .title{width:168px;height:29px;padding-left:10px;margin-left:1px;line-height:29px;color:#005c99;font-size:12px;font-weight:bold}
+.module_ucp1 ul{margin-top:5px}
+.module_ucp1 ul li{display:block;width:178px;height:20px;line-height:20px;}
+.module_ucp1 ul li a{display:block;background:#FFF url(../images/new/personal_47.png) 2px center no-repeat;height:20px;padding-left:15px;color:#444;font-size:12px;line-height:20px;}
+.module_ucp1 ul li a:hover{color: #FF8A66;text-decoration: none;background:#FFF url(../images/new/personal_46.png) 2px center no-repeat;}
+.module_ucp1 ul li.selected a{background:#FFF url(../images/new/personal_46.png) 2px center no-repeat;font-weight:bold;text-decoration:none;color: #FF8A66;}
+

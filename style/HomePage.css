@@ -1,0 +1,100 @@
+#ContentLayout .Panel {
+	margin: 0px 3px 5px 1px;
+	border: 1px solid #d4dded;
+	float: left;
+	width: 241px;
+	_width:240px;
+	background-color: #fff;
+}
+#ContentLayout .PanelTitle {
+	padding: 1px;
+	border-bottom: 1px solid #d4dded;
+}
+
+#ContentLayout .PanelTitle a {
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	background-color:#028f36;
+	padding: 3px 6px;
+	display:block;
+	text-align:left;
+}
+#ContentLayout .PanelTitle a:hover {
+	color:#006c8f;
+}
+#ContentLayout .PanelTitle a .countRec {
+	font-weight: normal;
+	font-size: 11px;
+}
+
+#ContentLayout .Item {
+	padding: 0px 0px;
+	margin: 0px;
+}
+
+#ContentLayout .Item UL {
+	padding: 0px;
+	margin: 0px;
+	list-style:none;
+}
+
+#ContentLayout .Item UL LI{
+	background:url(images/bullet_arrow.gif) no-repeat left 4px;
+	_background-position: left;
+	margin: 5px 5px 1px 3px;
+	padding: 0px 0px 0px 9px;
+	border-bottom: 1px solid #e2ebec;
+	text-align:left;
+}
+#ContentLayout .Item UL LI.itemHot{
+	background:url(images/bullet_orange.gif) no-repeat left 9px;
+	_background-position: left;
+	margin: 0px 5px 0px 3px;
+	padding: 0px 0px 0px 9px;
+	/*height:20px;*/
+	line-height:21px;
+	font-weight: 700;
+	text-align:left;
+}
+#ContentLayout .Item UL LI a{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 11px;
+	color:#444;
+	text-decoration: none;
+}
+#ContentLayout .Item UL LI a:hover{
+	color:#fe0002;
+	text-decoration: underline;
+}
+
+#ContentLayout .Bottom {
+	text-align: right;
+	margin: 0px;
+}
+
+#ContentLayout .Bottom a{
+	background:url(images/arrow_out.gif) no-repeat right bottom;
+	
+	color: #bdbaba;
+	text-decoration:none;
+	padding: 3px 15px 0px 0px;
+	margin: 0px;
+	font-size: 11px;
+}
+
+#ContentLayout .Bottom a:hover{
+	background:url(images/arrow_over.gif) no-repeat right bottom;
+	color: #ff3333;
+}
+
+/*DungNH added 5/7/2010*/
+#box_realestate{float:left;width:238px;*width:240px;height:51px;margin: 5px 5px 3px 1px;border:1px solid #d4ddee;background:#f4f8fb url(images/icon_realestate.gif) no-repeat 20px;font-size:14px;font-weight:bold;line-height:51px;text-indent:60px}
+#box_service{float:left;width:238px;*width:240px;height:51px;margin: 5px 5px 3px 0px;border:1px solid #d4ddee;background:#f4f8fb url(images/icon_service.gif) no-repeat 20px;font-size:14px;font-weight:bold;line-height:51px;text-indent:60px}
+#box_business{float:left;width:238px;*width:240px;height:51px;margin: 5px 2px 3px 0px;border:1px solid #d4ddee;background:#f4f8fb url(images/icon_jobs.gif) no-repeat 20px;font-size:14px;font-weight:bold;line-height:51px;text-indent:60px}
+
+#box_realestate a, #box_service a, #box_business a{text-decoration:none;color:#010101}
+#box_realestate a:hover,#box_service a:hover,#box_business a:hover{text-decoration:underline;color:#010101}

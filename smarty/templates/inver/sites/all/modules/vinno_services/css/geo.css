@@ -1,0 +1,132 @@
+#block-block-27{
+height: 0px;
+}
+#container-geo {
+	width:300px;
+	margin:0 auto;
+	text-align: center;
+	position: relative;
+	top: 0px;
+	left: 0px;	
+}
+/*
+#content {
+	width:520px;
+	min-height:500px;
+}
+*/
+
+#topnav {
+	padding:10px 0px 12px;
+	padding-left: 0px;
+	font-size:11px;
+	line-height:23px;
+	text-align:left;
+}
+#topnav a.geo {
+	background:#C00707;
+	padding:4px 6px 6px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#fff;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	*background:transparent url("images/signin-nav-bg-ie.png") no-repeat 0 0;
+	*padding:4px 12px 6px;
+	font-size: 13px;
+}
+#topnav a.geo:hover {
+	background:#F8F8F8;
+	*background:transparent url("images/signin-nav-bg-hover-ie.png") no-repeat 0 0;
+	*padding:4px 12px 6px;
+	color:#C00707;
+}
+#topnav a.geo, #topnav a.geo:hover {
+	*background-position:0 3px!important;
+}
+
+a.geo {
+	position:relative;
+	margin-left:3px;
+}
+a.geo span {
+	background-image:url("images/toggle_down_light.png");
+	background-repeat:no-repeat;
+	background-position:100% 50%;
+	padding:0px 10px 0px 10px;
+}
+#topnav a.menu-open {
+	background:#F8F8F8!important;
+	color:#666!important;
+	outline:none;
+}
+#small_signup {
+	display:inline;
+	float:none;
+	line-height:23px;
+	margin:25px 0 0;
+	width:170px;
+}
+a.geo.menu-open span {
+	background-image:url("images/toggle_up_dark.png");
+	color:#C00707;
+}
+
+#signin_menu {
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-bottomleft:5px;
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-webkit-border-bottom-right-radius:5px;
+	display:none;
+	background-color:#F8F8F8;
+	position:absolute;
+	width:929px;
+	z-index:100;
+	border:1px transparent;
+	text-align:left;
+	padding:12px;
+	top: 24.5px; 
+	left: 30px;
+	/*right: 0px; */
+	margin-top:5px;
+	margin-right: 0px;
+	*margin-right: -1px;
+	color:#789;
+	font-size:11px;
+}
+
+#signin_menu input[type=text], #signin_menu input[type=password] {
+	display:block;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border:1px solid #ACE;
+	font-size:13px;
+	margin:0 0 5px;
+	padding:5px;
+	width:203px;
+}
+#signin_menu p {
+	margin:0;
+}
+#signin_menu a {
+	color:#6AC;
+}
+#signin_menu label {
+	font-weight:normal;
+}
+#signin_menu p.remember {
+	padding:10px 0;
+}
+#signin_menu p.forgot, #signin_menu p.complete {
+	clear:both;
+	margin:5px 0;
+}
+#signin_menu p a {
+	color:#27B!important;
+}
+
+
+

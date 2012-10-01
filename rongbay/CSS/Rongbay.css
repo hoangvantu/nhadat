@@ -1,0 +1,299 @@
+@charset "utf-8";
+@import url(Banner.css);
+@import url(HomePage.css);
+@import url(Cate.css);
+@import url(MenuRight.css);
+@import url(Footer.css);
+@import url(Detail.css);
+@import url(Common.css);
+@import url(Message.css);
+@import url(Usercp.css);
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+/*background-color: #e5ecf3;*/
+    font-family: Arial, Tahoma, Verdana;
+    font-size: 11px;
+    background:#E5ECF4
+   /* background: #e5ecf3 url(images/head_bgr_top.gif) repeat-x left top;*/
+}
+
+/*********************************Content*******************************/
+#ContentLayout {
+    background-color: #fff;
+    padding-top: 5px;
+    width: 1000px;
+	text-align:left
+}
+
+#ContentLeft {
+    padding-left: 5px;
+
+}
+
+#ContentRight {
+    width: 252px;
+}
+
+#FooterLayout {
+    width: 1000px;
+}
+
+.searchlite {
+    font-weight: bold;
+}
+
+a:focus {
+    outline: none;
+    outline: 0
+}
+
+a:-moz-focus-inner {
+    border: none
+}
+
+.othrAcc {
+    background-color: #fffad8;
+    border: 1px solid #CBCAC8;
+    color: #000000;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 3px;
+    text-align: center;
+    margin-right: 6px;
+}
+
+/*---------------------*/
+
+.textAreaBlockUI {
+    width: 94%;
+    *width: 100%;;
+    margin: 15px;
+    border: 1px solid #e4e4e4
+}
+
+.btnBlockUIHover {
+    background: url(images/btn_all_blockUI.gif) repeat-x left -22px;
+    height: 22px;
+    cursor: pointer;
+    border-bottom: none;
+    border-top: none;
+    text-align: center;
+    padding: 0px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    line-height: 22px;
+    font-family: Tahoma, arial, sans-serif;
+    font-size: 12px
+}
+
+.btnBlockUI {
+    background: url(images/btn_all_blockUI.gif) repeat-x top;
+    height: 22px;
+    cursor: pointer;
+    border-bottom: none;
+    border-top: none;
+    text-align: center;
+    padding: 0px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    line-height: 22px;
+    font-family: Tahoma, arial, sans-serif;
+    font-size: 12px
+}
+
+#box-thongbao {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 400px;
+}
+
+#box-thongbao {
+    background-color: #fffbcc;
+    border: 1px solid #F8DE42;
+    overflow: hidden;
+}
+
+#img-thongbao {
+    margin-left: 5px;
+    margin-top: 7px;
+    padding-right: 5px;
+}
+
+#box-thongbao .view-thongbao {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0;
+}
+
+#box-thongbao .view-thongbao .content {
+    float: left;
+}
+
+#box-thongbao .close_thongbao {
+    cursor: pointer;
+    float: right;
+    margin-top: 3px;
+    width: 3%;
+}
+
+.closeThongbao, .closeThongbaoOver {
+    background: url("images/icon_close_thongbao.png") no-repeat scroll left top transparent;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    height: 18px;
+    margin-left: -8px;
+}
+
+.closeThongbaoOver {
+    background: url("images/icon_close_thongbao.png") no-repeat scroll left -18px transparent;
+    display: block;
+}
+
+#giohang {
+    width: 247px;
+    height: 37px;
+    background: #e4e5e7;
+    border: 1px #b5b5b5 solid;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    cursor: pointer;
+}
+
+#gio {
+    width: 85px;
+    float: left;
+    font-weight: bold;
+    font-size: 12px;
+    background: url('images/giohang2.jpg') no-repeat left center;
+    padding: 0px 0px 0px 15px;
+    height: 37px;
+}
+
+#cart-continue {
+    width: 30px;
+    float: left;
+    font-weight: bold;
+    font-size: 12px;
+    background: url('images/ico_cart_continue.png') no-repeat 4px 3px;
+    padding: 5px;
+    height: 37px;
+    border-right: 1px solid #b5b5b5;
+}
+
+#inner_gio {
+    border-right: 1px #b5b5b5 solid;
+    padding: 10px 0px 10px 22px;
+}
+
+#thanhtoan {
+    float: left;
+    width: 106px;
+    font-size: 12px;
+    text-align: center;
+    padding: 6px 0px;
+}
+
+#thanhtoan input {
+    background: url(images/thanhtoan_03.png);
+    width: 83px;
+    height: 24px;
+    color: #fff;
+    border: none;
+}
+
+#thanhtoan input:hover {
+    color: #000;
+    cursor: pointer
+}
+
+// Clear fix css for IE add by thanhdx
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+/*ngannv fix IE6 nÃºt chá»n mua (mua lÆ°á»£t Ä‘Äƒng)*/
+span.chonmua_def{
+    background: url(images/payment/Mua.png) no-repeat;
+    height: 25px;
+    width:75px;
+    display: inline-block;
+    cursor: pointer;
+}
+span.help_def{
+     background: url(images/usercp/question_blue.png) no-repeat;
+    height: 12px;
+    width:12px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.viewBoxActiveOtp{
+    background: url(images/error.png) no-repeat 5px 7px;
+    height:50px;
+    padding-left: 40px;
+    float:left;
+}
+/* classic popup */
+.classic-popup{background: rgba(255,255,255, 0.24);border-radius: 5px;-moz-border-radius: 5px;padding:5px;*padding:0px}
+.classic-popup-title{width:100%;background:#0093d0;*width:100.2%;}
+.classic-popup-title,.classic-popup-title .fl,a.classic-popup-close{height:40px;line-height:40px;_height:20px;*padding-top:-7px;*line-height:17px;_padding-top:-7px;_line-height:17px;font-weight:bold;color:#fff}
+.classic-popup-title .fl{padding-left:20px;*margin-top:15px;font-size:16px;text-transform:uppercase;text-shadow:0 1px 0 #666666}
+a.classic-popup-close{float:right;font-size:13px;line-height: 30px;padding:0 10px;*padding-right:15px}
+a.classic-popup-close:hover{text-decoration:none;color:#4f2d00}
+.classic-popup-content{width:100%;background:#fff;color:#472900;}
+.mTop20,#mTop20{margin-top:20px}
+.mRight20,#mRight20{margin-right:20px}
+/*ngannv*/
+table.cart-finish label{width: 100%;height:100%;cursor: pointer;display: inline-block;}
+.cart_choice{background: #e7ffc9;}
+.cart_2{background: #f6ffe8;}
+.NewsList tr.list_detail_mask{
+    background: #ff9900;}
+    
+#ul_u{ position: absolute; top: 0; z-index:10; margin: 0; right:10px; width: auto; background:none}
+#ul_u li#uname{position: relative; height:36px; padding: 0px 1px 3px 0; background: none; width:auto; min-width:155px; display:block; margin-left:0px}
+#ul_u li#uname a.uname{ background: url('images/arrow_down.gif') right center no-repeat; padding: 0 10px 0 0;display: inline-block; }
+#ugold{ color: #ff8b00; font-weight: normal; font-size: 11px; text-align: right;}
+#ul_u li{position: relative;}
+#ul_u li#uname ul{ position:  absolute; top:37px; right:0px; }
+#ul_u li#uname ul li{ position: relative; z-index: 1000001; }
+#ul_u li#uname:hover{  border-bottom:0; cursor: pointer; }
+
+ul#rbul_ucp{border: 1px solid #06598e; padding: 0; margin: 0; display: none; background:#FFF}
+ul#rbul_ucp li{ background: #fff; font-weight: bold; line-height:35px; border-bottom: 1px solid #d8dfea; min-width: 150px; padding: 0 5px 0 0; margin: 0; font-size: 11px; display:inline-block;}
+ul#rbul_ucp li a{text-shadow: 0px 0px 0px #fff;display:block}
+ul#rbul_ucp li a:hover{color:#FF8B00; display:block}
+ul#rbul_ucp li:hover{ background: #e9edf3; text-decoration: none; color:#FF0000}
+/**#ul_u li#uname:hover ul#rbul_ucp{display: block;}*/
+
+div#uhelp{ background: url("images/danhdau.png") no-repeat scroll 0 0 transparent; display: inline-block; height: 36px; position: absolute; right: 0; top: 0px; width: 49px; text-align: center; padding-top: 4px; }                    
+.view_account_head{ color:#034b8a; font-weight:bold; font-size: 11px; background: url("images/arrow_bottom.gif") no-repeat scroll left 6px;margin-right:-20px;padding-right:10px; }
+img.uavatar{ float: right; height: 30px; margin-left: 7px; width: 30px; border-radius: 2px 2px 2px 2px; }

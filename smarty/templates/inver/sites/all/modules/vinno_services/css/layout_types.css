@@ -1,0 +1,568 @@
+/* Style here should be used to define layout type to applied for each module layout
+---------------------------------------------------------------------------------------------------
+/*
+Module title layout dynamic
+//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* 
+Module layout type: Dynamic - No image
+Name: vinno-box-dymanic 
+//////////////////////////////////////////////////////////////////////////////////////*/
+.vinno-box-dymanic{
+    /*margin: 0 auto 20px;*/	
+    color: #000000;
+    #width: 100%;
+    _width: 99.99%;
+    /*padding: 20px;*/	
+    text-align: left;
+	margin: 0;
+	padding: 0;   
+	/*background: #ffffff url('../images/vinno-box-dymanic4-bg.jpg') repeat-x left bottom;	*/
+	background-color: #ffffe5;
+    border: 1px double #f5e082;
+}
+.vinno-box-dymanic .shell{
+	padding: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+/* ------------------------------ */
+.vinno-box-dymanic-1{
+    /*margin: 0 auto 20px;*/	
+    color: #000000;
+    #width: 100%;
+    _width: 99.99%;
+    /*padding: 20px;*/	
+    text-align: left;
+	margin: 0;
+	padding: 0;   
+	/*background: #ffffff url('../images/vinno-box-dymanic4-bg.jpg') repeat-x left bottom;	*/
+	background-color: #EEEEEE;
+    border: 1px double #CCCCCC;
+}
+.vinno-box-dymanic-1 .shell{
+	/*padding: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;*/
+}
+
+/* 
+Module layout type: Dynamic - Image for title
+Name: vinno-box-dymanic 
+//////////////////////////////////////////////////////////////////////////////////////*/
+
+.vinno-box-dymanic-special .shell{	
+	 /*margin: 0 auto 20px;*/	
+    color: #000000;
+	width: 99.3%;
+    #width: 99.2%;
+    _width: 99.2%;
+    /*padding: 20px;*/	
+	margin: 0;
+	padding: 0;
+	_margin-top: -4px;		
+    text-align: left;		
+	background-color: #ffffff;
+    /*border: 1px double #f5e082;*/
+	border: 1px double #c61029;
+}
+
+.vinno-box-dymanic-special .shell .inner-shell{
+	padding: 3px;
+	padding-bottom: 0px;
+	padding-top: 5px;
+}
+
+/* 
+Module layout type: Dynamic
+Name: vinno-box-dymanic 
+////////////////////////////////////////////////////*/
+
+.vinno-box-dymanic1{
+    /*margin: 0 auto 20px;*/
+	margin-left: 5px;
+    color: #000000;
+	#width: 100%;
+    _width: 99.99%;
+    /*padding: 20px;*/
+    text-align: left;
+    background-color: #ffffff;
+    border: 2px double #c6dffe;
+}
+.vinno-box-dymanic2
+{
+    margin: 0 auto;
+    border: 0px solid #ffffff;
+    color: #ffffff;
+    width: 60%;
+    padding: 20px;
+    text-align: left;
+    background-color: #3333FF;
+
+    /* Do rounding (native in Firefox and Safari, CC in IE)
+    -webkit-border-top-right-radius: 20px;
+    -webkit-border-top-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-topright: 20px;
+    CCborderRadiusTL: 20px;
+    CCborderRadiusTR: 20px; */
+}
+
+/* 
+Module layout type: Dynamic
+Name: vinno-box-dymanic3 
+//////////////////////////////////////////////////////////////////////////////////////*/
+.vinno-box-dymanic3{
+    /*margin: 0 auto 20px;*/	
+    color: #000000;
+    #width: 100%;
+    _width: 99.99%;
+    /*padding: 20px;*/	
+    text-align: left;
+	margin: 0;
+	padding: 0;   
+	background: #c6dffe url('../images/vinno-box-dymanic3-bg.jpg') repeat-x left bottom;	
+    border: 2px double #3192d7;
+}
+.vinno-box-dymanic3 .shell{
+	padding: 10px;
+	padding-bottom: 0px;
+}
+/* 
+Module layout type: Dynamic
+Name: vinno-box-dymanic4 
+//////////////////////////////////////////////////////////////////////////////////////*/
+.vinno-box-dymanic4{
+    /*margin: 0 auto 20px;*/	
+    color: #000000;
+    #width: 100%;
+    _width: 99.99%;
+    /*padding: 20px;*/	
+    text-align: left;
+	margin: 0;
+	padding: 0;   
+	background: #ffffff url('../images/vinno-box-dymanic4-bg.jpg') repeat-x left bottom;	
+    border: 1px double #c50f28;
+}
+.vinno-box-dymanic4 .shell{
+	padding: 10px;
+	padding-bottom: 0px;
+}
+
+
+
+
+
+/*
+Module layout static
+//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*
+Module layout type: static 
+Name: vinno-box 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.vinno-box{
+	width: 100%;
+	background: #effce7 url(../images/box-bottom-left1.jpg) no-repeat left bottom;	
+	font-size: 1em;
+	/*border: 1px dotted red;*/
+}
+
+.vinno-box .box-outer {
+	background: url(../images/box-bottom-right.jpg) no-repeat right bottom;
+	padding-bottom: 20px;
+}
+
+.vinno-box .box-inner {
+	background: url(../images/box-top-left1.jpg) no-repeat left top;
+}
+
+.vinno-box .box-inner-inner{
+	background: url(../images/box-top-right.jpg) no-repeat right top;
+}
+
+
+.vinno-box .content {
+  padding-left: 20px;
+  padding-right: 20px;	
+	
+}
+
+.vinno-box .content {
+  padding-top: 10px; 
+}
+
+/* Title theming spacing*/
+.vinno-box .box-inner-inner{
+	padding: 3px;
+}
+
+/*
+Module layout type: static 
+Name: vinno-box2 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.vinno-box2{
+	width: 100%;
+	background: #effce7 url(../images/box-bottom-left2.jpg) no-repeat left bottom;	
+	font-size: 1em;
+	/*border: 1px dotted red;*/
+}
+
+.vinno-box2 .box-outer {
+	background: url(../images/box-bottom-right2.jpg) no-repeat right bottom;
+	padding-bottom: 5px; 	
+}
+
+.vinno-box2 .box-inner {
+	background: url(../images/box-top-left2.jpg) no-repeat left top;
+}
+
+.vinno-box2 .box-inner-inner{
+	background: url(../images/box-top-right2.jpg) no-repeat right top;
+}
+
+
+.vinno-box2 .content {
+  padding-left: 5px;
+  padding-right: 2px;	
+	
+}
+
+.vinno-box2 .content {
+  padding-top: 3px; 
+}
+
+/* Title theming spacing*/
+.vinno-box2 .box-inner-inner{
+	padding: 3px;
+}
+
+/*
+Module layout: 
+Type: blank 
+--------------------------------------------------------*/
+.vinno-box-blank .content {
+  padding-top: 5px; 
+  background-color: #fdf2f0;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/*Bang tim kiem layout*/
+.vinno-box-search-table .content { 
+  background-color: #FFFFFF;
+  /*padding-top: 5px; 
+  padding-bottom: 5px;  
+  padding-right: 5px;*/
+  padding-top: 5px; 
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/*
+Module title layout static
+//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Title Module layout: 
+Type: title
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Bang tim kiem title*/
+.vinno-title-search-table .header-outer{
+	/*border-bottom: 1px dotted #179C49;*/
+	margin-bottom: 9px;
+	/*padding-bottom: 4px;*/
+}
+.vinno-title-search-table .header-inner h3{
+	text-align: right;
+	color: #179C49;
+	padding-right: 30px;
+	padding-top: 10px;
+	/*line-height: 150%;*/		
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.vinno-title-search-table .header-inner{
+	background: url(../images/status/search-table-left.jpg) no-repeat right top;
+	height: 28px; /* Image height */
+	padding-left: 31px; /* Image width */
+	margin-left: 3px;
+}
+/* END Bang tim kiem title*/
+
+.vinno-title .header-inner h3{
+	text-align: left;
+	color: #169B48;
+	padding-left: 10px;
+	padding-top: 23px;
+	/*line-height: 150%;*/		
+	font-size: 13pt;
+	padding-bottom: 5px;
+}
+
+/* Title Module layout: 
+Type: title1 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.vinno-title1 .header-outer{
+	background: url(../images/box-title1-left.jpg) no-repeat left top;
+	height: 27px; /* Image height */
+	padding-left: 45px; /* Image width */
+	
+}
+.vinno-title1 .header-inner{
+	background: url(../images/box-title1-center.jpg) repeat-x;
+	height: 27px;	/* Image height */
+}
+
+.vinno-title1 .header-inner h3{
+	background: url(../images/box-title1-right.jpg) no-repeat  right top;
+	height: 27px;	/* Image height */
+	padding-top: 4px;
+	text-align: left;
+	color: #FFFFFF;
+	line-height: 150%;	
+	text-transform: uppercase;
+	font-size: 9.5pt;
+}
+
+.vinno-title1 .header-inner h3 A{
+	color: #FFFFFF;
+	font-size: 10pt;
+}
+
+/* Title Module layout: 
+Type: title2 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.vinno-title2 .header-outer{
+	background: url(../images/box-title2-left.jpg) no-repeat left top;
+	height: 28px; /* Image height */
+	padding-left: 47px; /* Image width */
+}
+.vinno-title2 .header-inner{
+	/*background: url(../images/box-title2-center.jpg) repeat-x;*/
+	height: 28px;	/* Image height */		
+}
+
+.vinno-title2 .header-inner h3{
+	background: url(../images/box-title2-right.jpg) no-repeat  right top;
+	height: 28px;	/* Image height */
+	/*padding-top: 4px;*/
+	line-height: 170%;	
+	text-align: left;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+.vinno-title2 .header-inner h3 A{
+	color: #FFFFFF;
+	font-size: 10pt;
+}
+
+/* Title Module layout: 
+Type: title3 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.vinno-title3 .header-outer{
+	background: url(../images/box-title3-left.jpg) no-repeat left top;
+	padding-left: 45px; /* Image width */
+	height: 35px; /* Image height */	
+}
+.vinno-title3 .header-inner{
+	background: url(../images/box-title3-center.jpg) repeat-x;
+	height: 35px;	/* Image height */		
+}
+
+.vinno-title3 .header-inner h3{
+	background: url(../images/box-title3-right.jpg) no-repeat  right top;
+	height: 35px;	/* Image height */	
+	line-height: 210%;	
+	#line-height: 230%;	
+	text-align: left;
+	color: #d8880b;
+	text-transform: uppercase;
+	padding-left:2px;
+}
+
+.vinno-title3 .header-inner h3 A{
+	color: #d8880b;
+	font-size: 9pt;
+}
+
+/* Title Module layout: 
+Type: title4 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.vinno-title4 .header-outer{
+	background: url(../images/box-title4-left.jpg) no-repeat left top;
+	padding-left: 74px; /* Image width */
+	height: 36px; /* Image height */	
+}
+.vinno-title4 .header-inner{
+	background: url(../images/box-title4-center.jpg) repeat-x;
+	height: 36px;	/* Image height */		
+}
+
+.vinno-title4 .header-inner h3{
+	background: url(../images/box-title4-right.jpg) no-repeat  right top;
+	height: 36px;	/* Image height */	
+	line-height: 200%;	
+	#line-height: 180%;	
+	text-align: left;
+	color: #4e4e4e;
+	font-size: 15pt;
+	/*text-transform: uppercase;
+	padding-left:2px;*/
+}
+
+/* Title Module layout: 
+Type: title5 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.vinno-title5 .header-outer{
+	background: url(../images/box-title5-left.jpg) no-repeat left top;
+	padding-left: 49px; /* Image width */
+	height: 44px; /* Image height */	
+}
+.vinno-title5 .header-inner{
+	background: url(../images/box-title5-center.jpg) repeat-x;
+	height: 44px;	/* Image height */		
+}
+
+.vinno-title5 .header-inner h3{
+	/*background: url(../images/box-title4-right.jpg) no-repeat  right top;*/
+	height: 44px;	/* Image height */	
+	line-height: 110%;	
+	#line-height: 110%;	
+	text-align: left;
+	color: #c50f28;
+	font-size: 15pt;
+	/*text-transform: uppercase;
+	padding-left:2px;*/
+}
+
+
+
+/* Title Module layout: 
+Type: title6
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.vinno-title6 .header-outer{
+	background: url(../images/box-title6-left.jpg) no-repeat left top;
+	height: 49px; /* Image height */
+	padding-left: 46px; /* Image width */
+	
+}
+.vinno-title6 .header-inner{
+	background: url(../images/box-title6-center.jpg) repeat-x;
+	height: 49px;	/* Image height */
+}
+
+.vinno-title6 .header-inner h3{
+	background: url(../images/box-title6-right.jpg) no-repeat  right top;
+	height: 49px;	/* Image height */
+	padding-top: 4px;
+	text-align: left;
+	color: #c30f2a;
+	line-height: 190%;	
+	/*text-transform: uppercase;*/
+	font-size: 12pt;
+}
+
+.vinno-title6 .header-inner h3 A{
+	color: #FFFFFF;
+	font-size: 12pt;
+}
+
+
+/* Title Module layout: 
+Type: title7
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*
+.vinno-title7 .header-outer{
+	background: url(../images/box-title7-left.jpg) no-repeat left top;
+	height: 45px; 
+	padding-left: 60px; 
+	#margin-top: 10px;	
+}
+
+.vinno-title7 .header-inner{
+	background: url(../images/box-title7-center.jpg) repeat-x;
+	height: 45px;	
+}
+*/
+.vinno-title7 .header-inner h3{
+	background: url(../images/status/title-ico.jpg) no-repeat  left top;
+	color:#A70B0C;	
+	font-weight:bold;
+	height:34px;
+	line-height:300%;
+	padding-left:44px;
+	text-transform:uppercase;
+	font-size: 12px;
+}
+
+.vinno-title6 .header-inner h3 A{
+	color: #000000;
+	font-size: 12pt;
+}
+
+
+/* Title Module layout: 
+Type: title-blank
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.vinno-title-blank .header-outer{	
+	height: 49px; 
+	padding-left: 30px; 	
+}
+.vinno-title-blank .header-inner{	
+	height: 49px;	
+}
+
+.vinno-title-blank .header-inner h3{	
+	height: 49px;	
+	padding-top: 6px;
+	text-align: left;
+	color: #FFFFFF;
+	/*line-height: 190%;	*/
+	/*text-transform: uppercase;*/
+	font-size: 12pt;
+}
+
+.vinno-title-blank .header-inner h3 A{
+	color: #FFFFFF;
+	font-size: 14pt;
+}
+
+
+/* Title Module layout: 
+Type: Search 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.vinno-search-title .header-outer{
+	background: url(../images/box-search-title-left.jpg) no-repeat left top;
+	height: 31px; /* Image height */
+	padding-left: 59px; /* Image width */
+}
+.vinno-search-title .header-inner h3{
+	background: none;
+	padding-top: 6px;	
+	color: #000000;
+	text-transform: uppercase;
+}
+
+/* Nhadatvideo adv */
+.nhadavideo_adv{
+	background: url(../images/ad/adv_details.jpg) no-repeat left top;
+	height: 25px; /* Image height */
+	width: 480px; /* Image width */	
+	padding-left:133px;
+	padding-top:153px;
+	
+}
+.property_details .nhadavideo_adv a{
+	color: #A70D0D;
+	text-decoration: underline;
+}
+.property_details .nhadavideo_adv a:hover{
+	text-decoration: none;
+}
+.details-more{
+	display: none;
+}
+
+
+

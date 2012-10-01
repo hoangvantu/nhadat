@@ -1,0 +1,58 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="vi" lang="vi">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Nhà đất - Bán nhà hà nội, Video nhà đất chính chủ | chinh chu, nha dat video</title>  
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+    <title>Geocoding with GMap v3</title>
+    <link type="text/css" href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script>
+		$(document).ready(function() { 
+			//Init value
+			
+						$("#banthue").val("0");
+					    $("#radius").val("1");
+						$("#latitude").val("21.02776883364401");
+						$("#longitude").val("105.82388270317995");
+						
+							});
+    </script>	
+    <script type="text/javascript" src="js/main.js"></script>
+    
+  </head>
+  <body>
+	<div style="background-color: #F4F5F6;padding: 3px;">
+	<div style="margin-bottom: 3px;"> 
+		<label>Bán / Thuê: </label><select id="banthue" style="width: 100px;">
+									<option value="0">Tất cả</option>
+								    <option value="9">Bán đất</option>
+								    <option value="10">Bán nhà</option>
+									<option value="11">Cho thuê</option>
+								    <option value="12">Sang nhượng</option>
+							  </select>
+		 <label>Trong vòng bán kính: </label><select id="radius" style="width: 100px;">
+									<option value="0.5">0.5 km</option>
+								    <option value="1" selected>1 km</option>
+								    <option value="2">2 km</option>
+							  </select>					  
+		<button id="property-search" type="button">Tìm nhà đất với nhadatvideo.vn</button>	
+        <button id="setmapcenter" type="button" style="margin-left: 146px; position: relative; top: 100px; z-index: 200;">Về vị trí trung tâm</button>			
+	</div>
+    <div style="margin-bottom: 3px;"> 
+    <label>Địa chỉ: </label><input title="Gõ địa chỉ vào đây để di chuyển bản đồ tới, Di chuyển Marker để làm mịn, Ví dụ: Thái Thịnh, Đống Đa, Hà Nội, Việt Nam" id="address"  type="text" style="width: 560px;margin-left: 23px;"/><input title="Tọa độ sẽ tự động hiện đây !" readonly='readonly' id="latlong" type="text" style="width: 255px;"/>
+	</div>
+	</div>
+    <div id="map_canvas" style="width:902px; height:480px"></div><br/>
+	<div style="display: none;">
+		<label>latitude: </label><input id="latitude" type="text"/><br/>
+		<label>longitude: </label><input id="longitude" type="text"/>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+.divLayoutMes {
+	border: 1px solid #c8c8c8;
+	margin: 5px 0px;
+	font-family: Arial, Tahoma, Verdana;
+	font-size: 12px;
+	text-align: left;
+	overflow:hidden;
+	width:735px;
+}
+
+.textMesBold{
+	font-size:11px;
+	color:#00344F;	
+	font-weight:bold;
+}
+
+.textMes{
+	font-size:11px;
+	color:#00344F;
+}
+
+.textMestime{
+	font-size:10px;
+	color:#999999
+}
+
+.mess_success {padding:5px;background-color:#FFFFCC; color:#0066CC; border:#FFCC00 solid 1px; margin-top:10px;font-size:12px; width:95%; margin-left:12px}
+
+input.btnSendmes{background:url(images/btn_mess_detail.gif) repeat-x top;height:22px;cursor:pointer;border: 1px solid #a3a6a7;  text-align:center; padding:3px 10px; color:#00344F; font-family:Tahoma, arial, sans-serif; font-size:11px
+}
+
+.btnbackMes {background:url(images/btn_mess_detail.gif) repeat-x top;height:22px;cursor:pointer;border: 1px solid #a3a6a7;  text-align:center; padding:3px 10px; color:#a3a6a7; font-family:Tahoma, arial, sans-serif; font-size:10px}
+
+.lnk_detail_mes{font:Arial, Helvetica, sans-serif; font-size:11px; color:#003366;text-decoration:none}
+
+.markItUpHeader li {
+	margin-left: 4px;
+}
+
+.bound_pagging{margin-left:630px; margin-top:2px;font-size:11px}
+
+.pag_bg {text-decoration:none;font-size:11px}
+
+.pag_bg_hover {color:#FF0000;text-decoration:underline;}
+
+.lbl_del_mes{text-decoration:none; font-size:10px; color:#999999}
+
+div.newupdates { 
+	position:absolute;	
+	/*top:43px;	
+	margin: 15px 0px 0px 15px;
+	left:310px;*/
+	height: 31px;
+	width: 158px;
+	
+	background-image: url(../style/images/newupdates.gif);
+	background-repeat: no-repeat;	
+	color:#FFFFFF
+}
+.newupdates_content{
+	color: #FFFFFF; 
+	font-size:11px;
+	line-height: 20px;	
+	margin-left:30px;
+				
+}
+.newupdates_content a:link,.newupdates_content a:visited {
+	color: #FFFFFF; 
+	text-decoration:none;
+}
+
+.close_content{
+	margin-left:10px;
+	font-size:11px
+}
+.block_mess_sub{
+	width:90%;
+	padding:10px;
+	
+	font-size:10px;
+	color:#999999;
+	border:1px solid #eee
+}

@@ -1,0 +1,13 @@
+/* Styles for screen media */
+
+/*
+@import url("liquid_platform.css");
+@import url("liquid_application.css");
+*/
+
+@import url("fixed_platform.css");
+@import url("fixed_application.css");
+
+
+
+

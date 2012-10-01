@@ -1,0 +1,100 @@
+
+#FooterLayout .FooterLeft {
+	background:url(images/bottom_left.gif) no-repeat left top;
+	padding-left: 4px;
+}
+
+#FooterLayout .FooterRight {
+	background:#fff url(images/bottom_right.gif) no-repeat right top;
+	padding-right: 4px;
+	height: 4px;
+}
+
+#FooterLayout .FooterSearch {
+	background: url(images/bottom_search.gif) no-repeat left top;
+	height: 13px;
+}
+
+
+#FooterLayout .FooterRightSearch {
+	background:#fff url(images/bottom_right_search.gif) no-repeat right top;
+	border-bottom:1px solid #d1d8e0;
+	padding-right: 14px;
+	height: 13px;
+}
+
+#CopyrightLayout {
+	margin: 15px 0px 0px 0px;
+	text-align: left;
+}
+
+#CopyrightLayout .LogoInvest {
+	width: 255px;
+	float: left;
+	color:#313234;
+}
+
+#CopyrightLayout .CopyrightInfo {
+	float: left;
+	text-align: left;
+	margin-left:-5px;
+}
+
+#CopyrightLayout .FooterMenu {
+	color: #0079ff;	
+}
+
+#CopyrightLayout .FooterMenu a {
+	font-weight: normal;
+	font-size: 11px;
+	text-decoration: none;
+	color: #0079ff;
+	padding: 0px 5px;
+}
+
+#CopyrightLayout .FooterMenu a:hover {
+	color:#ff6600;
+}
+
+#CopyrightLayout .RBinfo {
+	padding: 5px 0px 10px 5px;
+	color:#414b56;
+}
+
+.icon_email_footer{
+	margin-top:5px;margin-bottom:5px;
+	background:url(images/icon_email_footer.png) no-repeat left;padding-left:27px;
+}
+.icon_fone_footer{
+	margin-top:5px;margin-bottom:5px;
+	background:url(images/icon_fone_footer.png) no-repeat left;padding-left:27px;
+}
+.icon_ym_footer{
+	margin-top:5px;margin-bottom:5px; height:16px;
+	background:url(images/icon_ym_footer.png) no-repeat 2px center;padding-left:27px;
+}
+
+/*Dungnh added 17/06/2010*/
+.web_browser{color:#0079ff;text-decoration:none}
+.web_browser:hover{color:#ff6600;}
+/*
+#toolbar-wrapper{
+	bottom:0;
+	display:block;
+	min-width:130px;
+	position:fixed;
+	right:20px;
+	z-index:9999;
+	border:1px solid #999999;
+	border-bottom:0px;
+	height:25px;
+	line-height:25px;
+	background:#fff;
+	text-decoration: none;
+	color:#333333;
+	font-weight:bold;
+}
+
+#box-toolbar-wrapper{}
+*/
+

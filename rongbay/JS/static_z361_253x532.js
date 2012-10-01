@@ -1,0 +1,1 @@
+window.onloaded = advScroll("Sticky",532,120);
