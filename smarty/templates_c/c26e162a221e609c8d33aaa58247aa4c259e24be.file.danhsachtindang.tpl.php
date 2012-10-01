@@ -1,19 +1,19 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:15:19
-         compiled from "..\smarty\templates\styleAdmin\blueadmin\changepass.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:22465062eac1849fe0-69293433%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:50:42
+         compiled from "..\smarty\templates\styleAdmin\blueadmin\danhsachtindang.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:96050698c7eb50174-09364756%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'fa280eb2c89e0ef0be3fcef92c1b0e09e323c8d5' => 
+    'c26e162a221e609c8d33aaa58247aa4c259e24be' => 
     array (
-      0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\changepass.tpl',
-      1 => 1349091050,
+      0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\danhsachtindang.tpl',
+      1 => 1349095840,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\layout.tpl',
-      1 => 1349091052,
+      1 => 1349093802,
       2 => 'file',
     ),
     '8a48e3331a7d9f9f03f5e1db17b60f3bf0d666b7' => 
@@ -29,19 +29,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '22465062eac1849fe0-69293433',
+  'nocache_hash' => '96050698c7eb50174-09364756',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_5062eac2005739_26688347',
+  'unifunc' => 'content_50698c7ece0050_00911541',
   'variables' => 
   array (
     'page_title' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5062eac2005739_26688347')) {function content_5062eac2005739_26688347($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php if ($_valid && !is_callable('content_50698c7ece0050_00911541')) {function content_50698c7ece0050_00911541($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -51,25 +51,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '22465062eac1849fe0-69293433');
-content_50698957774e58_07417921($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '96050698c7eb50174-09364756');
+content_506991a26b1b67_76779239($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
  
  <?php /*  Call merged included template "headjava.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '22465062eac1849fe0-69293433');
-content_50698957869648_87595177($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '96050698c7eb50174-09364756');
+content_506991a26f5ac1_99298702($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
  
-$(document).keypress(function(e)
-{
-  if(e.which == 13) 
-  $('#change_pass_form').submit();
-
-
-}
-
  
  </head>
  <body>
@@ -141,7 +133,7 @@ $(document).keypress(function(e)
                         <li><a class="menuitem">Quản lý thành viên</a>
                             <ul class="submenu">
                                 <li><a href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
-                                <li><a href="adduser.php">Thêm thành viên</a> </li>
+                                <li><a href="themthanhvien.php">Thêm thành viên</a> </li>
                                 <li><a>Submenu 3</a> </li>
                                 <li><a>Submenu 4</a> </li>
                                 <li><a>Submenu 5</a> </li>
@@ -174,85 +166,70 @@ $(document).keypress(function(e)
 	  
 
 
-</table>
 
 
-<div class="box round first fullpage">
- <h2>
-  Đổi mật khẩu thành viên</h2>
- <div class="block ">
-  <?php if (isset($_smarty_tpl->tpl_vars['thongbaoloi']->value)){?>
-   <div class="message warning">
-    <h5>Xuất hiện lỗi!</h5>
-    <p>
-     <?php echo $_smarty_tpl->tpl_vars['thongbaoloi']->value;?>
-
-    </p>
-   </div>
-
-  <?php }?>
-  <form id="change_pass_form"action="" method="POST">
-   <table class="form">
-    <input type="hidden" name="userid" value="<?php echo $_smarty_tpl->tpl_vars['thanhvien']->value['UserID'];?>
-"/>
-    <tr>
-     <td class="col1">
-      <label>
-       Email  </label>
-     </td>
-     <td class="col2">
-      <input type="text" id="grumble" value="<?php echo $_smarty_tpl->tpl_vars['thanhvien']->value['Email'];?>
-" disabled/>
-     </td>
-    </tr>
-    <tr>
-     <td class="col1">
-      <label>
-       Mật khẩu cũ</label>
-     </td>
-     <td class="col2">
-      <input type="text" id="grumble" name="oldpass" />
-     </td>
-    </tr>
-    <tr>
-     <td>
-      <label>
-       Mật khẩu mới</label>
-     </td>
-     <td>
-      <input  type="password" <?php if (isset($_smarty_tpl->tpl_vars['pass_retype']->value)){?>class="error" <?php }?> name="newpass" />
-     </td>
-    </tr>
-    <tr>
-     <td>
-      <label>
-       Điền lại mật khẩu mới</label> 
-     </td>
-     <td>
-      <input type="password" <?php if (isset($_smarty_tpl->tpl_vars['pass_retype']->value)){?>class="error" <?php }?>name="newpass_retype"/> 
-
-
-      <?php if (isset($_smarty_tpl->tpl_vars['pass_retype']->value)){?>
-       <?php echo $_smarty_tpl->tpl_vars['pass_retype']->value;?>
-
-      <?php }?>
-      </div>
-     </td>
-    </tr>
-
-    <tr>
-     <td>  <input type="submit" class="btn btn-teal" value="Đổi mật khẩu" /></td>
-     <td> </td>
-
-    </tr>
-
-   </table>
-  </form>
- </div>
-</div>
-
-
-
+ <div class="box round first grid">
+                <h2>;
+                    Danh Sách Tin Đăng</h2>
+                <div class="block">
+                    
+                    
+                    
+                    <div class="dataTables_wrapper" id="example_wrapper"><div id="example_length" class="dataTables_length"><label>Show <select size="1" name="example_length"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div class="dataTables_filter" id="example_filter"><label>Search: <input type="text"></label></div><table class="data display datatable" id="example">
+					<thead>
+						<tr><th class="sorting_asc" rowspan="1" colspan="1" style="width: 213px; ">Rendering engine</th><th class="sorting" rowspan="1" colspan="1" style="width: 265px; ">Browser</th><th class="sorting" rowspan="1" colspan="1" style="width: 249px; ">Platform(s)</th><th class="sorting" rowspan="1" colspan="1" style="width: 179px; ">Engine version</th><th class="sorting" rowspan="1" colspan="1" style="width: 129px; ">CSS grade</th></tr>
+					</thead>
+					
+				<tbody>
+                                    <?php if (isset($_smarty_tpl->tpl_vars['danhsachtindang']->value)){?>
+                                    <?php  $_smarty_tpl->tpl_vars['tindang'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tindang']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['danhsachtindang']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['tindang']->key => $_smarty_tpl->tpl_vars['tindang']->value){
+$_smarty_tpl->tpl_vars['tindang']->_loop = true;
+?>
+             
+             <tr class="gradeA odd">
+                     <td class="center"><?php echo $_smarty_tpl->tpl_vars['tindang']->value['NewsID'];?>
+</td>
+							
+                                  <td ><a href="xemtin.php?newsid=<?php echo $_smarty_tpl->tpl_vars['tindang']->value['NewsID'];?>
+"><?php echo $_smarty_tpl->tpl_vars['tindang']->value['Title'];?>
+</td>
+				 <td> <a href="?action=delete&news=<?php echo $_smarty_tpl->tpl_vars['tindang']->value['UserID'];?>
+"> <button class="btn btn-teal" >Xóa</button> </a>	</td>	
+                                    </tr>
+                  
+                  
+                
+                 <?php } ?>  
+                 <?php }?>
+                                               <tr class="gradeA odd">
+							<td class=" sorting_1">Gecko</td>
+							<td>Firefox 1.0</td>
+							<td>Win 98+ / OSX.2+</td>
+							<td class="center">1.7</td>
+							<td class="center">A</td>
+						</tr>
+                                                <tr class="gradeA even">
+							<td class=" sorting_1">Gecko</td>
+							<td>Firefox 1.5</td>
+							<td>Win 98+ / OSX.2+</td>
+							<td class="center">1.8</td>
+							<td class="center">A</td>
+						</tr></tbody>
+                        
+                        </table>
+                        <div class="dataTables_info" id="example_info">Showing 1 to 10 of 57 entries</div>
+                        <div class="dataTables_paginate paging_two_button" id="example_paginate">
+                            <div class="paginate_disabled_previous" title="Previous" id="example_previous"></div>
+                            <div class="paginate_enabled_next" title="Next" id="example_next"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
 
 
 	  
@@ -272,9 +249,9 @@ $(document).keypress(function(e)
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:15:19
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:50:42
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_50698957774e58_07417921')) {function content_50698957774e58_07417921($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506991a26b1b67_76779239')) {function content_506991a26b1b67_76779239($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -287,9 +264,9 @@ $(document).keypress(function(e)
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:15:19
+  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:50:42
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_50698957869648_87595177')) {function content_50698957869648_87595177($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506991a26f5ac1_99298702')) {function content_506991a26f5ac1_99298702($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!-- BEGIN: load jquery -->
 <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /js/jquery-1.6.4.min.js" type="text/javascript"></script>

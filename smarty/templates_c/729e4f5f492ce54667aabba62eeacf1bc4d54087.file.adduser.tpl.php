@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-09-27 00:48:39
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:16:49
          compiled from "..\smarty\templates\styleAdmin\blueadmin\adduser.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:255155062837c0f5742-15481849%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,25 +7,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '729e4f5f492ce54667aabba62eeacf1bc4d54087' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\adduser.tpl',
-      1 => 1348633606,
+      1 => 1349091050,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\layout.tpl',
-      1 => 1348671395,
+      1 => 1349093802,
       2 => 'file',
     ),
     '8a48e3331a7d9f9f03f5e1db17b60f3bf0d666b7' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headcss.tpl',
-      1 => 1348622034,
+      1 => 1349091050,
       2 => 'file',
     ),
     '0fc3d3f5d0caae3f65ebc50f770b3e2d52a1d326' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headjava.tpl',
-      1 => 1348622542,
+      1 => 1349091050,
       2 => 'file',
     ),
   ),
@@ -52,14 +52,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '255155062837c0f5742-15481849');
-content_5063a267e90f38_33297329($_smarty_tpl);
+content_506989b19a8102_55808241($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
  
  <?php /*  Call merged included template "headjava.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '255155062837c0f5742-15481849');
-content_5063a268169711_15490961($_smarty_tpl);
+content_506989b19f6938_85469505($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
  
  
@@ -133,7 +133,7 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
                         <li><a class="menuitem">Quản lý thành viên</a>
                             <ul class="submenu">
                                 <li><a href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
-                                <li><a href="adduser.php">Thêm thành viên</a> </li>
+                                <li><a href="themthanhvien.php">Thêm thành viên</a> </li>
                                 <li><a>Submenu 3</a> </li>
                                 <li><a>Submenu 4</a> </li>
                                 <li><a>Submenu 5</a> </li>
@@ -353,9 +353,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-09-27 00:48:39
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:16:49
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5063a267e90f38_33297329')) {function content_5063a267e90f38_33297329($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\Nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506989b19a8102_55808241')) {function content_506989b19a8102_55808241($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -368,9 +368,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-09-27 00:48:40
+  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:16:49
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5063a268169711_15490961')) {function content_5063a268169711_15490961($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\Nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506989b19f6938_85469505')) {function content_506989b19f6938_85469505($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!-- BEGIN: load jquery -->
 <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /js/jquery-1.6.4.min.js" type="text/javascript"></script>

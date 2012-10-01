@@ -19,6 +19,7 @@
 					</thead>
 					
 				<tbody>
+                                    {if isset($danhsachthanhvien)}
               {foreach from=$danhsachthanhvien item=thanhvien}
              
              <tr class="gradeA odd">
@@ -32,6 +33,7 @@
                   
                 
                  {/foreach}  
+                 {/if}
               <tr class="gradeA even">
 							<td class=" sorting_1">Gecko</td>
 							<td>Firefox 1.5</td>

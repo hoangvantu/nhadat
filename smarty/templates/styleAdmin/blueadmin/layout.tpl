@@ -79,7 +79,7 @@
                         <li><a class="menuitem">Quản lý thành viên</a>
                             <ul class="submenu">
                                 <li><a href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
-                                <li><a href="adduser.php">Thêm thành viên</a> </li>
+                                <li><a href="themthanhvien.php">Thêm thành viên</a> </li>
                                 <li><a>Submenu 3</a> </li>
                                 <li><a>Submenu 4</a> </li>
                                 <li><a>Submenu 5</a> </li>

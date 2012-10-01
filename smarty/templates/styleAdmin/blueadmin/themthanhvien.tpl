@@ -1,5 +1,5 @@
 {extends file="layout.tpl"}
- {block name="content" append}
+ {block name="content" }
  
  <div class="box round first fullpage">
    <h2>Thêm Thành Viên:</h2>
