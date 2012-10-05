@@ -6,6 +6,8 @@ $db = new dbmanager();
 $db->connect();
 require_once "json/JSON.php";
 $json = new Services_JSON();
+if(isset($_POST['action']))
+{
 $action = $_POST['action'];
 $newsid = $_POST['idtin'];
 //convert php object to json 
@@ -31,6 +33,23 @@ if($action=='uptin')
     }
     $output = $json->encode($value);
     print($output);
+}
+
+}
+if(isset($_GET['action']))
+{
+    $action=$_GET['action'];
+if($action=='getquan')
+{
+    if(isset($_GET['provinceid']))
+    {
+        $districtid=$_GET['provinceid'];
+        $sql="SELECT *  FROM  `district` WHERE  `provinceid` =$districtid";
+        $danhsachquan=$db->getAll($sql);
+        $output=json_encode($danhsachquan);
+        print($output);
+    }
+}
 }
 
 ?>

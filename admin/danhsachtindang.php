@@ -9,8 +9,7 @@ if(isset($_GET['action'])&&isset($_GET['newsid']))
     if(($_GET['action']=="delete")&&($_GET['newsid']!=""))
     {
         $newsid=$_GET['newsid'];
-        $sql="DELETE FROM `nhadat`.`news`WHERE`news`.`NewsID`=$newsid";
-        $db->querry($sql);
+        $db->xoanews($newsid);
     }
 }
 $sql="SELECT *  FROM  `news`";

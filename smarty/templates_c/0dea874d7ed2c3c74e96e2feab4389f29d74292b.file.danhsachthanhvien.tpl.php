@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:16:55
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 12:45:23
          compiled from "..\smarty\templates\styleAdmin\blueadmin\danhsachthanhvien.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:159455062f1e7d0cba9-22026813%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,24 +7,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0dea874d7ed2c3c74e96e2feab4389f29d74292b' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\danhsachthanhvien.tpl',
-      1 => 1349091050,
+      1 => 1349095015,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\layout.tpl',
-      1 => 1349093802,
+      1 => 1349441120,
       2 => 'file',
     ),
     '8a48e3331a7d9f9f03f5e1db17b60f3bf0d666b7' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headcss.tpl',
-      1 => 1349091050,
-      2 => 'file',
-    ),
-    '0fc3d3f5d0caae3f65ebc50f770b3e2d52a1d326' => 
-    array (
-      0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headjava.tpl',
       1 => 1349091050,
       2 => 'file',
     ),
@@ -52,15 +46,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '159455062f1e7d0cba9-22026813');
-content_506989b7ecd1c4_63182264($_smarty_tpl);
+content_506ed66366aa00_43708547($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
  
- <?php /*  Call merged included template "headjava.tpl" */
-$_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '159455062f1e7d0cba9-22026813');
-content_506989b7f20618_59908261($_smarty_tpl);
-$_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
+           
  
  
  </head>
@@ -181,6 +171,7 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
 					</thead>
 					
 				<tbody>
+                                    <?php if (isset($_smarty_tpl->tpl_vars['danhsachthanhvien']->value)){?>
               <?php  $_smarty_tpl->tpl_vars['thanhvien'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['thanhvien']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['danhsachthanhvien']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['thanhvien']->key => $_smarty_tpl->tpl_vars['thanhvien']->value){
@@ -203,6 +194,7 @@ $_smarty_tpl->tpl_vars['thanhvien']->_loop = true;
                   
                 
                  <?php } ?>  
+                 <?php }?>
               <tr class="gradeA even">
 							<td class=" sorting_1">Gecko</td>
 							<td>Firefox 1.5</td>
@@ -245,9 +237,9 @@ $_smarty_tpl->tpl_vars['thanhvien']->_loop = true;
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:16:55
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 12:45:23
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506989b7ecd1c4_63182264')) {function content_506989b7ecd1c4_63182264($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506ed66366aa00_43708547')) {function content_506ed66366aa00_43708547($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -260,54 +252,4 @@ $_smarty_tpl->tpl_vars['thanhvien']->_loop = true;
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:16:55
-         compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506989b7f20618_59908261')) {function content_506989b7f20618_59908261($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
-?><!-- BEGIN: load jquery -->
-<script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jquery-1.6.4.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jquery-ui/jquery.ui.core.min.js"></script>
-<script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jquery-ui/jquery.ui.widget.min.js" type="text/javascript"></script>
-<script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jquery-ui/jquery.ui.accordion.min.js" type="text/javascript"></script>
-<script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jquery-ui/jquery.effects.core.min.js" type="text/javascript"></script>
-<script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jquery-ui/jquery.effects.slide.min.js" type="text/javascript"></script>
-<!-- END: load jquery -->
-<!-- BEGIN: load jqplot -->
-<link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/css/jquery.jqplot.min.css" />
-<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jqPlot/excanvas.min.js"></script><![endif]-->
-<script language="javascript" type="text/javascript" src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jqPlot/jquery.jqplot.min.js"></script>
-
-<script language="javascript" type="text/javascript" src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jqPlot/plugins/jqplot.barRenderer.min.js"></script>
-<script language="javascript" type="text/javascript" src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jqPlot/plugins/jqplot.pieRenderer.min.js"></script>
-<script language="javascript" type="text/javascript" src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jqPlot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
-<script language="javascript" type="text/javascript" src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jqPlot/plugins/jqplot.highlighter.min.js"></script>
-<script language="javascript" type="text/javascript" src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/jqPlot/plugins/jqplot.pointLabels.min.js"></script>
-<!-- END: load jqplot -->
-
-<script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/js/setup.js" type="text/javascript"></script>
-
- <script type="text/javascript">
-         
-    $(document).ready(function () 
-    {
-        setupLeftMenu();
-        setSidebarHeight();
-           
-           
-    });
- </script>
-<?php }} ?>
+  <?php }} ?>

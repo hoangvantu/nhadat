@@ -1,19 +1,19 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 12:43:40
-         compiled from "..\smarty\templates\styleAdmin\blueadmin\danhsachtindang.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:96050698c7eb50174-09364756%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 13:29:57
+         compiled from "..\smarty\templates\styleAdmin\blueadmin\themtindang.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:6072506ed32bde1ff8-44359923%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'c26e162a221e609c8d33aaa58247aa4c259e24be' => 
+    '7954bc6e35673394399013fac15f5a4a88060e79' => 
     array (
-      0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\danhsachtindang.tpl',
-      1 => 1349440364,
+      0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\themtindang.tpl',
+      1 => 1349443796,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\layout.tpl',
-      1 => 1349093802,
+      1 => 1349441154,
       2 => 'file',
     ),
     '8a48e3331a7d9f9f03f5e1db17b60f3bf0d666b7' => 
@@ -29,19 +29,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '96050698c7eb50174-09364756',
+  'nocache_hash' => '6072506ed32bde1ff8-44359923',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_50698c7ece0050_00911541',
+  'unifunc' => 'content_506ed32bf3ad18_84598198',
   'variables' => 
   array (
     'page_title' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_50698c7ece0050_00911541')) {function content_50698c7ece0050_00911541($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php if ($_valid && !is_callable('content_506ed32bf3ad18_84598198')) {function content_506ed32bf3ad18_84598198($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -51,17 +51,88 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '96050698c7eb50174-09364756');
-content_506ed5fcb50d23_03656993($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '6072506ed32bde1ff8-44359923');
+content_506ee0d5634fd0_11191382($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
  
- <?php /*  Call merged included template "headjava.tpl" */
+            <?php /*  Call merged included template "headjava.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '96050698c7eb50174-09364756');
-content_506ed5fcb95571_52533343($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '6072506ed32bde1ff8-44359923');
+content_506ee0d5678702_16280274($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
  
+<script type="text/javascript" src="../jscripts/tiny_mce/tiny_mce.js"></script>
+
+<script type="text/javascript">
+	tinyMCE.init({
+		// General options
+		mode : "textareas",
+		theme : "advanced",
+		plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave,visualblocks",
+
+		// Theme options
+		theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
+		theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+		theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+		theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,restoredraft,visualblocks",
+		theme_advanced_toolbar_location : "top",
+		theme_advanced_toolbar_align : "left",
+		theme_advanced_statusbar_location : "bottom",
+		theme_advanced_resizing : true,
+
+		// Example content CSS (should be your site CSS)
+		content_css : "css/content.css",
+
+		// Drop lists for link/image/media/template dialogs
+		template_external_list_url : "lists/template_list.js",
+		external_link_list_url : "lists/link_list.js",
+		external_image_list_url : "lists/image_list.js",
+		media_external_list_url : "lists/media_list.js",
+
+		// Style formats
+		style_formats : [
+			{title : 'Bold text', inline : 'b'},
+			{title : 'Red text', inline : 'span', styles : {color : '#ff0000'}},
+			{title : 'Red header', block : 'h1', styles : {color : '#ff0000'}},
+			{title : 'Example 1', inline : 'span', classes : 'example1'},
+			{title : 'Example 2', inline : 'span', classes : 'example2'},
+			{title : 'Table styles'},
+			{title : 'Table row 1', selector : 'tr', classes : 'tablerow1'}
+		],
+
+		// Replace values for the template plugin
+		template_replace_values : {
+			username : "Some User",
+			staffid : "991234"
+		}
+	});
+            
+            
+            
+</script>
+<script type="text/javascript">
+
+function getquan(provinceid)
+     {
+         
+   // if(!confirm('Bạn có chắc muốn xóa không?')){return false};
+    $.get("../ajax_request.php1?action=getquan&provinceid=provinceid",
+    function(data) 
+    {
+       
+        for(var key in data) {
+       alert(data[key].districtname);
+        }
+       
+    }
+     ,"json")
+	
+     }
+</script>
+
+
+
  
  </head>
  <body>
@@ -170,70 +241,60 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
 
  <div class="box round first grid">
                 <h2>
-                    Danh sách tin đăng</h2>
-                <div class="block">
-                    
-                    
-                    
-                    <div class="dataTables_wrapper" id="example_wrapper"><div id="example_length" class="dataTables_length"><label>Show <select size="1" name="example_length"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div class="dataTables_filter" id="example_filter"><label>Search: <input type="text"></label></div><table class="data display datatable" id="example">
-					<thead>
-						<tr><th class="sorting_asc" rowspan="1" colspan="1" style="width: 213px; ">Rendering engine</th><th class="sorting" rowspan="1" colspan="1" style="width: 265px; ">Browser</th><th class="sorting" rowspan="1" colspan="1" style="width: 249px; ">Platform(s)</th><th class="sorting" rowspan="1" colspan="1" style="width: 179px; ">Engine version</th><th class="sorting" rowspan="1" colspan="1" style="width: 129px; ">CSS grade</th></tr>
-					</thead>
-					
-				<tbody>
-                                    <?php if (isset($_smarty_tpl->tpl_vars['danhsachtindang']->value)){?>
-                                    <?php  $_smarty_tpl->tpl_vars['tindang'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tindang']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['danhsachtindang']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['tindang']->key => $_smarty_tpl->tpl_vars['tindang']->value){
-$_smarty_tpl->tpl_vars['tindang']->_loop = true;
-?>
-             
-             <tr class="gradeA odd">
-                     <td class="center"><?php echo $_smarty_tpl->tpl_vars['tindang']->value['NewsID'];?>
-</td>
-							
-                                  <td ><a href="xemtin.php?newsid=<?php echo $_smarty_tpl->tpl_vars['tindang']->value['NewsID'];?>
-"><?php echo $_smarty_tpl->tpl_vars['tindang']->value['Title'];?>
-</td>
-				 <td> <a href="?action=delete&newsid=<?php echo $_smarty_tpl->tpl_vars['tindang']->value['NewsID'];?>
-"> <button class="btn btn-teal" >Xóa</button> </a>	</td>	
-                                            
-                                    
-                                    </tr>
-                  
-                  
-                
-                 <?php } ?>  
-                 <?php }?>
-                                               <tr class="gradeA odd">
-							<td class=" sorting_1">Gecko</td>
-							<td>Firefox 1.0</td>
-							<td>Win 98+ / OSX.2+</td>
-							<td class="center">1.7</td>
-							<td class="center">A</td>
-						</tr>
-                                                <tr class="gradeA even">
-							<td class=" sorting_1">Gecko</td>
-							<td>Firefox 1.5</td>
-							<td>Win 98+ / OSX.2+</td>
-							<td class="center">1.8</td>
-							<td class="center">A</td>
-						</tr></tbody>
+                    Thêm Tin Đăng</h2>
+                <div class="block ">
+                    <form>
+                    <table class="form">
+                        <tbody>
+                            <tr>
+                            <td class="col1">
+                                <label>
+                                    Tiêu đề</label>
+                            </td>
+                            <td class="col2">
+                                <input type="text" name="txtTitle" id="grumble">
+                            </td>
+                        </tr>
+                        <tr>
+                       <td>  <label>Nội dung</label></td>
+                         <td> <textarea name="content" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea></td>
                         
-                        </table>
-                        <div class="dataTables_info" id="example_info">Showing 1 to 10 of 57 entries</div>
-                        <div class="dataTables_paginate paging_two_button" id="example_paginate">
-                            <div class="paginate_disabled_previous" title="Previous" id="example_previous"></div>
-                            <div class="paginate_enabled_next" title="Next" id="example_next"></div>
-                        </div>
-                    </div>
-                    
-                    
-                    
+                        </tr>
+                        <tr>
+                        <td><label>Tỉnh</label></td>
+                        <td>
+                            <select onchange="javascript: return  getquan(this);">
+                                <?php if (isset($_smarty_tpl->tpl_vars['danhsachtinh']->value)){?>
+                                    <?php  $_smarty_tpl->tpl_vars['tinh'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tinh']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['danhsachtinh']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['tinh']->key => $_smarty_tpl->tpl_vars['tinh']->value){
+$_smarty_tpl->tpl_vars['tinh']->_loop = true;
+?>
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['tinh']->value['ProvinceID'];?>
+"><?php echo $_smarty_tpl->tpl_vars['tinh']->value['ProvinceName'];?>
+</option>
+                                <?php } ?>
+                                <?php }?>
+                            </select>
+                        
+                        
+                        </td>
+                        </tr>
+                        <tr>
+                            <td><label>Quận/Huyện</label></td>
+                            <td>
+                            <select>
+                                <option>1</option>
+                            
+                            </select>
+                            </td>
+                        
+                        </tr>
+                       
+                    </tbody></table>
+                    </form>
                 </div>
-            </div>
-
-
+  
 	  
             </div>
         </div>
@@ -251,9 +312,9 @@ $_smarty_tpl->tpl_vars['tindang']->_loop = true;
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 12:43:40
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 13:29:57
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506ed5fcb50d23_03656993')) {function content_506ed5fcb50d23_03656993($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506ee0d5634fd0_11191382')) {function content_506ee0d5634fd0_11191382($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -266,9 +327,9 @@ $_smarty_tpl->tpl_vars['tindang']->_loop = true;
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 12:43:40
+  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 13:29:57
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506ed5fcb95571_52533343')) {function content_506ed5fcb95571_52533343($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506ee0d5678702_16280274')) {function content_506ee0d5678702_16280274($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!-- BEGIN: load jquery -->
 <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /js/jquery-1.6.4.min.js" type="text/javascript"></script>

@@ -6,8 +6,8 @@
 
 
  <div class="box round first grid">
-                <h2>;
-                    Danh Sách Tin Đăng</h2>
+                <h2>
+                    Danh sách tin đăng</h2>
                 <div class="block">
                     
                     

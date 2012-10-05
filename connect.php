@@ -65,6 +65,12 @@ class dbmanager {
    return false;
   }
  }
+ function xoanews($newsid)
+ {
+    
+        $sql="DELETE FROM `nhadat`.`news`WHERE`news`.`NewsID`=$newsid";
+        $this->querry($sql);
+ }
 
  /**
   * 

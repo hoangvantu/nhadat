@@ -8,7 +8,7 @@
 {include file="headcss.tpl"}
  {/block}
  {block name="headjava"}
- {include file="headjava.tpl"}
+            {include file="headjava.tpl"}
  {/block}
  
  </head>
