@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:50:42
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 11:34:53
          compiled from "..\smarty\templates\styleAdmin\blueadmin\danhsachtindang.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:96050698c7eb50174-09364756%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c26e162a221e609c8d33aaa58247aa4c259e24be' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\danhsachtindang.tpl',
-      1 => 1349095840,
+      1 => 1349436890,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
@@ -52,14 +52,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '96050698c7eb50174-09364756');
-content_506991a26b1b67_76779239($_smarty_tpl);
+content_506ec5dd56ab13_29156431($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
  
  <?php /*  Call merged included template "headjava.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '96050698c7eb50174-09364756');
-content_506991a26f5ac1_99298702($_smarty_tpl);
+content_506ec5dd671973_54293873($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
  
  
@@ -195,8 +195,10 @@ $_smarty_tpl->tpl_vars['tindang']->_loop = true;
                                   <td ><a href="xemtin.php?newsid=<?php echo $_smarty_tpl->tpl_vars['tindang']->value['NewsID'];?>
 "><?php echo $_smarty_tpl->tpl_vars['tindang']->value['Title'];?>
 </td>
-				 <td> <a href="?action=delete&news=<?php echo $_smarty_tpl->tpl_vars['tindang']->value['UserID'];?>
+				 <td> <a href="?action=delete&newsid=<?php echo $_smarty_tpl->tpl_vars['tindang']->value['NewsID'];?>
 "> <button class="btn btn-teal" >Xóa</button> </a>	</td>	
+                                            
+                                    
                                     </tr>
                   
                   
@@ -249,9 +251,9 @@ $_smarty_tpl->tpl_vars['tindang']->_loop = true;
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:50:42
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 11:34:53
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506991a26b1b67_76779239')) {function content_506991a26b1b67_76779239($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506ec5dd56ab13_29156431')) {function content_506ec5dd56ab13_29156431($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -264,9 +266,9 @@ $_smarty_tpl->tpl_vars['tindang']->_loop = true;
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:50:42
+  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 11:34:53
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506991a26f5ac1_99298702')) {function content_506991a26f5ac1_99298702($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506ec5dd671973_54293873')) {function content_506ec5dd671973_54293873($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!-- BEGIN: load jquery -->
 <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /js/jquery-1.6.4.min.js" type="text/javascript"></script>

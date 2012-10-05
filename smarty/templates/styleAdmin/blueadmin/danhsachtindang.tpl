@@ -25,7 +25,9 @@
                      <td class="center">{$tindang.NewsID}</td>
 							
                                   <td ><a href="xemtin.php?newsid={$tindang.NewsID}">{$tindang.Title}</td>
-				 <td> <a href="?action=delete&news={$tindang.UserID}"> <button class="btn btn-teal" >Xóa</button> </a>	</td>	
+				 <td> <a href="?action=delete&newsid={$tindang.NewsID}"> <button class="btn btn-teal" >Xóa</button> </a>	</td>	
+                                            
+                                    
                                     </tr>
                   
                   
