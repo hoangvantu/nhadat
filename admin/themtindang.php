@@ -14,10 +14,11 @@ $qlgiaodien->assign('page_title', 'Thêm tin đăng');
 $sql="SELECT * FROM  `province` ";
 $danhsachtinh=$db->getAll($sql);
 $qlgiaodien->assign('danhsachtinh',$danhsachtinh);
-
-
-
-
-
+$sql="SELECT * FROM  `loainha` ";
+$danhsachloainha=$db->getAll($sql);
+$qlgiaodien->assign('danhsachloainha',$danhsachloainha);
+$sql="SELECT * FROM  `khunggia` ";
+$danhsachkhunggia=$db->getAll($sql);
+$qlgiaodien->assign('danhsachkhunggia',$danhsachkhunggia);
 $qlgiaodien->display("themtindang.tpl")
 ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 13:29:57
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 09:10:35
          compiled from "..\smarty\templates\styleAdmin\blueadmin\themtindang.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6072506ed32bde1ff8-44359923%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,25 +7,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7954bc6e35673394399013fac15f5a4a88060e79' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\themtindang.tpl',
-      1 => 1349443796,
+      1 => 1349514621,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\layout.tpl',
-      1 => 1349441154,
+      1 => 1349448018,
       2 => 'file',
     ),
     '8a48e3331a7d9f9f03f5e1db17b60f3bf0d666b7' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headcss.tpl',
-      1 => 1349091050,
+      1 => 1349448012,
       2 => 'file',
     ),
     '0fc3d3f5d0caae3f65ebc50f770b3e2d52a1d326' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headjava.tpl',
-      1 => 1349091050,
+      1 => 1349448012,
       2 => 'file',
     ),
   ),
@@ -41,7 +41,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_506ed32bf3ad18_84598198')) {function content_506ed32bf3ad18_84598198($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php if ($_valid && !is_callable('content_506ed32bf3ad18_84598198')) {function content_506ed32bf3ad18_84598198($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -52,84 +53,116 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '6072506ed32bde1ff8-44359923');
-content_506ee0d5634fd0_11191382($_smarty_tpl);
+content_506ff58b75be52_65811623($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
+<!-- Bootstrap CSS Toolkit styles -->
+<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap.min.css">
+<!-- Generic page styles -->
+<link rel="stylesheet" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
+/upload/css/style.css">
+<!-- Bootstrap styles for responsive website layout, supporting different screen sizes -->
+<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css">
+<!-- Bootstrap CSS fixes for IE6 -->
+<!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
+<!-- Bootstrap Image Gallery styles -->
+
+<link rel="stylesheet" href="http://blueimp.github.com/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css">
+<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+<link rel="stylesheet" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
+/upload/css/jquery.fileupload-ui.css">
+<!-- Shim to make HTML5 elements usable in older Internet Explorer versions -->
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+
+
  
             <?php /*  Call merged included template "headjava.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '6072506ed32bde1ff8-44359923');
-content_506ee0d5678702_16280274($_smarty_tpl);
+content_506ff58ba4a089_19815887($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
  
 <script type="text/javascript" src="../jscripts/tiny_mce/tiny_mce.js"></script>
 
-<script type="text/javascript">
-	tinyMCE.init({
-		// General options
-		mode : "textareas",
-		theme : "advanced",
-		plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave,visualblocks",
+  
+ 
+ 
+ 
+  <!--Tiny MCE Intializing -->
+ <script type="text/javascript">
+    tinyMCE.init({
+       // General options
+       mode : "textareas",
+       theme : "advanced",
+       plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave,visualblocks",
+        
+       // Theme options
+       theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
+       theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+       theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+       theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,restoredraft,visualblocks",
+       theme_advanced_toolbar_location : "top",
+       theme_advanced_toolbar_align : "left",
+       theme_advanced_statusbar_location : "bottom",
+       theme_advanced_resizing : true,
 
-		// Theme options
-		theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
-		theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
-		theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
-		theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,restoredraft,visualblocks",
-		theme_advanced_toolbar_location : "top",
-		theme_advanced_toolbar_align : "left",
-		theme_advanced_statusbar_location : "bottom",
-		theme_advanced_resizing : true,
+       // Example content CSS (should be your site CSS)
+       content_css : "css/content.css",
 
-		// Example content CSS (should be your site CSS)
-		content_css : "css/content.css",
+       // Drop lists for link/image/media/template dialogs
+       template_external_list_url : "lists/template_list.js",
+       external_link_list_url : "lists/link_list.js",
+       external_image_list_url : "lists/image_list.js",
+       media_external_list_url : "lists/media_list.js",
 
-		// Drop lists for link/image/media/template dialogs
-		template_external_list_url : "lists/template_list.js",
-		external_link_list_url : "lists/link_list.js",
-		external_image_list_url : "lists/image_list.js",
-		media_external_list_url : "lists/media_list.js",
+       // Style formats
+       style_formats : [
+          {title : 'Bold text', inline : 'b'},
+          {title : 'Red text', inline : 'span', styles : {color : '#ff0000'}},
+          {title : 'Red header', block : 'h1', styles : {color : '#ff0000'}},
+          {title : 'Example 1', inline : 'span', classes : 'example1'},
+          {title : 'Example 2', inline : 'span', classes : 'example2'},
+          {title : 'Table styles'},
+          {title : 'Table row 1', selector : 'tr', classes : 'tablerow1'}
+       ],
 
-		// Style formats
-		style_formats : [
-			{title : 'Bold text', inline : 'b'},
-			{title : 'Red text', inline : 'span', styles : {color : '#ff0000'}},
-			{title : 'Red header', block : 'h1', styles : {color : '#ff0000'}},
-			{title : 'Example 1', inline : 'span', classes : 'example1'},
-			{title : 'Example 2', inline : 'span', classes : 'example2'},
-			{title : 'Table styles'},
-			{title : 'Table row 1', selector : 'tr', classes : 'tablerow1'}
-		],
-
-		// Replace values for the template plugin
-		template_replace_values : {
-			username : "Some User",
-			staffid : "991234"
-		}
-	});
+       // Replace values for the template plugin
+       template_replace_values : {
+          username : "Some User",
+          staffid : "991234"
+       }
+    });
             
-            
-            
-</script>
-<script type="text/javascript">
+ </script>
 
-function getquan(provinceid)
-     {
-         
-   // if(!confirm('Bạn có chắc muốn xóa không?')){return false};
-    $.get("../ajax_request.php1?action=getquan&provinceid=provinceid",
-    function(data) 
-    {
+   <!-- AJAX -->
+ <script type="text/javascript">
+      $(document).ready(function(){
+      $.getJSON('../ajax_request.php' ,{action:'getquan',provinceid:$(".province").val()},function(data){
+               $.each(data, function(index) {
+               // alert(data[index].districtid);
+               $(".district").append("<option value=\""+data[index].districtid+"\">"+data[index].districtname+"</option>");
+          });
+
+}); 
        
-        for(var key in data) {
-       alert(data[key].districtname);
-        }
-       
-    }
-     ,"json")
-	
-     }
-</script>
+      $(".province").change(function(data)
+         {
+            $(".district").empty();
+            $.getJSON('../ajax_request.php' ,{action:'getquan',provinceid:$(this).val()},function(data){
+               $.each(data, function(index) {
+               // alert(data[index].districtid);
+               $(".district").append("<option value=\""+data[index].districtid+"\">"+data[index].districtname+"</option>");
+          });
+
+});
+            
+         }
+         );
+});
+   
+ </script>
 
 
 
@@ -239,62 +272,178 @@ function getquan(provinceid)
 
 
 
- <div class="box round first grid">
-                <h2>
-                    Thêm Tin Đăng</h2>
-                <div class="block ">
-                    <form>
-                    <table class="form">
-                        <tbody>
-                            <tr>
-                            <td class="col1">
-                                <label>
-                                    Tiêu đề</label>
-                            </td>
-                            <td class="col2">
-                                <input type="text" name="txtTitle" id="grumble">
-                            </td>
-                        </tr>
-                        <tr>
-                       <td>  <label>Nội dung</label></td>
-                         <td> <textarea name="content" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea></td>
-                        
-                        </tr>
-                        <tr>
-                        <td><label>Tỉnh</label></td>
-                        <td>
-                            <select onchange="javascript: return  getquan(this);">
-                                <?php if (isset($_smarty_tpl->tpl_vars['danhsachtinh']->value)){?>
-                                    <?php  $_smarty_tpl->tpl_vars['tinh'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tinh']->_loop = false;
+<div class="box round first grid">
+ <h2>
+  Thêm Tin Đăng</h2>
+ <div class="block ">
+  <form id="fileupload" action="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
+/upload/server/php/" method="POST" enctype="multipart/form-data">
+        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+        <div class="row fileupload-buttonbar">
+            <div class="span7">
+                <!-- The fileinput-button span is used to style the file input field as button -->
+                <span class="btn btn-success fileinput-button">
+                    <i class="icon-plus icon-white"></i>
+                    <span>Add files...</span>
+                    <input type="file" name="files[]" multiple>
+                </span>
+                <button type="submit" class="btn btn-primary start">
+                    <i class="icon-upload icon-white"></i>
+                    <span>Start upload</span>
+                </button>
+                <button type="reset" class="btn btn-warning cancel">
+                    <i class="icon-ban-circle icon-white"></i>
+                    <span>Cancel upload</span>
+                </button>
+                <button type="button" class="btn btn-danger delete">
+                    <i class="icon-trash icon-white"></i>
+                    <span>Delete</span>
+                </button>
+                <input type="checkbox" class="toggle">
+            </div>
+            <!-- The global progress information -->
+            <div class="span5 fileupload-progress fade">
+                <!-- The global progress bar -->
+                <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    <div class="bar" style="width:0%;"></div>
+                </div>
+                <!-- The extended global progress information -->
+                <div class="progress-extended">&nbsp;</div>
+            </div>
+        </div>
+        <!-- The loading indicator is shown during file processing -->
+        <div class="fileupload-loading"></div>
+        <br>
+        <!-- The table listing the files available for upload/download -->
+        <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
+    </form>
+  <form>
+   <table class="form">
+    <tbody>
+     <tr>
+      <td class="col1">
+       <label>
+        Tiêu đề</label>
+      </td>
+      <td class="col2">
+       <input type="text" name="txtTitle" id="grumble">
+      </td>
+     </tr>
+     <tr>
+      <td>  <label>Nội dung</label></td>
+      <td> <textarea name="content" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea></td>
+
+     </tr>
+     <tr>
+      <td><label>Tỉnh</label></td>
+      <td>
+       <select class="province" value="112">
+        <?php if (isset($_smarty_tpl->tpl_vars['danhsachtinh']->value)){?>
+         <?php  $_smarty_tpl->tpl_vars['tinh'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tinh']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['danhsachtinh']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['tinh']->key => $_smarty_tpl->tpl_vars['tinh']->value){
 $_smarty_tpl->tpl_vars['tinh']->_loop = true;
 ?>
-                                <option value="<?php echo $_smarty_tpl->tpl_vars['tinh']->value['ProvinceID'];?>
+          <option value="<?php echo $_smarty_tpl->tpl_vars['tinh']->value['ProvinceID'];?>
 "><?php echo $_smarty_tpl->tpl_vars['tinh']->value['ProvinceName'];?>
 </option>
-                                <?php } ?>
-                                <?php }?>
-                            </select>
-                        
-                        
-                        </td>
-                        </tr>
-                        <tr>
-                            <td><label>Quận/Huyện</label></td>
-                            <td>
-                            <select>
-                                <option>1</option>
-                            
-                            </select>
-                            </td>
-                        
-                        </tr>
-                       
-                    </tbody></table>
-                    </form>
-                </div>
-  
+         <?php } ?>
+        <?php }?>
+       </select>
+
+
+      </td>
+     </tr>
+     <tr>
+      <td><label>Quận/Huyện</label></td>
+      <td>
+       <select class="district">
+       
+
+       </select>
+      </td>
+
+     </tr>
+     <tr>
+      <td><label>Loại nhà</label></td>
+      <td>
+       <select class="province" value="112">
+        <?php if (isset($_smarty_tpl->tpl_vars['danhsachloainha']->value)){?>
+         <?php  $_smarty_tpl->tpl_vars['loainha'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['loainha']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['danhsachloainha']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['loainha']->key => $_smarty_tpl->tpl_vars['loainha']->value){
+$_smarty_tpl->tpl_vars['loainha']->_loop = true;
+?>
+          <option value="<?php echo $_smarty_tpl->tpl_vars['loainha']->value['LoainhaID'];?>
+"><?php echo $_smarty_tpl->tpl_vars['loainha']->value['TenLoaiNha'];?>
+</option>
+         <?php } ?>
+        <?php }?>
+       </select>
+
+
+      </td>
+     </tr>
+     <tr>
+      <td><label>Khung giá</label></td>
+      <td>
+       <select class="province" value="112">
+        <?php if (isset($_smarty_tpl->tpl_vars['danhsachkhunggia']->value)){?>
+         <?php  $_smarty_tpl->tpl_vars['khunggia'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['khunggia']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['danhsachkhunggia']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['khunggia']->key => $_smarty_tpl->tpl_vars['khunggia']->value){
+$_smarty_tpl->tpl_vars['khunggia']->_loop = true;
+?>
+          <option value="<?php echo $_smarty_tpl->tpl_vars['khunggia']->value['khunggiaid'];?>
+"><?php echo $_smarty_tpl->tpl_vars['khunggia']->value['KhungGiaName'];?>
+</option>
+         <?php } ?>
+        <?php }?>
+       </select>
+
+
+      </td>
+     </tr>
+      <tr>
+      <td class="col1">
+       <label>
+         Địa chỉ</label>
+      </td>
+      <td class="col2">
+       <input type="text" name="txtTitle" id="grumble">
+      </td>
+     </tr>
+     <tr>
+      <td class="col1">
+       <label>
+       Giá nhà (viết bằng chữ)</label>
+      </td>
+      <td class="col2">
+       <input type="text" name="txtTitle" id="grumble">
+      </td>
+     </tr>
+     <tr>
+      <td class="col1">
+       <label>
+       Tọa độ x</label>
+      </td>
+      <td class="col2">
+       <input type="text" name="txtTitle" id="grumble">
+      </td>
+     </tr>
+     <tr>
+      <td class="col1">
+       <label>
+        Tọa độ y</label>
+      </td>
+      <td class="col2">
+       <input type="text" name="txtTitle" id="grumble">
+      </td>
+     </tr>
+    </tbody></table>
+  </form>
+ </div>
+ 
 	  
             </div>
         </div>
@@ -312,9 +461,9 @@ $_smarty_tpl->tpl_vars['tinh']->_loop = true;
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 13:29:57
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 09:10:35
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506ee0d5634fd0_11191382')) {function content_506ee0d5634fd0_11191382($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506ff58b75be52_65811623')) {function content_506ff58b75be52_65811623($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -327,9 +476,9 @@ $_smarty_tpl->tpl_vars['tinh']->_loop = true;
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-05 13:29:57
+  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 09:10:35
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506ee0d5678702_16280274')) {function content_506ee0d5678702_16280274($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_506ff58ba4a089_19815887')) {function content_506ff58ba4a089_19815887($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!-- BEGIN: load jquery -->
 <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /js/jquery-1.6.4.min.js" type="text/javascript"></script>
