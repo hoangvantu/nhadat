@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 01, 2012 at 12:08 PM
+-- Generation Time: Oct 06, 2012 at 11:07 AM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.4.3
 
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `district` (
 INSERT INTO `district` (`districtid`, `districtname`, `provinceid`) VALUES
 (1, 'Hai Bà Trưng', 1),
 (2, 'Hoàng Mai', 1),
-(3, 'Thanh Xuân', 1);
+(3, 'Thanh Xuân', 2);
 
 -- --------------------------------------------------------
 
@@ -130,14 +130,14 @@ CREATE TABLE IF NOT EXISTS `loainhucau` (
   KEY `nhucauid_13` (`nhucauid`),
   KEY `nhucauid_14` (`nhucauid`),
   KEY `nhucauid_15` (`nhucauid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `loainhucau`
 --
 
 INSERT INTO `loainhucau` (`nhucauid`, `nhucauname`) VALUES
-(1, 'Cần bán');
+(2, 'can ban');
 
 -- --------------------------------------------------------
 
@@ -170,21 +170,14 @@ CREATE TABLE IF NOT EXISTS `news` (
   KEY `nhucauid_2` (`nhucauid`),
   KEY `khunggia` (`khunggia`),
   KEY `loainhaid` (`loainhaid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
 
 --
 -- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`NewsID`, `Title`, `Content`, `TimeAction`, `DistrictID`, `UserID`, `Display`, `ViewCount`, `PhoneNumber`, `loainhaid`, `nhucauid`, `khunggia`, `address`, `GiaNha`, `lat`, `lng`) VALUES
-(9, 'Cho thuê phong tro sinh vien khu Khương Đình chính chủ, Khương Đình, Quận Thanh Xuân Hà nội\n', 'Cho thuê phòng trọ Khương Đình, Thanh Xuân. Địa chỉ: Khương Đình, Thanh Xuân, Hà Nội (cách ngã 4 Sở khoảng 1km). Mình có phòng trọ 1.5tr/tháng (dạng chung cư mini, khep kín, mới xây, điện nước theo giá nhà nước...nói chung là tốt). Mình đang ở một mình, muốn thêm một bạn nử nữa ở cùng mình cho vui và chia sẻ tiền nhà (mỗi người 750.000/tháng). Liên hệ: 0972943806\n', '2012-09-26 16:47:00', 2, 1, 0, 178, '1212121', 1, 1, 1, 'Số 57 ngõ 11 tổ 82 Hoàng Văn Thái, Khương Trung, Quận Thanh Xuân\n', '1,5 trieu / thang', 21.002354, 105.870026),
-(10, 'Tieu de 21', 'http://farm8.static.flickr.com/7074/7151890791_5d7df30d88_m.jpg\r\nTieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21Tieu de 21', '2012-09-26 16:47:45', 2, 4, 1, 2, '', 1, 1, 1, '', '', 0.000000, 0.000000),
-(12, 'tieu de', 'noi dung', '2012-09-26 16:47:47', 1, 3, 1, 0, '', 1, 1, 1, '', '', 0.000000, 0.000000),
-(13, 'tieu de', 'noi dung', '2012-09-26 16:47:51', 1, 3, 1, 0, '', 1, 1, 1, '', '', 0.000000, 0.000000),
-(14, 'Tieu de tin dang', 'Noi dung tin dang', '2012-09-26 16:50:00', 1, 3, 1, 0, '', 1, 1, 1, '', '', 0.000000, 0.000000),
-(15, 'Tieu de tin dang', 'Tieu de tin dang', '2012-09-26 16:51:31', 2, 3, 0, 0, '12121212', 1, 1, 1, '', NULL, NULL, NULL),
-(16, 'Tieu de tin dang', 'Tieu de tin dang', '2012-09-26 16:52:25', 1, 1, 1, 1, '1', 1, 1, 1, '1111111111', '11111111111111111111111', 10000.000000, 10000.000000),
-(17, 'Tieu de tin dang', 'Tieu de tin dang', '2012-09-26 16:52:45', 1, 1, 1, 1, '1', 1, 1, 1, '1111111111', '11111111111111111111111', 10000.000000, 10000.000000);
+(36, '2323', '32323232', '2012-10-06 08:41:16', 1, 1, 0, 0, '2323233232', 1, 2, 1, '232323323232', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -211,14 +204,15 @@ CREATE TABLE IF NOT EXISTS `province` (
   `ProvinceID` int(11) NOT NULL AUTO_INCREMENT,
   `ProvinceName` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ProvinceID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `province`
 --
 
 INSERT INTO `province` (`ProvinceID`, `ProvinceName`) VALUES
-(1, 'Hà Nội');
+(1, 'Hà Nội'),
+(2, 'TP Ho Chi Minh');
 
 -- --------------------------------------------------------
 
@@ -231,24 +225,25 @@ CREATE TABLE IF NOT EXISTS `user` (
   `Email` varchar(50) CHARACTER SET latin1 NOT NULL,
   `Password` varchar(50) CHARACTER SET latin1 NOT NULL,
   `Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `EmailList` tinyint(1) NOT NULL,
   `Telephone` varchar(12) CHARACTER SET latin1 NOT NULL,
+  `EmailHide` tinyint(1) NOT NULL,
   `TimeRegister` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `active` tinyint(1) NOT NULL,
   `activestring` varchar(50) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`UserID`, `Email`, `Password`, `Name`, `Telephone`, `TimeRegister`, `active`, `activestring`) VALUES
-(1, 'hoangvantu', 'homendvn', '22', '22', '2012-09-27 00:53:26', 0, '0'),
-(3, 'hoangvantundvn@gmail.com1', 'matkhautest', 'HOMENDVN', '0973341574', '2012-09-26 12:31:47', 0, '0'),
-(4, 'hoangvantundvn@gmail.com', 'homendvn', 'homendvn', '0973341574', '0000-00-00 00:00:00', 0, '0'),
-(5, 'thanhcut@gmail.com', 'thanhancut', 'thanhcut', '12121221', '2012-10-01 11:58:35', 0, ''),
-(6, 'thanhcut@gmail.com', 'thanhancut', 'thanhcut', '12121221', '2012-10-01 11:59:00', 1, ''),
-(7, 'hoangvantundvn@gmail.com', 'homendvn', 'hoang van tu', '123123123123', '2012-10-01 12:05:44', 1, '');
+INSERT INTO `user` (`UserID`, `Email`, `Password`, `Name`, `EmailList`, `Telephone`, `EmailHide`, `TimeRegister`, `active`, `activestring`) VALUES
+(1, 'hoangvantu', 'homendvn', '22', 0, '22', 1, '2012-09-27 00:53:26', 0, '0'),
+(3, 'hoangvantundvn@gmail.com1', 'matkhautest', 'HOMENDVN', 1, '0973341574', 0, '2012-09-26 12:31:47', 0, '0'),
+(4, 'hoangvantundvn@gmail.com', 'homendvn', 'homendvn', 1, '0973341574', 0, '0000-00-00 00:00:00', 0, '0'),
+(5, 'hoangvantundvn@gmail.com', 'vietnammobile', 'hoangvantu', 0, '0973341574', 0, '2012-10-06 08:48:35', 1, ''),
+(6, 'hoangvantundvn@gmail.com', 'vietnammobile', 'hoangvantu', 0, '0973341574', 0, '2012-10-06 08:52:10', 1, '');
 
 --
 -- Constraints for dumped tables
@@ -264,11 +259,11 @@ ALTER TABLE `district`
 -- Constraints for table `news`
 --
 ALTER TABLE `news`
-  ADD CONSTRAINT `news_ibfk_1` FOREIGN KEY (`DistrictID`) REFERENCES `district` (`districtid`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `news_ibfk_2` FOREIGN KEY (`UserID`) REFERENCES `user` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `news_ibfk_3` FOREIGN KEY (`nhucauid`) REFERENCES `news` (`nhucauid`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `news_ibfk_4` FOREIGN KEY (`khunggia`) REFERENCES `khunggia` (`khunggiaid`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `news_ibfk_5` FOREIGN KEY (`loainhaid`) REFERENCES `loainha` (`LoainhaID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `news_ibfk_1` FOREIGN KEY (`khunggia`) REFERENCES `khunggia` (`khunggiaid`),
+  ADD CONSTRAINT `news_ibfk_2` FOREIGN KEY (`nhucauid`) REFERENCES `loainhucau` (`nhucauid`),
+  ADD CONSTRAINT `news_ibfk_3` FOREIGN KEY (`DistrictID`) REFERENCES `district` (`districtid`),
+  ADD CONSTRAINT `news_ibfk_4` FOREIGN KEY (`UserID`) REFERENCES `user` (`UserID`),
+  ADD CONSTRAINT `news_ibfk_5` FOREIGN KEY (`loainhaid`) REFERENCES `loainha` (`LoainhaID`);
 
 --
 -- Constraints for table `news_image`
