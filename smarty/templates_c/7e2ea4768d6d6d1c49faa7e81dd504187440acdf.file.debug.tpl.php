@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:15:19
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 00:58:13
          compiled from "C:\wamp\www\nhadat\includes\smarty\debug.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2162506989579ed811-53809265%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7e2ea4768d6d6d1c49faa7e81dd504187440acdf' => 
     array (
       0 => 'C:\\wamp\\www\\nhadat\\includes\\smarty\\debug.tpl',
-      1 => 1349091048,
+      1 => 1349448006,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_50698957d56f80_71323896',
   'variables' => 
   array (
     'template_name' => 0,
@@ -28,8 +30,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'debug_output' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_50698957d56f80_71323896',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_50698957d56f80_71323896')) {function content_50698957d56f80_71323896($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_debug_print_var')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.debug_print_var.php';
 ?><?php $_smarty_tpl->_capture_stack[0][] = array('_smarty_debug', 'debug_output', null); ob_start(); ?>
