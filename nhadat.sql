@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.2.4
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Oct 06, 2012 at 11:07 AM
--- Server version: 5.5.24-log
--- PHP Version: 5.4.3
+-- Serveur: localhost
+-- Généré le : Sam 06 Octobre 2012 à 21:11
+-- Version du serveur: 5.1.41
+-- Version de PHP: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,13 +16,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `nhadat`
+-- Base de données: `nhadat`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Structure de la table `admin`
 --
 
 CREATE TABLE IF NOT EXISTS `admin` (
@@ -35,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `admin`
+-- Contenu de la table `admin`
 --
 
 INSERT INTO `admin` (`adminid`, `username`, `password`, `lastlogin`) VALUES
@@ -45,7 +44,7 @@ INSERT INTO `admin` (`adminid`, `username`, `password`, `lastlogin`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `district`
+-- Structure de la table `district`
 --
 
 CREATE TABLE IF NOT EXISTS `district` (
@@ -57,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `district` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `district`
+-- Contenu de la table `district`
 --
 
 INSERT INTO `district` (`districtid`, `districtname`, `provinceid`) VALUES
@@ -68,7 +67,7 @@ INSERT INTO `district` (`districtid`, `districtname`, `provinceid`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `khunggia`
+-- Structure de la table `khunggia`
 --
 
 CREATE TABLE IF NOT EXISTS `khunggia` (
@@ -79,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `khunggia` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `khunggia`
+-- Contenu de la table `khunggia`
 --
 
 INSERT INTO `khunggia` (`khunggiaid`, `KhungGiaName`) VALUES
@@ -88,7 +87,7 @@ INSERT INTO `khunggia` (`khunggiaid`, `KhungGiaName`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loainha`
+-- Structure de la table `loainha`
 --
 
 CREATE TABLE IF NOT EXISTS `loainha` (
@@ -98,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `loainha` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `loainha`
+-- Contenu de la table `loainha`
 --
 
 INSERT INTO `loainha` (`LoainhaID`, `TenLoaiNha`) VALUES
@@ -108,7 +107,7 @@ INSERT INTO `loainha` (`LoainhaID`, `TenLoaiNha`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loainhucau`
+-- Structure de la table `loainhucau`
 --
 
 CREATE TABLE IF NOT EXISTS `loainhucau` (
@@ -133,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `loainhucau` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `loainhucau`
+-- Contenu de la table `loainhucau`
 --
 
 INSERT INTO `loainhucau` (`nhucauid`, `nhucauname`) VALUES
@@ -142,7 +141,7 @@ INSERT INTO `loainhucau` (`nhucauid`, `nhucauname`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news`
+-- Structure de la table `news`
 --
 
 CREATE TABLE IF NOT EXISTS `news` (
@@ -173,31 +172,40 @@ CREATE TABLE IF NOT EXISTS `news` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
 
 --
--- Dumping data for table `news`
+-- Contenu de la table `news`
 --
 
 INSERT INTO `news` (`NewsID`, `Title`, `Content`, `TimeAction`, `DistrictID`, `UserID`, `Display`, `ViewCount`, `PhoneNumber`, `loainhaid`, `nhucauid`, `khunggia`, `address`, `GiaNha`, `lat`, `lng`) VALUES
-(36, '2323', '32323232', '2012-10-06 08:41:16', 1, 1, 0, 0, '2323233232', 1, 2, 1, '232323323232', NULL, NULL, NULL);
+(36, '2323', '32323232', '2012-10-06 16:40:52', 1, 1, 0, 0, '2323233232', 1, 2, 1, '232323323232', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news_image`
+-- Structure de la table `news_image`
 --
 
 CREATE TABLE IF NOT EXISTS `news_image` (
   `ImageID` int(11) NOT NULL AUTO_INCREMENT,
   `NewsID` int(11) NOT NULL,
-  `Image__URL` int(11) NOT NULL,
-  `IMG_desc` int(11) NOT NULL,
+  `Image__URL` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `IMG_desc` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `thumbnail_url` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ImageID`),
   KEY `NewsID` (`NewsID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `news_image`
+--
+
+INSERT INTO `news_image` (`ImageID`, `NewsID`, `Image__URL`, `IMG_desc`, `thumbnail_url`) VALUES
+(3, 36, 'http://localhost:82/nhadat/smarty/templates/styleAdmin/blueadmin/upload/server/php/files/Water%20lilies%20%282%29.jpg', 'http://localhost:82/nhadat/smarty/templates/styleAdmin/blueadmin/upload/server/php/files/Water%20lilies%20%282%29.jpg', 'http://localhost:82/nhadat/smarty/templates/styleAdmin/blueadmin/upload/server/php/files/Water%20lilies%20%282%29.jpg'),
+(4, 36, 'http:\\/\\/localhost:82\\/nhadat\\/smarty\\/templates\\/styleAdmin\\/blueadmin\\/upload\\/server\\/php\\/files\\/Blue%20hills%20%282%29.jp', 'http:\\/\\/localhost:82\\/nhadat\\/smarty\\/templates\\/styleAdmin\\/blueadmin\\/upload\\/server\\/php\\/files\\/Blue%20hills%20%282%29.jphttp:\\/\\/localhost:82\\/nhadat\\/smarty\\/templates\\/styleAdmin\\/blueadmin\\/u', 'http:\\/\\/localhost:82\\/nhadat\\/smarty\\/templates\\/styleAdmin\\/blueadmin\\/upload\\/server\\/php\\/files\\/Blue%20hills%20%282%29.jp');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `province`
+-- Structure de la table `province`
 --
 
 CREATE TABLE IF NOT EXISTS `province` (
@@ -207,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `province` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `province`
+-- Contenu de la table `province`
 --
 
 INSERT INTO `province` (`ProvinceID`, `ProvinceName`) VALUES
@@ -217,7 +225,7 @@ INSERT INTO `province` (`ProvinceID`, `ProvinceName`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Structure de la table `user`
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
@@ -235,28 +243,27 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `user`
+-- Contenu de la table `user`
 --
 
 INSERT INTO `user` (`UserID`, `Email`, `Password`, `Name`, `EmailList`, `Telephone`, `EmailHide`, `TimeRegister`, `active`, `activestring`) VALUES
-(1, 'hoangvantu', 'homendvn', '22', 0, '22', 1, '2012-09-27 00:53:26', 0, '0'),
-(3, 'hoangvantundvn@gmail.com1', 'matkhautest', 'HOMENDVN', 1, '0973341574', 0, '2012-09-26 12:31:47', 0, '0'),
+(1, 'hoangvantu', 'homendvn', '22', 0, '22', 1, '2012-09-27 08:53:02', 0, '0'),
+(3, 'hoangvantundvn@gmail.com1', 'matkhautest', 'HOMENDVN', 1, '0973341574', 0, '2012-09-26 20:31:23', 0, '0'),
 (4, 'hoangvantundvn@gmail.com', 'homendvn', 'homendvn', 1, '0973341574', 0, '0000-00-00 00:00:00', 0, '0'),
-(5, 'hoangvantundvn@gmail.com', 'vietnammobile', 'hoangvantu', 0, '0973341574', 0, '2012-10-06 08:48:35', 1, ''),
-(6, 'hoangvantundvn@gmail.com', 'vietnammobile', 'hoangvantu', 0, '0973341574', 0, '2012-10-06 08:52:10', 1, '');
+(5, 'hoangvantundvn@gmail.com', 'vietnammobile', 'hoangvantu', 0, '0973341574', 0, '2012-10-06 16:48:11', 1, '');
 
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables exportées
 --
 
 --
--- Constraints for table `district`
+-- Contraintes pour la table `district`
 --
 ALTER TABLE `district`
   ADD CONSTRAINT `district_ibfk_1` FOREIGN KEY (`provinceid`) REFERENCES `province` (`ProvinceID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `news`
+-- Contraintes pour la table `news`
 --
 ALTER TABLE `news`
   ADD CONSTRAINT `news_ibfk_1` FOREIGN KEY (`khunggia`) REFERENCES `khunggia` (`khunggiaid`),
@@ -266,7 +273,7 @@ ALTER TABLE `news`
   ADD CONSTRAINT `news_ibfk_5` FOREIGN KEY (`loainhaid`) REFERENCES `loainha` (`LoainhaID`);
 
 --
--- Constraints for table `news_image`
+-- Contraintes pour la table `news_image`
 --
 ALTER TABLE `news_image`
   ADD CONSTRAINT `news_image_ibfk_1` FOREIGN KEY (`NewsID`) REFERENCES `news` (`NewsID`) ON DELETE CASCADE ON UPDATE CASCADE;
