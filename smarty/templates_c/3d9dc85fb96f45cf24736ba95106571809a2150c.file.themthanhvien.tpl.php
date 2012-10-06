@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 01:30:19
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 20:18:53
          compiled from "..\smarty\templates\styleAdmin\blueadmin\themthanhvien.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:30097506980bce54120-80932983%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,25 +7,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3d9dc85fb96f45cf24736ba95106571809a2150c' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\themthanhvien.tpl',
-      1 => 1349448018,
+      1 => 1349522957,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\layout.tpl',
-      1 => 1349448018,
+      1 => 1349522957,
       2 => 'file',
     ),
     '8a48e3331a7d9f9f03f5e1db17b60f3bf0d666b7' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headcss.tpl',
-      1 => 1349448012,
+      1 => 1349522955,
       2 => 'file',
     ),
     '0fc3d3f5d0caae3f65ebc50f770b3e2d52a1d326' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headjava.tpl',
-      1 => 1349448012,
+      1 => 1349522955,
       2 => 'file',
     ),
   ),
@@ -52,14 +52,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '30097506980bce54120-80932983');
-content_506f89ac31b510_87867603($_smarty_tpl);
+content_507021ad4db241_30867428($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
  
             <?php /*  Call merged included template "headjava.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '30097506980bce54120-80932983');
-content_506f89ac5a0617_57535668($_smarty_tpl);
+content_507021ad51c092_51172893($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
  
  
@@ -260,9 +260,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 01:30:20
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 20:18:53
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506f89ac31b510_87867603')) {function content_506f89ac31b510_87867603($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_507021ad4db241_30867428')) {function content_507021ad4db241_30867428($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\Xampp\\htdocs\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -275,9 +275,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 01:30:20
+  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 20:18:53
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506f89ac5a0617_57535668')) {function content_506f89ac5a0617_57535668($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_507021ad51c092_51172893')) {function content_507021ad51c092_51172893($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\Xampp\\htdocs\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!-- BEGIN: load jquery -->
 <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /js/jquery-1.6.4.min.js" type="text/javascript"></script>
