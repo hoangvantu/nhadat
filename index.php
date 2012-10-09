@@ -30,8 +30,15 @@ $danhsachnha = $db->getAll($sql);
 $sql= 'SELECT * FROM NEWS  WHERE Display=1 order by TimeAction DESC';
 $danhsachvip1 = $db->getAll($sql);
 if($danhsachvip1)
+{
+  foreach ($danhsachvip1 as  &$value) 
+{
+$value['Content']=str_get_html($value['Content'])->plaintext;
+
+}
 $qlgiaodien->assign('danhsachvip1',$danhsachvip1);
 //$result = mysql_query($querry, $conn);
+}
 if($danhsachnha) 
 {
  foreach ($danhsachnha as  &$value) 

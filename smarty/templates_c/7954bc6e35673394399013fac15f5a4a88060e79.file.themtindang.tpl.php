@@ -1,47 +1,47 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 20:23:55
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:26
          compiled from "..\smarty\templates\styleAdmin\blueadmin\themtindang.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6072506ed32bde1ff8-44359923%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3124350705d8c445422-77186520%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7954bc6e35673394399013fac15f5a4a88060e79' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\themtindang.tpl',
-      1 => 1349526232,
+      1 => 1349741038,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\layout.tpl',
-      1 => 1349522957,
+      1 => 1349697201,
       2 => 'file',
     ),
     '8a48e3331a7d9f9f03f5e1db17b60f3bf0d666b7' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headcss.tpl',
-      1 => 1349522955,
+      1 => 1349448012,
       2 => 'file',
     ),
     '0fc3d3f5d0caae3f65ebc50f770b3e2d52a1d326' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headjava.tpl',
-      1 => 1349522955,
+      1 => 1349704098,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6072506ed32bde1ff8-44359923',
+  'nocache_hash' => '3124350705d8c445422-77186520',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_506ed32bf3ad18_84598198',
+  'unifunc' => 'content_50705d8cdb07c0_75708405',
   'variables' => 
   array (
     'page_title' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_506ed32bf3ad18_84598198')) {function content_506ed32bf3ad18_84598198($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\Xampp\\htdocs\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_50705d8cdb07c0_75708405')) {function content_50705d8cdb07c0_75708405($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -52,43 +52,146 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '6072506ed32bde1ff8-44359923');
-content_507022dbb0a993_49772503($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '3124350705d8c445422-77186520');
+content_5073e0df83ae34_82814185($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
-<!-- Bootstrap CSS Toolkit styles -->
-<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap.min.css">
-<!-- Generic page styles -->
-<link rel="stylesheet" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/upload/css/style.css">
-<!-- Bootstrap styles for responsive website layout, supporting different screen sizes -->
-<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css">
-<!-- Bootstrap CSS fixes for IE6 -->
-<!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
-<!-- Bootstrap Image Gallery styles -->
 
-<link rel="stylesheet" href="http://blueimp.github.com/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css">
-<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-<link rel="stylesheet" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
-/upload/css/jquery.fileupload-ui.css">
-<!-- Shim to make HTML5 elements usable in older Internet Explorer versions -->
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+ <style>
 
+            /* Demo styles */sground:#222;margin:0;}
+            body{border-top:4px solid #000;}
+            .content{color:#777;font:12px/1.4 "helvetica neue",arial,sans-serif;width:620px;margin:20px auto;}
+            h1{font-size:12px;font-weight:normal;color:#ddd;margin:0;}
+            p{margin:0 0 20px}
+         
+            .cred{margin-top:20px;font-size:11px;}
 
+            /* This rule is read by Galleria to define the gallery height: */
+            #galleria{height:500px;width:500}
+        </style>
+        
+ <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
+/juploader/fileuploader.css" media="screen" />
 
  
             <?php /*  Call merged included template "headjava.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '6072506ed32bde1ff8-44359923');
-content_507022dbb664d9_37380527($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '3124350705d8c445422-77186520');
+content_5073e0dfbfd991_13355452($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
  
+
 <script type="text/javascript" src="../jscripts/tiny_mce/tiny_mce.js"></script>
 
+<script type="text/javascript" src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
+/ajaxuploader/ajaxfileupload.js"></script>  
+
+<script type="text/javascript" src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
+/galeria/dump.js"></script>
+     <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
+/galeria/galleria-1.2.8.min.js"></script>
+ 
+    <script type="text/javascript">
+  var dataimage = [
+    { image: "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/800px-Locomotives-Roundhouse2.jpg",
+     thumb: 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/100px-Locomotives-Roundhouse2.jpg'
+ }
+];
+  </script>
   
+  <script type="text/javascript">
+
+
+  function add()
+   {
+    
+               dataimage.push({ image: "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/800px-Locomotives-Roundhouse2.jpg",
+     thumb: 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/100px-Locomotives-Roundhouse2.jpg'
+ });
+  Galleria.get(0).push({ image: "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/800px-Locomotives-Roundhouse2.jpg",
+     thumb: 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/100px-Locomotives-Roundhouse2.jpg'
+ });
+  dump(dataimage,true);
+    }
  
- 
- 
+
+   function ajaxFileUpload()
+    {
+        //starting setting some animation when the ajax starts and completes
+        $("#loading")
+        .ajaxStart(function(){
+            $(this).show();
+        })
+        .ajaxComplete(function(){
+            $(this).hide();
+        });
+        
+        /*
+            prepareing ajax file upload
+            url: the url of script file handling the uploaded files
+                        fileElementId: the file type of input element id and it will be the index of  $_FILES Array()
+            dataType: it support json, xml
+            secureuri:use secure protocol
+            success: call back function when the ajax complete
+            error: callback function when the ajax failed
+            
+                */
+        $.ajaxFileUpload
+        (
+            {
+                url:'http://localhost/te/photouploader/INDEX2.PHP', 
+                secureuri:false,
+                data:{name:'nhadatimage'},
+                fileElementId:'file',
+                dataType: 'json',
+                success: function (data, status)
+                {
+                 Galleria.get(0).push({ image: data.url,
+     thumb: data.url
+ });
+                   $(".imageuploaded").append("<input type=\"text\" readonly name=\"txtimage[]\" id=\"grumble\" value=\""+data.url +"\"><br/>");
+                     if(typeof(data.error) != 'undefined')
+                    {
+                        if(data.error != '')
+                        {
+                            alert(data.error);
+                        }else
+                        {
+                         
+                         //   alert(data.msg);
+                       
+                        }
+                    }
+                },
+                error: function (data, status, e)
+                {
+                    alert(e);
+                }
+            }
+        )
+        
+        return false;
+
+    }  
+ </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <!--Tiny MCE Intializing -->
  <script type="text/javascript">
     tinyMCE.init({
@@ -160,8 +263,28 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
             
          }
          );
+          
+          
+          
+                
+     
+     
+
+
+          
+          
+          
 });
    
+ </script>
+ 
+ 
+ <script type="text/javascript">
+ 
+ 
+    
+ 
+ 
  </script>
 
 
@@ -236,7 +359,7 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
                         </li>
                         <li><a class="menuitem">Quản lý thành viên</a>
                             <ul class="submenu">
-                                <li><a href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
+                                <li><a  href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
                                 <li><a href="themthanhvien.php">Thêm thành viên</a> </li>
                                 <li><a>Submenu 3</a> </li>
                                 <li><a>Submenu 4</a> </li>
@@ -245,8 +368,8 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
                         </li>
                         <li><a class="menuitem">Quản lý tin đăng</a>
                             <ul class="submenu">
-                                <li><a>Danh sách tin đăng</a> </li>
-                                <li><a>Submenu 2</a> </li>
+                                <li><a href="danhsachtindang.php">Danh sách tin đăng</a> </li>
+                                <li><a href="themtindang.php">Thêm tin đăng</a> </li>
                                 <li><a>Submenu 3</a> </li>
                                 <li><a>Submenu 4</a> </li>
                                 <li><a>Submenu 5</a> </li>
@@ -261,6 +384,15 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
                                 <li><a>Submenu 5</a> </li>
                             </ul>
                         </li>
+                      <li><a class="menuitem">Quản lý danh mục</a>
+                            <ul class="submenu">
+                                <li><a href="danhsachtinhthanh.php">Danh sách tỉnh thành</a> </li>
+                                <li><a href="danhsachquanhuyen.php">Danh sách quận huyện</a> </li>
+                                <li><a href="danhsachnhucau.php">Danh sách nhu cầu</a> </li>		
+                                <li><a href="danhsachkhunggia.php">Danh sách khung giá</a> </li>
+                                <li><a href="danhsachloainha.php">Danh sách loại nhà</a> </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -269,6 +401,10 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
       
 	  
 
+ 
+ 
+ 
+ 
 
 
 
@@ -277,7 +413,7 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
   Thêm Tin Đăng</h2>
  <div class="block ">
   
-  <form enctype="multipart/form-data" action="" method="POST">
+  <form action="" method="POST">
    <table class="form">
     <tbody>
      <tr>
@@ -286,18 +422,88 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
         Tiêu đề</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle" id="grumble">
+       <input type="text" name="txtTitle"  id="grumble">
+      </td>
+     </tr>
+     <tr>
+      <td class="col1">
+       <label>
+        Số điện thoại</label>
+      </td>
+      <td class="col2">
+       <input type="text" name="txtphone" id="grumble">
       </td>
      </tr>
      <tr>
       <td>  <label>Nội dung</label></td>
-      <td> <textarea name="content" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea></td>
+      <td> <textarea name="txtContent" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea></td>
 
+     </tr>
+      <tr>
+      <td class="col1">
+       <label>
+       Video URL<label>
+      </td>
+      <td class="col2">
+       <input type="text" name="txtvideo"  id="grumble">
+      </td>
+     </tr>
+			<tr>
+          <td></td>
+				<td><input id="file" type="file" size="45" name="file" class="input">	
+
+					
+			
+             Please select a file and click Upload button<br>
+					<button class="button" id="buttonUpload" onclick="return ajaxFileUpload();">Upload</button>
+               </td>
+				</tr>
+     <tr>
+      <td class="image1122">
+       <label>
+        Upload Image</label>
+      </td>
+      <td class="imageuploaded">
+      
+      </td>
+     </tr>
+     <tr>
+      <td>111
+      </td>
+      <td>
+    
+
+    <!-- <button type="button" onclick="add()" value="1211 "> </button>-->
+     
+     <div id="galleria">
+     </div>
+      <script>
+      
+
+    // Load the classic theme
+    Galleria.loadTheme('<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
+/galeria/galleria.classic.min.js');
+    
+    // Initialize Galleria
+    Galleria.configure({
+    width:400,
+    height:400
+});
+    Galleria.run('#galleria',{
+    dataSource: dataimage
+     
+});
+  
+
+    </script>
+     
+
+      </td>
      </tr>
      <tr>
       <td><label>Tỉnh</label></td>
       <td>
-       <select class="province" value="112">
+       <select name="slprovince" class="province" >
         <?php if (isset($_smarty_tpl->tpl_vars['danhsachtinh']->value)){?>
          <?php  $_smarty_tpl->tpl_vars['tinh'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tinh']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['danhsachtinh']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -317,7 +523,7 @@ $_smarty_tpl->tpl_vars['tinh']->_loop = true;
      <tr>
       <td><label>Quận/Huyện</label></td>
       <td>
-       <select class="district">
+       <select name="sldistrict" class="district">
        
 
        </select>
@@ -327,7 +533,7 @@ $_smarty_tpl->tpl_vars['tinh']->_loop = true;
      <tr>
       <td><label>Loại nhà</label></td>
       <td>
-       <select class="province" value="112">
+       <select  name="slloainha" >
         <?php if (isset($_smarty_tpl->tpl_vars['danhsachloainha']->value)){?>
          <?php  $_smarty_tpl->tpl_vars['loainha'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['loainha']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['danhsachloainha']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -347,7 +553,7 @@ $_smarty_tpl->tpl_vars['loainha']->_loop = true;
      <tr>
       <td><label>Khung giá</label></td>
       <td>
-       <select class="province" value="112">
+       <select  name="slkhunggia" ">
         <?php if (isset($_smarty_tpl->tpl_vars['danhsachkhunggia']->value)){?>
          <?php  $_smarty_tpl->tpl_vars['khunggia'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['khunggia']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['danhsachkhunggia']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -370,7 +576,7 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
          Địa chỉ</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle" id="grumble">
+       <input type="text" name="txtdiachi" id="grumble">
       </td>
      </tr>
      <tr>
@@ -379,7 +585,7 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
        Giá nhà (viết bằng chữ)</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle" id="grumble">
+       <input type="text" name="txtgianha" id="grumble">
       </td>
      </tr>
      <tr>
@@ -388,7 +594,7 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
        Tọa độ x</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle" id="grumble">
+       <input type="text" name="txttoadox" id="grumble">
       </td>
      </tr>
      <tr>
@@ -397,12 +603,30 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
         Tọa độ y</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle" id="grumble">
+       <input type="text" name="txttoadoy" id="grumble">
+      </td>
+     </tr>
+      <tr>
+      <td class="col1">
+      
+      </td>
+      <td class="col2">
+      <button type="submit" value="Submit" >Gửi tin</button>
       </td>
      </tr>
 
     </tbody></table>
+ 
+       
   </form>
+
+    
+		
+       
+		
+			
+	
+	
  </div>
  
 	  
@@ -422,9 +646,9 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 20:23:55
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:27
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_507022dbb0a993_49772503')) {function content_507022dbb0a993_49772503($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\Xampp\\htdocs\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_5073e0df83ae34_82814185')) {function content_5073e0df83ae34_82814185($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -437,9 +661,9 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-06 20:23:55
+  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:27
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_507022dbb664d9_37380527')) {function content_507022dbb664d9_37380527($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\Xampp\\htdocs\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_5073e0dfbfd991_13355452')) {function content_5073e0dfbfd991_13355452($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!-- BEGIN: load jquery -->
 <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /js/jquery-1.6.4.min.js" type="text/javascript"></script>
@@ -482,7 +706,7 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
     $(document).ready(function () 
     {
         setupLeftMenu();
-        setSidebarHeight();
+       setSidebarHeight();
            
            
     });

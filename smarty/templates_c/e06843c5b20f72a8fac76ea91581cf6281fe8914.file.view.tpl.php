@@ -1,83 +1,83 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-09-25 17:43:24
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:04
          compiled from "smarty\templates\inver\view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7231505bb257c56816-85032342%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16075073e0c84234d4-18695853%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e06843c5b20f72a8fac76ea91581cf6281fe8914' => 
     array (
       0 => 'smarty\\templates\\inver\\view.tpl',
-      1 => 1348510515,
+      1 => 1349448012,
       2 => 'file',
     ),
     'a11298e285aa8c6789781d58dea0f22d621d3c2d' => 
     array (
       0 => 'smarty\\templates\\inver\\layout.tpl',
-      1 => 1348314686,
+      1 => 1349448010,
       2 => 'file',
     ),
     '9d152fdeeb73b8bd3f13e16909758ba42fdbe230' => 
     array (
       0 => 'smarty\\templates\\inver\\javascript.tpl',
-      1 => 1348184953,
+      1 => 1349448010,
       2 => 'file',
     ),
     'd075bb17e5efa5cae638d81646ad2bb0868d5b43' => 
     array (
       0 => 'smarty\\templates\\inver\\headermeta.tpl',
-      1 => 1348148903,
+      1 => 1349448010,
       2 => 'file',
     ),
     'eb177b432096d43dc790caf554536da710c7ae1b' => 
     array (
       0 => 'smarty\\templates\\inver\\headercss.tpl',
-      1 => 1348184787,
+      1 => 1349448010,
       2 => 'file',
     ),
     '0d50c0511ab6100cdcaa1be01ff27cd3e84e4ac2' => 
     array (
       0 => 'smarty\\templates\\inver\\header.tpl',
-      1 => 1348148628,
+      1 => 1349448010,
       2 => 'file',
     ),
     '306b215f9265fdef9d0c21696047b33f707d108a' => 
     array (
       0 => 'smarty\\templates\\inver\\wrap_header.tpl',
-      1 => 1348185053,
+      1 => 1349448012,
       2 => 'file',
     ),
     '2cf8dd2efc2109c19a6ea21e944e44c70f89d2b4' => 
     array (
       0 => 'smarty\\templates\\inver\\lbi_view_tindang.tpl',
-      1 => 1348532476,
+      1 => 1349448010,
       2 => 'file',
     ),
     '59744d32513144c3b4e96d2965223f4cc0435d15' => 
     array (
       0 => 'smarty\\templates\\inver\\lbi_tindang2.tpl',
-      1 => 1348509218,
+      1 => 1349448010,
       2 => 'file',
     ),
     '723b5b558a1ef05054811d6de0541c5777f38bb5' => 
     array (
       0 => 'smarty\\templates\\inver\\func_view.tpl',
-      1 => 1348595001,
+      1 => 1349448010,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7231505bb257c56816-85032342',
+  'nocache_hash' => '16075073e0c84234d4-18695853',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_505bb25847b378_48601345',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_5073e0ccc356b4_98931262',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_505bb25847b378_48601345')) {function content_505bb25847b378_48601345($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5073e0ccc356b4_98931262')) {function content_5073e0ccc356b4_98931262($_smarty_tpl) {?>
 <?php /*  Call merged included template "header.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '7231505bb257c56816-85032342');
-content_5061ed3cb4c389_24558723($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '16075073e0c84234d4-18695853');
+content_5073e0c87500c5_79882642($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "header.tpl" */?>
 
 
@@ -94,8 +94,8 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "header.tpl"
      
      <?php /*  Call merged included template "wrap_header.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("wrap_header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '7231505bb257c56816-85032342');
-content_5061ed3d2e66b1_54989474($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("wrap_header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '16075073e0c84234d4-18695853');
+content_5073e0cb53acf2_88141774($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "wrap_header.tpl" */?>
      
   
@@ -107,8 +107,8 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "wrap_header
 		
                       <?php /*  Call merged included template "func_view.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("func_view.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '7231505bb257c56816-85032342');
-content_5061ed3d417b41_26509764($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("func_view.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '16075073e0c84234d4-18695853');
+content_5073e0cbb50ac1_12475905($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "func_view.tpl" */?>
 
 		 </div> 
@@ -160,9 +160,9 @@ try{var pageTracker = _gat._getTracker("UA-7905545-6");pageTracker._trackPagevie
 
 </html>
 
-<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-09-25 17:43:24
+<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:04
          compiled from "smarty\templates\inver\header.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5061ed3cb4c389_24558723')) {function content_5061ed3cb4c389_24558723($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<?php if ($_valid && !is_callable('content_5073e0c87500c5_79882642')) {function content_5073e0c87500c5_79882642($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="vi" lang="vi">
 <head>
@@ -174,15 +174,15 @@ try{var pageTracker = _gat._getTracker("UA-7905545-6");pageTracker._trackPagevie
 
 <?php /*  Call merged included template "javascript.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("javascript.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '7231505bb257c56816-85032342');
-content_5061ed3cbb48d0_38031670($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("javascript.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '16075073e0c84234d4-18695853');
+content_5073e0c8a7a3c8_64770697($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "javascript.tpl" */?>
  
  
  <?php /*  Call merged included template "headermeta.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headermeta.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '7231505bb257c56816-85032342');
-content_5061ed3cc55106_31102858($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headermeta.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '16075073e0c84234d4-18695853');
+content_5073e0c905c6e8_22479628($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headermeta.tpl" */?>
  
  
@@ -236,9 +236,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headermeta.
 /sites/all/themes/framework/style.css?S" />
  
  
-</head><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-09-25 17:43:24
+</head><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:04
          compiled from "smarty\templates\inver\javascript.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5061ed3cbb48d0_38031670')) {function content_5061ed3cbb48d0_38031670($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5073e0c8a7a3c8_64770697')) {function content_5073e0c8a7a3c8_64770697($_smarty_tpl) {?>
 <script type="text/javascript" src="<?php echo dirname($_smarty_tpl->source->filepath);?>
 /sites/default/files/js/js_589871593f149c3b07e4e337276416ea.jsmin.js"></script>
 <script type="text/javascript">
@@ -255,9 +255,9 @@ $().ready(function() {
 </script>
     <!--[if lte IE 7]><link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/framework/fix-ie.css" /><![endif]--><!--If Less Than or Equal (lte) to IE 7-->
   
-    <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-09-25 17:43:24
+    <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:05
          compiled from "smarty\templates\inver\headermeta.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5061ed3cc55106_31102858')) {function content_5061ed3cc55106_31102858($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5073e0c905c6e8_22479628')) {function content_5073e0c905c6e8_22479628($_smarty_tpl) {?>
 
 
 
@@ -268,9 +268,9 @@ $().ready(function() {
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta content="Nhà đất - Bán Nhà Hà Nội, Video Nhà bán chính chủ" name="keywords" />
 <meta content="NhadatVideo.vn 100% tin đăng có Ảnh thật, Video thực tế, LH chủ nhà. Nhà đất - Bán Nhà Hà Nội, Video Nhà bán chính chủ " name="description" />
-<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-09-25 17:43:24
+<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:05
          compiled from "smarty\templates\inver\headercss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5061ed3ccb4b58_93526850')) {function content_5061ed3ccb4b58_93526850($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5073e0c92fdeb0_02100916')) {function content_5073e0c92fdeb0_02100916($_smarty_tpl) {?>
 
 <link rel="shortcut icon" href="<?php echo basename($_smarty_tpl->source->filepath);?>
 /sites/default/files/favicon.png" type="image/x-icon" />
@@ -376,9 +376,9 @@ $().ready(function() {
 
 
 
-<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-09-25 17:43:25
+<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:07
          compiled from "smarty\templates\inver\wrap_header.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5061ed3d2e66b1_54989474')) {function content_5061ed3d2e66b1_54989474($_smarty_tpl) {?>   
+<?php if ($_valid && !is_callable('content_5073e0cb53acf2_88141774')) {function content_5073e0cb53acf2_88141774($_smarty_tpl) {?>   
 <div id="header">
         <div id="block-buildweb_services-vinno_header" class="block block-buildweb_services">
 
@@ -629,9 +629,9 @@ $().ready(function() {
 		  <!--	
 		<div class="messages error" style='width: 977px;text-align: center;font-weight: bold;'> Bạn chậm chân hơn người khác ?, hãy bấm vào <a rel='nofollow' href='http://sms.nhadatvideo.vn/user'>Xem trước tin chưa đăng</a> để tăng cơ hội tìm được nhà đất như ý </div>
 		 -->	
-<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-09-25 17:43:25
+<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:07
          compiled from "smarty\templates\inver\func_view.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5061ed3d417b41_26509764')) {function content_5061ed3d417b41_26509764($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\wamp\\www\\Nhadat\\includes\\smarty\\plugins\\modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5073e0cbb50ac1_12475905')) {function content_5073e0cbb50ac1_12475905($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.date_format.php';
 ?>
 			      <!-- Breadcrums
 				  
@@ -723,8 +723,8 @@ $_smarty_tpl->tpl_vars['foo']->_loop = true;
 ?>
                             <?php /*  Call merged included template "lbi_view_tindang.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("lbi_view_tindang.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '7231505bb257c56816-85032342');
-content_5061ed3d542da6_46081335($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("lbi_view_tindang.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '16075073e0c84234d4-18695853');
+content_5073e0cc45b1e8_43788703($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "lbi_view_tindang.tpl" */?>
                             <?php } ?>
                             <?php }?>
@@ -859,8 +859,8 @@ $_smarty_tpl->tpl_vars[$_smarty_tpl->tpl_vars['foo']->value]->_loop = true;
 ?>
 			<?php /*  Call merged included template "lbi_tindang2.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("lbi_tindang2.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '7231505bb257c56816-85032342');
-content_5061ed3d620d60_33550355($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("lbi_tindang2.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '16075073e0c84234d4-18695853');
+content_5073e0cc7af854_22857452($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "lbi_tindang2.tpl" */?>
          <?php } ?>
          <?php }?>
@@ -891,9 +891,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "lbi_tindang
 					  </div>
 					  				  </div>
 				  
-		<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-09-25 17:43:25
+		<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:08
          compiled from "smarty\templates\inver\lbi_view_tindang.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5061ed3d542da6_46081335')) {function content_5061ed3d542da6_46081335($_smarty_tpl) {?> 
+<?php if ($_valid && !is_callable('content_5073e0cc45b1e8_43788703')) {function content_5073e0cc45b1e8_43788703($_smarty_tpl) {?> 
                             <div id="node-37929" class="node">
  
    
@@ -960,9 +960,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "lbi_tindang
 
   </div>
   </div>
-<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-09-25 17:43:25
+<?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:08
          compiled from "smarty\templates\inver\lbi_tindang2.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5061ed3d620d60_33550355')) {function content_5061ed3d620d60_33550355($_smarty_tpl) {?><div class="property-ad">
+<?php if ($_valid && !is_callable('content_5073e0cc7af854_22857452')) {function content_5073e0cc7af854_22857452($_smarty_tpl) {?><div class="property-ad">
 			<div class="ad-item">
 			   <a href="view.php?themes=inver&newsid=<?php echo $_smarty_tpl->tpl_vars['foo']->value['NewsID'];?>
 " style="display: block;text-decoration: none;" title="Cho thuê nhà  Hoàng Mai, Số 6 BT3 KĐT Pháp Vân, Tứ Hiệp, Chính chủ, Giá 30 Triệu/Tháng, Anh Sơn, ĐT 0909796668 " rel="nofollow">

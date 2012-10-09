@@ -78,7 +78,7 @@
                         </li>
                         <li><a class="menuitem">Quản lý thành viên</a>
                             <ul class="submenu">
-                                <li><a href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
+                                <li><a  href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
                                 <li><a href="themthanhvien.php">Thêm thành viên</a> </li>
                                 <li><a>Submenu 3</a> </li>
                                 <li><a>Submenu 4</a> </li>
@@ -87,8 +87,8 @@
                         </li>
                         <li><a class="menuitem">Quản lý tin đăng</a>
                             <ul class="submenu">
-                                <li><a>Danh sách tin đăng</a> </li>
-                                <li><a>Submenu 2</a> </li>
+                                <li><a href="danhsachtindang.php">Danh sách tin đăng</a> </li>
+                                <li><a href="themtindang.php">Thêm tin đăng</a> </li>
                                 <li><a>Submenu 3</a> </li>
                                 <li><a>Submenu 4</a> </li>
                                 <li><a>Submenu 5</a> </li>
@@ -101,6 +101,15 @@
                                 <li><a>Submenu 3</a> </li>		
                                 <li><a>Submenu 4</a> </li>
                                 <li><a>Submenu 5</a> </li>
+                            </ul>
+                        </li>
+                      <li><a class="menuitem">Quản lý danh mục</a>
+                            <ul class="submenu">
+                                <li><a href="danhsachtinhthanh.php">Danh sách tỉnh thành</a> </li>
+                                <li><a href="danhsachquanhuyen.php">Danh sách quận huyện</a> </li>
+                                <li><a href="danhsachnhucau.php">Danh sách nhu cầu</a> </li>		
+                                <li><a href="danhsachkhunggia.php">Danh sách khung giá</a> </li>
+                                <li><a href="danhsachloainha.php">Danh sách loại nhà</a> </li>
                             </ul>
                         </li>
                     </ul>

@@ -2,32 +2,133 @@
 
 {extends file="layout.tpl"}
 {block name="headcss" append}
-<!-- Bootstrap CSS Toolkit styles -->
-<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap.min.css">
-<!-- Generic page styles -->
-<link rel="stylesheet" href="{$smarty.current_dir|replace:'\\':'/'}/upload/css/style.css">
-<!-- Bootstrap styles for responsive website layout, supporting different screen sizes -->
-<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css">
-<!-- Bootstrap CSS fixes for IE6 -->
-<!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
-<!-- Bootstrap Image Gallery styles -->
+{literal}
+ <style>
 
-<link rel="stylesheet" href="http://blueimp.github.com/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css">
-<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-<link rel="stylesheet" href="{$smarty.current_dir|replace:'\\':'/'}/upload/css/jquery.fileupload-ui.css">
-<!-- Shim to make HTML5 elements usable in older Internet Explorer versions -->
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+            /* Demo styles */sground:#222;margin:0;}
+            body{border-top:4px solid #000;}
+            .content{color:#777;font:12px/1.4 "helvetica neue",arial,sans-serif;width:620px;margin:20px auto;}
+            h1{font-size:12px;font-weight:normal;color:#ddd;margin:0;}
+            p{margin:0 0 20px}
+         
+            .cred{margin-top:20px;font-size:11px;}
 
-
+            /* This rule is read by Galleria to define the gallery height: */
+            #galleria{height:500px;width:500}
+        </style>
+        {/literal}
+ <link rel="stylesheet" type="text/css" href="{$smarty.current_dir|replace:'\\':'/'}/juploader/fileuploader.css" media="screen" />
 {/block}
 
 {block name="headjava" append}
+
 <script type="text/javascript" src="../jscripts/tiny_mce/tiny_mce.js"></script>
-{literal}
+
+<script type="text/javascript" src="{$smarty.current_dir|replace:'\\':'/'}/ajaxuploader/ajaxfileupload.js"></script>  
+
+<script type="text/javascript" src="{$smarty.current_dir|replace:'\\':'/'}/galeria/dump.js"></script>
+     <script src="{$smarty.current_dir|replace:'\\':'/'}/galeria/galleria-1.2.8.min.js"></script>
+ {literal}
+    <script type="text/javascript">
+  var dataimage = [
+    { image: "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/800px-Locomotives-Roundhouse2.jpg",
+     thumb: 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/100px-Locomotives-Roundhouse2.jpg'
+ }
+];
+  </script>
   
+  <script type="text/javascript">
+
+
+  function add()
+   {
+    
+               dataimage.push({ image: "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/800px-Locomotives-Roundhouse2.jpg",
+     thumb: 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/100px-Locomotives-Roundhouse2.jpg'
+ });
+  Galleria.get(0).push({ image: "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/800px-Locomotives-Roundhouse2.jpg",
+     thumb: 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Locomotives-Roundhouse2.jpg/100px-Locomotives-Roundhouse2.jpg'
+ });
+  dump(dataimage,true);
+    }
  
- 
- 
+
+   function ajaxFileUpload()
+    {
+        //starting setting some animation when the ajax starts and completes
+        $("#loading")
+        .ajaxStart(function(){
+            $(this).show();
+        })
+        .ajaxComplete(function(){
+            $(this).hide();
+        });
+        
+        /*
+            prepareing ajax file upload
+            url: the url of script file handling the uploaded files
+                        fileElementId: the file type of input element id and it will be the index of  $_FILES Array()
+            dataType: it support json, xml
+            secureuri:use secure protocol
+            success: call back function when the ajax complete
+            error: callback function when the ajax failed
+            
+                */
+        $.ajaxFileUpload
+        (
+            {
+                url:'http://localhost/te/photouploader/INDEX2.PHP', 
+                secureuri:false,
+                data:{name:'nhadatimage'},
+                fileElementId:'file',
+                dataType: 'json',
+                success: function (data, status)
+                {
+                 Galleria.get(0).push({ image: data.url,
+     thumb: data.url
+ });
+                   $(".imageuploaded").append("<input type=\"text\" readonly name=\"txtimage[]\" id=\"grumble\" value=\""+data.url +"\"><br/>");
+                     if(typeof(data.error) != 'undefined')
+                    {
+                        if(data.error != '')
+                        {
+                            alert(data.error);
+                        }else
+                        {
+                         
+                         //   alert(data.msg);
+                       
+                        }
+                    }
+                },
+                error: function (data, status, e)
+                {
+                    alert(e);
+                }
+            }
+        )
+        
+        return false;
+
+    }  
+ </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <!--Tiny MCE Intializing -->
  <script type="text/javascript">
     tinyMCE.init({
@@ -99,8 +200,28 @@
             
          }
          );
+          
+          
+          
+                
+     
+     
+
+
+          
+          
+          
 });
    
+ </script>
+ 
+ 
+ <script type="text/javascript">
+ 
+ 
+    
+ 
+ 
  </script>
 {/literal}
 
@@ -110,7 +231,11 @@
 
 
 {block name="content"}
-
+{literal}
+ 
+ 
+ 
+ {/literal}
 
 
 
@@ -119,7 +244,7 @@
   Thêm Tin Đăng</h2>
  <div class="block ">
   
-  <form enctype="multipart/form-data" action="" method="POST">
+  <form action="" method="POST">
    <table class="form">
     <tbody>
      <tr>
@@ -128,18 +253,87 @@
         Tiêu đề</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle" id="grumble">
+       <input type="text" name="txtTitle"  id="grumble">
+      </td>
+     </tr>
+     <tr>
+      <td class="col1">
+       <label>
+        Số điện thoại</label>
+      </td>
+      <td class="col2">
+       <input type="text" name="txtphone" id="grumble">
       </td>
      </tr>
      <tr>
       <td>  <label>Nội dung</label></td>
-      <td> <textarea name="content" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea></td>
+      <td> <textarea name="txtContent" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea></td>
 
+     </tr>
+      <tr>
+      <td class="col1">
+       <label>
+       Video URL<label>
+      </td>
+      <td class="col2">
+       <input type="text" name="txtvideo"  id="grumble">
+      </td>
+     </tr>
+			<tr>
+          <td></td>
+				<td><input id="file" type="file" size="45" name="file" class="input">	
+
+					
+			
+             Please select a file and click Upload button<br>
+					<button class="button" id="buttonUpload" onclick="return ajaxFileUpload();">Upload</button>
+               </td>
+				</tr>
+     <tr>
+      <td class="image1122">
+       <label>
+        Upload Image</label>
+      </td>
+      <td class="imageuploaded">
+      
+      </td>
+     </tr>
+     <tr>
+      <td>111
+      </td>
+      <td>
+    {literal}
+
+    <!-- <button type="button" onclick="add()" value="1211 "> </button>-->
+     
+     <div id="galleria">
+     </div>
+      <script>
+      
+{/literal}
+    // Load the classic theme
+    Galleria.loadTheme('{$smarty.current_dir|replace:'\\':'/'}/galeria/galleria.classic.min.js');
+{literal}    
+    // Initialize Galleria
+    Galleria.configure({
+    width:400,
+    height:400
+});
+    Galleria.run('#galleria',{
+    dataSource: dataimage
+     
+});
+  
+{/literal}
+    </script>
+     
+
+      </td>
      </tr>
      <tr>
       <td><label>Tỉnh</label></td>
       <td>
-       <select class="province" value="112">
+       <select name="slprovince" class="province" >
         {if isset($danhsachtinh)}
          {foreach from=$danhsachtinh item=tinh}
           <option value="{$tinh.ProvinceID}">{$tinh.ProvinceName}</option>
@@ -153,7 +347,7 @@
      <tr>
       <td><label>Quận/Huyện</label></td>
       <td>
-       <select class="district">
+       <select name="sldistrict" class="district">
        
 
        </select>
@@ -163,7 +357,7 @@
      <tr>
       <td><label>Loại nhà</label></td>
       <td>
-       <select class="province" value="112">
+       <select  name="slloainha" >
         {if isset($danhsachloainha)}
          {foreach from=$danhsachloainha item=loainha}
           <option value="{$loainha.LoainhaID}">{$loainha.TenLoaiNha}</option>
@@ -177,7 +371,7 @@
      <tr>
       <td><label>Khung giá</label></td>
       <td>
-       <select class="province" value="112">
+       <select  name="slkhunggia" ">
         {if isset($danhsachkhunggia)}
          {foreach from=$danhsachkhunggia item=khunggia}
           <option value="{$khunggia.khunggiaid}">{$khunggia.KhungGiaName}</option>
@@ -194,7 +388,7 @@
          Địa chỉ</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle" id="grumble">
+       <input type="text" name="txtdiachi" id="grumble">
       </td>
      </tr>
      <tr>
@@ -203,7 +397,7 @@
        Giá nhà (viết bằng chữ)</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle" id="grumble">
+       <input type="text" name="txtgianha" id="grumble">
       </td>
      </tr>
      <tr>
@@ -212,7 +406,7 @@
        Tọa độ x</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle" id="grumble">
+       <input type="text" name="txttoadox" id="grumble">
       </td>
      </tr>
      <tr>
@@ -221,11 +415,29 @@
         Tọa độ y</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle" id="grumble">
+       <input type="text" name="txttoadoy" id="grumble">
+      </td>
+     </tr>
+      <tr>
+      <td class="col1">
+      
+      </td>
+      <td class="col2">
+      <button type="submit" value="Submit" >Gửi tin</button>
       </td>
      </tr>
 
     </tbody></table>
+ 
+       
   </form>
+
+    
+		
+       
+		
+			
+	
+	
  </div>
  {/block}

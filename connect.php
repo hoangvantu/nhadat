@@ -135,7 +135,11 @@ class dbmanager {
    
     $sql = "INSERT INTO `nhadat`.`news` (`NewsID`, `Title`, `Content`, `TimeAction`, `DistrictID`, `UserID`, `Display`, `ViewCount`, `PhoneNumber`, `loainhaid`, `nhucauid`, `khunggia`, `address`, `GiaNha`, `lat`, `lng`) VALUES (NULL, '$tieude', '$noidung', CURRENT_TIMESTAMP, '1', '1', '1', '1', '1', '1', '1', '1', '1111111111', '11111111111111111111111', '12112.12112', '12112.12112');";
   }
- 
+  function province_delete($provinceid)
+  {
+    $sql="DELETE FROM province where ProvinceID=$provinceid";
+    $this->querry($sql);
+  }
 }
 
 ?>

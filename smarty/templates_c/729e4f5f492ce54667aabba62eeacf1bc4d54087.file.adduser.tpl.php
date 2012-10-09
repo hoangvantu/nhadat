@@ -1,47 +1,47 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:16:49
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:55:04
          compiled from "..\smarty\templates\styleAdmin\blueadmin\adduser.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:255155062837c0f5742-15481849%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:236915073e6683c9f88-43950230%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '729e4f5f492ce54667aabba62eeacf1bc4d54087' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\adduser.tpl',
-      1 => 1349091050,
+      1 => 1349448012,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\layout.tpl',
-      1 => 1349093802,
+      1 => 1349697201,
       2 => 'file',
     ),
     '8a48e3331a7d9f9f03f5e1db17b60f3bf0d666b7' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headcss.tpl',
-      1 => 1349091050,
+      1 => 1349448012,
       2 => 'file',
     ),
     '0fc3d3f5d0caae3f65ebc50f770b3e2d52a1d326' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headjava.tpl',
-      1 => 1349091050,
+      1 => 1349704098,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '255155062837c0f5742-15481849',
+  'nocache_hash' => '236915073e6683c9f88-43950230',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_5062837c60c174_86976380',
   'variables' => 
   array (
     'page_title' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_5073e66a26f1c9_82556770',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5062837c60c174_86976380')) {function content_5062837c60c174_86976380($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php if ($_valid && !is_callable('content_5073e66a26f1c9_82556770')) {function content_5073e66a26f1c9_82556770($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -51,15 +51,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '255155062837c0f5742-15481849');
-content_506989b19a8102_55808241($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '236915073e6683c9f88-43950230');
+content_5073e6693ed222_59766228($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
  
- <?php /*  Call merged included template "headjava.tpl" */
+            <?php /*  Call merged included template "headjava.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '255155062837c0f5742-15481849');
-content_506989b19f6938_85469505($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '236915073e6683c9f88-43950230');
+content_5073e6699ef9d1_25003253($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
  
  
@@ -132,7 +132,7 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
                         </li>
                         <li><a class="menuitem">Quản lý thành viên</a>
                             <ul class="submenu">
-                                <li><a href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
+                                <li><a  href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
                                 <li><a href="themthanhvien.php">Thêm thành viên</a> </li>
                                 <li><a>Submenu 3</a> </li>
                                 <li><a>Submenu 4</a> </li>
@@ -141,8 +141,8 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
                         </li>
                         <li><a class="menuitem">Quản lý tin đăng</a>
                             <ul class="submenu">
-                                <li><a>Danh sách tin đăng</a> </li>
-                                <li><a>Submenu 2</a> </li>
+                                <li><a href="danhsachtindang.php">Danh sách tin đăng</a> </li>
+                                <li><a href="themtindang.php">Thêm tin đăng</a> </li>
                                 <li><a>Submenu 3</a> </li>
                                 <li><a>Submenu 4</a> </li>
                                 <li><a>Submenu 5</a> </li>
@@ -155,6 +155,15 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
                                 <li><a>Submenu 3</a> </li>		
                                 <li><a>Submenu 4</a> </li>
                                 <li><a>Submenu 5</a> </li>
+                            </ul>
+                        </li>
+                      <li><a class="menuitem">Quản lý danh mục</a>
+                            <ul class="submenu">
+                                <li><a href="danhsachtinhthanh.php">Danh sách tỉnh thành</a> </li>
+                                <li><a href="danhsachquanhuyen.php">Danh sách quận huyện</a> </li>
+                                <li><a href="danhsachnhucau.php">Danh sách nhu cầu</a> </li>		
+                                <li><a href="danhsachkhunggia.php">Danh sách khung giá</a> </li>
+                                <li><a href="danhsachloainha.php">Danh sách loại nhà</a> </li>
                             </ul>
                         </li>
                     </ul>
@@ -353,9 +362,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:16:49
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:55:05
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506989b19a8102_55808241')) {function content_506989b19a8102_55808241($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_5073e6693ed222_59766228')) {function content_5073e6693ed222_59766228($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -368,9 +377,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-01 12:16:49
+  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:55:05
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_506989b19f6938_85469505')) {function content_506989b19f6938_85469505($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_5073e6699ef9d1_25003253')) {function content_5073e6699ef9d1_25003253($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!-- BEGIN: load jquery -->
 <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /js/jquery-1.6.4.min.js" type="text/javascript"></script>
@@ -413,7 +422,7 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
     $(document).ready(function () 
     {
         setupLeftMenu();
-        setSidebarHeight();
+       setSidebarHeight();
            
            
     });
