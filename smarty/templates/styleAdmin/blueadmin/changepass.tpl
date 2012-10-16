@@ -1,12 +1,14 @@
 {extends file="layout.tpl"}
  {block name="headjava" append}
+ <script type="text/javascript">
+  {literal}
 $(document).keypress(function(e)
 {
   if(e.which == 13) 
-  $('#change_pass_form').submit();
-
-
+  $('#change_pass_form').submit()
 }
+ {/literal}
+</script>
 {/block}
 {block name="content"}
 
@@ -27,6 +29,7 @@ $(document).keypress(function(e)
    </div>
 
   {/if}
+  {if isset($thanhvien)}
   <form id="change_pass_form"action="" method="POST">
    <table class="form">
     <input type="hidden" name="userid" value="{$thanhvien.UserID}"/>
@@ -39,22 +42,24 @@ $(document).keypress(function(e)
       <input type="text" id="grumble" value="{$thanhvien.Email}" disabled/>
      </td>
     </tr>
+    {if {$quyenhan} ne 0}
     <tr>
      <td class="col1">
       <label>
        Mật khẩu cũ</label>
      </td>
      <td class="col2">
-      <input type="text" id="grumble" name="oldpass" />
+      <input type="text" id="grumble" name="oldpass" tooltiptext="Vui lòng nhập chính xác e-mail của bạn" required/>
      </td>
     </tr>
+    {/if} 
     <tr>
      <td>
       <label>
        Mật khẩu mới</label>
      </td>
      <td>
-      <input  type="password" {if isset($pass_retype)}class="error" {/if} name="newpass" />
+      <input  type="password" {if isset($pass_retype)}class="error" {/if} name="newpass" required />
      </td>
     </tr>
     <tr>
@@ -63,7 +68,7 @@ $(document).keypress(function(e)
        Điền lại mật khẩu mới</label> 
      </td>
      <td>
-      <input type="password" {if isset($pass_retype)}class="error" {/if}name="newpass_retype"/> 
+      <input type="password" {if isset($pass_retype)}class="error" {/if}name="newpass_retype" required/> 
 
 
       {if isset($pass_retype)}
@@ -81,6 +86,8 @@ $(document).keypress(function(e)
 
    </table>
   </form>
+      
+      {/if}
  </div>
 </div>
 

@@ -1,15 +1,15 @@
 <?php
 
-include_once('../connect.php');
-include '../function.php';
-require_once '../includes/sm_config_admin.php';
-$db = new dbmanager();
-$db->connect();
+require_once 'global.php';
 $giaodien = 'changepass.tpl';
 $qlgiaodien->assign('page_title', "Đổi mật khẩu thành viên");
+if(!empty($_GET['userid']))
+{
 $userid = $_GET['userid'];
-if (isset($_POST['userid']) && isset($_POST['userid']) && isset($_POST['oldpass']) && isset($_POST['newpass'])) {
+if (isset($_POST['userid']) && isset($_POST['userid']) && (!empty($_POST['oldpass'])||($_SESSION['permission']==0)) && isset($_POST['newpass'])) {
+          if(!empty($_POST['oldpass']))
  $oldpass = $_POST['oldpass'];
+ else $oldpass="";
  $newpass = $_POST['newpass'];
  $newpass_retype = $_POST['newpass_retype'];
  if ($newpass != $newpass_retype) {
@@ -29,11 +29,13 @@ $userid = $_GET['userid'];
 $thanhvien = $db->user_getinfo($userid);
 
 $qlgiaodien->assign('thanhvien', $thanhvien);
-$qlgiaodien->debugging = true;
+
 //$userid="3";
 //$matkhau ="matkhautest";
 //$sql="UPDATE  `nhadat`.`user` SET  `Password` =  '$matkhau' WHERE  `user`.`UserID` =$userid;";
 //$danhsachadmin =  $db->getAll($sql);
 //$smarty->assign('danhsachadmin',$danhsachadmin);
+}
+
 $qlgiaodien->display($giaodien);
 ?>

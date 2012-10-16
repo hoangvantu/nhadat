@@ -28,6 +28,8 @@
 
 <script type="text/javascript" src="{$smarty.current_dir|replace:'\\':'/'}/galeria/dump.js"></script>
      <script src="{$smarty.current_dir|replace:'\\':'/'}/galeria/galleria-1.2.8.min.js"></script>
+          <script src="{$smarty.current_dir|replace:'\\':'/'}/jquery-1.6.4.min.js"></script>
+
  {literal}
     <script type="text/javascript">
   var dataimage = [
@@ -188,11 +190,12 @@
 }); 
        
       $(".province").change(function(data)
-         {
-            $(".district").empty();
+         {  $(".district").html("");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
             $.getJSON('../ajax_request.php' ,{action:'getquan',provinceid:$(this).val()},function(data){
                $.each(data, function(index) {
                // alert(data[index].districtid);
+              
                $(".district").append("<option value=\""+data[index].districtid+"\">"+data[index].districtname+"</option>");
           });
 
@@ -248,12 +251,66 @@
    <table class="form">
     <tbody>
      <tr>
+      <td><label>Tỉnh</label></td>
+      <td>
+       <select name="slprovince" class="province" >
+        {if isset($danhsachtinh)}
+         {foreach from=$danhsachtinh item=tinh}
+          <option value="{$tinh.ProvinceID}">{$tinh.ProvinceName}</option>
+         {/foreach}
+        {/if}
+       </select>
+
+
+      </td>
+     </tr>
+     <tr>
+      <td><label>Quận/Huyện</label></td>
+      <td>
+       <select name="sldistrict" class="district" required title="Bạn chưa chọn quận huyện" >
+       
+
+       </select>
+      </td>
+
+     </tr>
+     <tr>
+      <td><label>Loại nhà</label></td>
+      <td>
+       <select  name="slloainha" required title="Bạn chưa chọn loại nhà"  >
+         <option value=""></option>
+        {if isset($danhsachloainha)}
+         {foreach from=$danhsachloainha item=loainha}
+          <option value="{$loainha.LoainhaID}">{$loainha.TenLoaiNha}</option>
+         {/foreach}
+        {/if}
+       </select>
+
+
+      </td>
+     </tr>
+     <tr>
+      <td><label>Khung giá</label></td>
+      <td>
+       <select required  name="slkhunggia" required title="Bạn chưa chọn khung giá" >
+         <option value=""></option>
+        {if isset($danhsachkhunggia)}
+         {foreach from=$danhsachkhunggia item=khunggia}
+          <option value="{$khunggia.khunggiaid}">{$khunggia.KhungGiaName}</option>
+         {/foreach}
+        {/if}
+       </select>
+
+
+      </td>
+     </tr>
+     <tr>
       <td class="col1">
        <label>
         Tiêu đề</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle"  id="grumble">
+       <input type="text" name="txtTitle" class="large" id="grumble" required title="Tiêu đề không được bỏ trông"/ >
       </td>
      </tr>
      <tr>
@@ -262,16 +319,16 @@
         Số điện thoại</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtphone" id="grumble">
+       <input type="text" name="txtphone" id="grumble" pattern="[0-9]{literal}{10,11}{/literal}" title="Số điện thoại bao gồm 10 hoặc 11 chữ số" required/>
       </td>
      </tr>
      <tr>
       <td>  <label>Nội dung</label></td>
-      <td> <textarea name="txtContent" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea></td>
+      <td> <textarea name="txtContent" cols="50" rows="15"  required="required">1</textarea></td>
 
      </tr>
       <tr>
-      <td class="col1">
+      <td class="col1"  required>
        <label>
        Video URL<label>
       </td>
@@ -299,7 +356,7 @@
       </td>
      </tr>
      <tr>
-      <td>111
+      <td>
       </td>
       <td>
     {literal}
@@ -312,6 +369,7 @@
       
 {/literal}
     // Load the classic theme
+    
     Galleria.loadTheme('{$smarty.current_dir|replace:'\\':'/'}/galeria/galleria.classic.min.js');
 {literal}    
     // Initialize Galleria
@@ -330,65 +388,14 @@
 
       </td>
      </tr>
-     <tr>
-      <td><label>Tỉnh</label></td>
-      <td>
-       <select name="slprovince" class="province" >
-        {if isset($danhsachtinh)}
-         {foreach from=$danhsachtinh item=tinh}
-          <option value="{$tinh.ProvinceID}">{$tinh.ProvinceName}</option>
-         {/foreach}
-        {/if}
-       </select>
-
-
-      </td>
-     </tr>
-     <tr>
-      <td><label>Quận/Huyện</label></td>
-      <td>
-       <select name="sldistrict" class="district">
-       
-
-       </select>
-      </td>
-
-     </tr>
-     <tr>
-      <td><label>Loại nhà</label></td>
-      <td>
-       <select  name="slloainha" >
-        {if isset($danhsachloainha)}
-         {foreach from=$danhsachloainha item=loainha}
-          <option value="{$loainha.LoainhaID}">{$loainha.TenLoaiNha}</option>
-         {/foreach}
-        {/if}
-       </select>
-
-
-      </td>
-     </tr>
-     <tr>
-      <td><label>Khung giá</label></td>
-      <td>
-       <select  name="slkhunggia" ">
-        {if isset($danhsachkhunggia)}
-         {foreach from=$danhsachkhunggia item=khunggia}
-          <option value="{$khunggia.khunggiaid}">{$khunggia.KhungGiaName}</option>
-         {/foreach}
-        {/if}
-       </select>
-
-
-      </td>
-     </tr>
+     
       <tr>
       <td class="col1">
        <label>
          Địa chỉ</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtdiachi" id="grumble">
+       <input type="text" name="txtdiachi" id="grumble" required="required">
       </td>
      </tr>
      <tr>
@@ -397,7 +404,7 @@
        Giá nhà (viết bằng chữ)</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtgianha" id="grumble">
+       <input type="text" name="txtgianha" id="grumble" required="required">
       </td>
      </tr>
      <tr>
@@ -423,7 +430,8 @@
       
       </td>
       <td class="col2">
-      <button type="submit" value="Submit" >Gửi tin</button>
+       
+      <button type="submit" value="Submit" > <input type="submit"  /> </button>
       </td>
      </tr>
 
@@ -433,7 +441,21 @@
   </form>
 
     
-		
+		 <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'hongvnt'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
        
 		
 			

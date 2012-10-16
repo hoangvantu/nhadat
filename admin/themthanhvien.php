@@ -1,5 +1,9 @@
 <?php
-
+require_once 'global.php';
+if($quyenhan!=0)
+{
+ header("location:loginform.php");
+}
 include_once('../connect.php');
 require_once '../includes/sm_config_admin.php';
 $db = new dbmanager();

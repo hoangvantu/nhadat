@@ -27,7 +27,7 @@
                                     email:</label>
                             </td>
                             <td class="col2">
-                                <input type="text" id="grumble " name="txtemail">
+                                <input type="email" id="grumble " name="txtemail">
                             </td>
                         </tr>
                         

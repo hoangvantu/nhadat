@@ -23,9 +23,9 @@
                         <img src="{$smarty.current_dir}/img/img-profile.jpg" alt="Profile Pic" /></div>
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
-                            <li>Hello Admin</li>
+                            <li>Hello {if isset($name)}{$name}{/if}</li>
                             <li><a href="#">Config</a></li>
-                            <li><a href="#">Logout</a></li>
+                            <li><a href="logout.php">Logout</a></li>
                         </ul>
                         <br />
                         <span class="small grey">Last Login: 3 hours ago</span>
@@ -71,45 +71,42 @@
                             <ul class="submenu">
                                 <li><a class="active">Thay đổi mật khẩu</a> </li>
                                 <li><a>Thay đổi thông tin cá nhân</a> </li>
-                                <li><a >Submenu 3</a> </li>
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
+                                
                             </ul>
                         </li>
+                     {if isset($quyenhan)}
+                      {if $quyenhan eq 0}
                         <li><a class="menuitem">Quản lý thành viên</a>
                             <ul class="submenu">
                                 <li><a  href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
                                 <li><a href="themthanhvien.php">Thêm thành viên</a> </li>
-                                <li><a>Submenu 3</a> </li>
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
+                               
                             </ul>
                         </li>
+                     {/if}
+                     {/if}
                         <li><a class="menuitem">Quản lý tin đăng</a>
                             <ul class="submenu">
                                 <li><a href="danhsachtindang.php">Danh sách tin đăng</a> </li>
                                 <li><a href="themtindang.php">Thêm tin đăng</a> </li>
-                                <li><a>Submenu 3</a> </li>
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
+                               
                             </ul>
                         </li>
-                        <li><a class="menuitem">Quản lý tin tức</a>
-                            <ul class="submenu">
-                                <li><a>Danh sách tin tức</a> </li>
-                                <li><a>Submenu 2</a> </li>
-                                <li><a>Submenu 3</a> </li>		
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
-                            </ul>
-                        </li>
+                       
                       <li><a class="menuitem">Quản lý danh mục</a>
                             <ul class="submenu">
                                 <li><a href="danhsachtinhthanh.php">Danh sách tỉnh thành</a> </li>
-                                <li><a href="danhsachquanhuyen.php">Danh sách quận huyện</a> </li>
+                               
                                 <li><a href="danhsachnhucau.php">Danh sách nhu cầu</a> </li>		
                                 <li><a href="danhsachkhunggia.php">Danh sách khung giá</a> </li>
                                 <li><a href="danhsachloainha.php">Danh sách loại nhà</a> </li>
+                            </ul>
+                        </li>
+                        <li><a class="menuitem">Hộp thư</a>
+                            <ul class="submenu">
+                                <li><a href="tinnhanden.php">Tin nhắn đến</a> </li>
+                                <li><a href="tinnhandi.php">Tin nhắn đã gửi</a> </li>		
+                                 <li><a href="guitinnhan.php">Gửi tin nhắn</a> </li>		
                             </ul>
                         </li>
                     </ul>

@@ -27,6 +27,7 @@
 							<td class=" sorting_1">{$thanhvien.Email}</td>
 							<td>{$thanhvien.Password}</td>
 							 <td> <a href="changepass.php?userid={$thanhvien.UserID}"> <button class="btn btn-teal" >Sửa mật khẩu</button> </a> </td>
+                       <td> <a href="guitinnhan.php?nguoinhan={$thanhvien.UserID}"> <button class="btn btn-teal" >Gửi tin nhắn</button> </a> </td>
 						  <td> <a href="?action=delete&userid={$thanhvien.UserID}"> <button class="btn btn-teal" >Xóa</button> </a> </td>
 						</tr>
                   

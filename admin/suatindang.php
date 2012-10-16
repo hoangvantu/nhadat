@@ -1,10 +1,5 @@
 <?php
-
-if (isset($_GET['newsid'])) {
- include_once('../connect.php');
- require_once '../includes/sm_config_admin.php';
- $db = new dbmanager();
- $db->connect();
+require_once 'global.php';
  $qlgiaodien->assign('page_title',"Sửa tin đăng");
 if(isset($_POST['txtTitle']))
 {
@@ -56,7 +51,8 @@ $qlgiaodien->assign('danhsachkhunggia',$danhsachkhunggia);
   }
   $district=$db->getRow("select districtname from `district` where `districtid`=2");
  }
- }
+ 
  $qlgiaodien->display('suatindang.tpl');
+ 
 }
 ?>

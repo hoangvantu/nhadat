@@ -30,14 +30,36 @@
 				<div style="margin-left: 40px;">
 						<ul><li> <a href="/thụy-khuê-2012/bán-nhà-khu-thụy-khuê-2012-chính-chủ-49253.htm">Bán nhà chính chủ ngõ phố Thụy Khuê, Tây Hồ 2012. Địa chỉ: số 1 ngõ ... 4.3 Tỷ</a></li></ul>	
 					</div>
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="613" height="450">
-<param name="allowFullScreen" value="true">
-<param name="movie" value="http://nhadatvideo.vn/sites/all/modules/application_services/dfgallery/dfgallery/DfGallery.swf">
-<param name="quality" value="high">
-<param name="wmode" value="opaque">
-<param name="FlashVars" value="xmlUrl=http://nhadatvideo.vn/photos/data/43773?type=json.json">
-<embed wmode="opaque" src="http://nhadatvideo.vn/sites/all/modules/application_services/dfgallery/dfgallery/DfGallery.swf" quality="high" width="613" height="450" flashvars="xmlUrl=http://nhadatvideo.vn/photos/data/43773?type=json.json" allowfullscreen="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" title="Flash">
-</object><div class="view-quick-guide clearfix" style="color: #000000;">
+ <div id="galleria">
+     </div>   
+             {literal}
+
+    <!-- <button type="button" onclick="add()" value="1211 "> </button>-->
+     
+    
+     
+      
+{/literal}
+ <script >
+    // Load the classic theme
+    
+   Galleria.loadTheme('{$smarty.current_dir|replace:'\\':'/'}/galeria/galleria.classic.min.js');
+{literal}    
+    // Initialize Galleria
+    Galleria.configure({
+    width:613,
+    height:450
+});
+    Galleria.run('#galleria',{
+    dataSource: dataimage
+     
+});
+  
+{/literal}
+    </script>
+     
+
+            <div class="view-quick-guide clearfix" style="color: #000000;">
 <div class="clearfix" style="width: 613px;">
 <h3 style="cursor: pointer; font-size: 14px; margin-bottom: 3px; float: left;"> <i> <b style="color: blue;"> </b></i> ... </h3> <a href="/send/feedback?property_nid=43773" id="customer-feedback" rel="nofollow" class="feedback" style="float: right; display: block;"></a>
 </div>

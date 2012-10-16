@@ -1,15 +1,59 @@
 {extends file="layout.tpl"}
 {block name="headjava" append}
+<script src="{$smarty.current_dir|replace:'\\':'/'}/jquery.jeditable.js" type="text/javascript"></script>
 {literal}
  <script type="text/javascript">
+    $(function() { 
+ $(".editable_textarea").editable("ajaxkhunggia.php?action=edittenkhunggia", { 
+      indicator : "<img src='img/indicator.gif'>",
+      type   : 'textarea',
+      submitdata: { _method: "put" },
+      select : true,
+      submit : 'OK',
+      cancel : 'cancel',
+      cssclass : "editable"
+  });
+ });
+  
+  
+  
+  
+  
+  
 function themmoi()
 {
  if(!$(".newprovince").get(0)) 
-  {
+$(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên </td><td><input type=\"text\"/></td><td><button onclick=\"them()\">Thêm</button></td></tr>");
+}
  
-$(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh thành</td><td><input type=\"text\"/></td><td><select name=\"slprovince\"></select></td><td><button onclick=\"them()\">Thêm</button></td><</tr>");
-  } 
-   }
+ function them()
+  {
+  // alert($(".newprovince td:eq(1) input").val());
+   var newprovince = $(".newprovince td:eq(1) input").val();
+    var newprovinceid;
+    $.post("ajaxkhunggia.php?action=addkhunggia", { khunggianame: newprovince},
+   function(data) {
+    newprovinceid=data;
+   
+      $(".newprovince").html("");
+   $(".newprovince").remove();
+    $(".bangdanhsach").append("<tr class=\"gradeA odd td"+newprovinceid+" \"><td>"+newprovinceid+"</td><td><a href=\"danhsachquanhuyen.php?provinceid="+newprovinceid+"\">"+newprovince+"</a></td><td> <a href=\"?action=delete&provinceid="+newprovinceid+"\"><button class=\"btn btn-teal\" >Xóa</button></td></tr>");
+   });
+     
+   };
+    function xoa(khunggiaid)
+  {
+   if( confirm("Bạn có muốn xóa không"))
+    {
+      $.post("ajaxkhunggia.php?action=delete", { khunggiaid: khunggiaid},
+   function(data) {
+       
+       $(".td"+khunggiaid).html("");
+      $(".td"+khunggiaid).remove();
+  
+ });
+ }}
+ 
  </script>
 {/literal}
 {/block}
@@ -38,12 +82,12 @@ $(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh th�
                                     {if isset($danhsachkhunggia)}
                                     {foreach from=$danhsachkhunggia item=khunggia}
              
-             <tr class="gradeA odd">
+             <tr class="gradeA odd td{$khunggia.khunggiaid} ">
                      <td class="center">{$khunggia.khunggiaid}</td>
 							
-                                  <td ><a href="danhsachquanhuyen.php?districtid={$khunggia.khunggiaid}">{$khunggia.KhungGiaName}</td>
+                     <td > <div id="{$khunggia.khunggiaid}" class="editable_textarea">{$khunggia.KhungGiaName}</div></td>
                                  
-                                  <td> <a href="?action=delete&districtid={$khunggia.khunggiaid}"> <button class="btn btn-teal" >Xóa</button> </a>	</td>	
+                                  <td> <button class="btn btn-teal" onclick="xoa({$khunggia.khunggiaid})" >Xóa</button> 	</td>	
                                             
                                     
                                     </tr>
@@ -52,20 +96,7 @@ $(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh th�
                 
                  {/foreach}  
                  {/if}
-                                               <tr class="gradeA odd">
-							<td class=" sorting_1">Gecko</td>
-							<td>Firefox 1.0</td>
-							<td>Win 98+ / OSX.2+</td>
-							<td class="center">1.7</td>
-							<td class="center">A</td>
-						</tr>
-                                                <tr class="gradeA even">
-							<td class=" sorting_1">Gecko</td>
-							<td>Firefox 1.5</td>
-							<td>Win 98+ / OSX.2+</td>
-							<td class="center">1.8</td>
-							<td class="center">A</td>
-						</tr></tbody>
+                                             </tbody>
                         
                         </table>
                         <div class="dataTables_info" id="example_info">Showing 1 to 10 of 57 entries</div>

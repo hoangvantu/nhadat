@@ -5,7 +5,7 @@
 					<h4>{$foo.Title}</h4>
 				</span>
 				<span class="ad-image">
-					<img width="154" height="116" src="http://farm7.static.flickr.com/6122/5929060589_b515a2674a_m.jpg">
+					<img width="154" height="116" src="{if isset($foo.Image__URL)}{$foo.Image__URL}{else}http://easyvn.net/news/themes/img/no-img.jpg{/if}">
 				</span>
 				<p></p>
 				<span class="ad-des" >

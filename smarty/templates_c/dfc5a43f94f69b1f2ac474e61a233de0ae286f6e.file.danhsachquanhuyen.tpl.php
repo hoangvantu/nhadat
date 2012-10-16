@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-08 13:49:01
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-16 05:40:13
          compiled from "..\smarty\templates\styleAdmin\blueadmin\danhsachquanhuyen.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:47845072a149ce30e8-29611531%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,13 +7,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dfc5a43f94f69b1f2ac474e61a233de0ae286f6e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\danhsachquanhuyen.tpl',
-      1 => 1349689519,
+      1 => 1350366011,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\layout.tpl',
-      1 => 1349697201,
+      1 => 1350362906,
       2 => 'file',
     ),
     '8a48e3331a7d9f9f03f5e1db17b60f3bf0d666b7' => 
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0fc3d3f5d0caae3f65ebc50f770b3e2d52a1d326' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headjava.tpl',
-      1 => 1349704098,
+      1 => 1350363007,
       2 => 'file',
     ),
   ),
@@ -38,10 +38,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'page_title' => 0,
+    'name' => 0,
+    'quyenhan' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5072a14a389515_31608950')) {function content_5072a14a389515_31608950($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php if ($_valid && !is_callable('content_5072a14a389515_31608950')) {function content_5072a14a389515_31608950($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -52,23 +55,74 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '47845072a149ce30e8-29611531');
-content_5072d9cd7272c9_09444098($_smarty_tpl);
+content_507cf33dea5fb1_00140984($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
  
             <?php /*  Call merged included template "headjava.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '47845072a149ce30e8-29611531');
-content_5072d9cd85f584_13924095($_smarty_tpl);
+content_507cf33e1fdc04_12745723($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
  
+<script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
+/jquery.jeditable.js" type="text/javascript"></script>
 
  <script type="text/javascript">
+  
+  $(function() { 
+ $(".editable_textarea").editable("ajaxquanhuyen.php?action=edittenhuyen", { 
+      indicator : "<img src='img/indicator.gif'>",
+      type   : 'textarea',
+      submitdata: { _method: "put" },
+      select : true,
+      submit : 'OK',
+      cancel : 'cancel',
+      cssclass : "editable"
+  });
+ });
+  
+  
+  $.urlParam = function(name){
+    var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    return results[1] || 0;
+}
 function themmoi()
 {
  if(!$(".newprovince").get(0)) 
-$(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh thành</td><td><input type=\"text\"/></td><td><button onclick=\"them()\">Thêm</button></td></tr>");
+$(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh thành</td><td><input type=\"text\"/></td><td>"+$(".bangdanhsach tr:eq(0) td:eq(2)").html()+"</td><td><button onclick=\"them()\">Thêm</button></td></tr>");
 }
+ function them()
+  {
+  // alert($(".newprovince td:eq(1) input").val());
+   var tenquanhuyen = $(".newprovince td:eq(1) input").val();
+    var newprovinceid;
+    $.post("ajaxquanhuyen.php?action=addquanhuyen&provinceid="+$.urlParam("provinceid"), { tenquanhuyen: tenquanhuyen},
+   function(data) {
+    newprovinceid=data;
+   
+      $(".newprovince").html("");
+   $(".newprovince").remove();
+    $(".bangdanhsach").append("<tr class=\"gradeA odd td"+newprovinceid+" \"><td>"+newprovinceid+"</td><td><a href=\"danhsachquanhuyen.php?provinceid="+newprovinceid+"\">"+tenquanhuyen+"</a></td><td>"+$(".bangdanhsach tr:eq(0) td:eq(2)").html()+"</td><td>  <button class=\"btn btn-teal\" type=\"Submit\" onclick=\"xoa("+newprovinceid+")\">Xóa</button> </td></tr>");
+   });
+     
+   };
+ function xoa(quanhuyenid)
+  {
+   if( confirm("Bạn có muốn xóa không"))
+    {
+      $.post("ajaxquanhuyen.php?action=delete", { quanhuyenid: quanhuyenid},
+   function(data) {
+       
+       $(".td"+quanhuyenid).html("");
+      $(".td"+quanhuyenid).remove();
+  
+ });
+     
+    
+    }
+   
+   }
  </script>
 
 
@@ -87,9 +141,10 @@ $(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh th�
 /img/img-profile.jpg" alt="Profile Pic" /></div>
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
-                            <li>Hello Admin</li>
+                            <li>Hello <?php if (isset($_smarty_tpl->tpl_vars['name']->value)){?><?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+<?php }?></li>
                             <li><a href="#">Config</a></li>
-                            <li><a href="#">Logout</a></li>
+                            <li><a href="logout.php">Logout</a></li>
                         </ul>
                         <br />
                         <span class="small grey">Last Login: 3 hours ago</span>
@@ -135,45 +190,42 @@ $(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh th�
                             <ul class="submenu">
                                 <li><a class="active">Thay đổi mật khẩu</a> </li>
                                 <li><a>Thay đổi thông tin cá nhân</a> </li>
-                                <li><a >Submenu 3</a> </li>
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
+                                
                             </ul>
                         </li>
+                     <?php if (isset($_smarty_tpl->tpl_vars['quyenhan']->value)){?>
+                      <?php if ($_smarty_tpl->tpl_vars['quyenhan']->value==0){?>
                         <li><a class="menuitem">Quản lý thành viên</a>
                             <ul class="submenu">
                                 <li><a  href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
                                 <li><a href="themthanhvien.php">Thêm thành viên</a> </li>
-                                <li><a>Submenu 3</a> </li>
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
+                               
                             </ul>
                         </li>
+                     <?php }?>
+                     <?php }?>
                         <li><a class="menuitem">Quản lý tin đăng</a>
                             <ul class="submenu">
                                 <li><a href="danhsachtindang.php">Danh sách tin đăng</a> </li>
                                 <li><a href="themtindang.php">Thêm tin đăng</a> </li>
-                                <li><a>Submenu 3</a> </li>
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
+                               
                             </ul>
                         </li>
-                        <li><a class="menuitem">Quản lý tin tức</a>
-                            <ul class="submenu">
-                                <li><a>Danh sách tin tức</a> </li>
-                                <li><a>Submenu 2</a> </li>
-                                <li><a>Submenu 3</a> </li>		
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
-                            </ul>
-                        </li>
+                       
                       <li><a class="menuitem">Quản lý danh mục</a>
                             <ul class="submenu">
                                 <li><a href="danhsachtinhthanh.php">Danh sách tỉnh thành</a> </li>
-                                <li><a href="danhsachquanhuyen.php">Danh sách quận huyện</a> </li>
+                               
                                 <li><a href="danhsachnhucau.php">Danh sách nhu cầu</a> </li>		
                                 <li><a href="danhsachkhunggia.php">Danh sách khung giá</a> </li>
                                 <li><a href="danhsachloainha.php">Danh sách loại nhà</a> </li>
+                            </ul>
+                        </li>
+                        <li><a class="menuitem">Hộp thư</a>
+                            <ul class="submenu">
+                                <li><a href="tinnhanden.php">Tin nhắn đến</a> </li>
+                                <li><a href="tinnhandi.php">Tin nhắn đã gửi</a> </li>		
+                                 <li><a href="guitinnhan.php">Gửi tin nhắn</a> </li>		
                             </ul>
                         </li>
                     </ul>
@@ -189,55 +241,43 @@ $(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh th�
 
  <div class="box round first grid">
                 <h2>
-                    Danh sách tỉnh thành</h2>
+                    Danh sách quận huyện</h2>
                 <div class="block">
                     
                     
                     
-                 <div class="dataTables_wrapper" id="example_wrapper"><div id="example_length" class="dataTables_length"><label>Show <select size="1" name="example_length"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label>   <button type="button"onclick="themmoi()">Thêm mới</button></div><div class="dataTables_filter" id="example_filter"><label>Search: <input type="text"></label></div><table class="data display datatable" id="example">
+                 <div class="dataTables_wrapper" id="example_wrapper"><div id="example_length" class="dataTables_length"><label>Show <select size="1" name="example_length"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label>   <button type="button"onclick="themmoi()">Thêm mới</button> <a  href="danhsachtinhthanh.php"><button type="button">Trở lại danh sách tỉnh</button></a></div><div class="dataTables_filter" id="example_filter"><label>Search: <input type="text"></label></div><table class="data display datatable" id="example">
 					<thead>
-						<tr><th class="sorting_asc" rowspan="1" colspan="1" style="width: 213px; ">Rendering engine</th><th class="sorting" rowspan="1" colspan="1" style="width: 265px; ">Browser</th><th class="sorting" rowspan="1" colspan="1" style="width: 249px; ">Platform(s)</th><th class="sorting" rowspan="1" colspan="1" style="width: 179px; ">Engine version</th><th class="sorting" rowspan="1" colspan="1" style="width: 129px; ">CSS grade</th></tr>
+						<tr><th class="sorting_asc" rowspan="1" colspan="1" style="width: 213px; ">Mã quận huyện</th><th class="sorting" rowspan="1" colspan="1" style="width: 265px; ">Tên quận huyện</th><th class="sorting" rowspan="1" colspan="1" style="width: 249px; ">Tên tỉnh</th><th class="sorting" rowspan="1" colspan="1" style="width: 179px; ">Engine version</th><th class="sorting" rowspan="1" colspan="1" style="width: 129px; ">CSS grade</th></tr>
 					</thead>
 					
 				<tbody class="bangdanhsach">
-                                    <?php if (isset($_smarty_tpl->tpl_vars['danhsachtinhthanh']->value)){?>
-                                    <?php  $_smarty_tpl->tpl_vars['tinhthanh'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tinhthanh']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['danhsachtinhthanh']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['tinhthanh']->key => $_smarty_tpl->tpl_vars['tinhthanh']->value){
-$_smarty_tpl->tpl_vars['tinhthanh']->_loop = true;
+                                    <?php if (isset($_smarty_tpl->tpl_vars['danhsachquanhuyen']->value)){?>
+                                    <?php  $_smarty_tpl->tpl_vars['quanhuyen'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['quanhuyen']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['danhsachquanhuyen']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['quanhuyen']->key => $_smarty_tpl->tpl_vars['quanhuyen']->value){
+$_smarty_tpl->tpl_vars['quanhuyen']->_loop = true;
 ?>
-             
-             <tr class="gradeA odd">
-                     <td class="center"><?php echo $_smarty_tpl->tpl_vars['tinhthanh']->value['ProvinceID'];?>
+                   <tr class="gradeA odd td<?php echo $_smarty_tpl->tpl_vars['quanhuyen']->value['districtid'];?>
+">
+                     <td class="center"><?php echo $_smarty_tpl->tpl_vars['quanhuyen']->value['districtid'];?>
 </td>
-							
-                                  <td ><a href="danhsachquanhuyen.php?districtid=<?php echo $_smarty_tpl->tpl_vars['tinhthanh']->value['ProvinceID'];?>
-"><?php echo $_smarty_tpl->tpl_vars['tinhthanh']->value['ProvinceName'];?>
-</td>
-				 <td> <a href="?action=delete&provinceid=<?php echo $_smarty_tpl->tpl_vars['tinhthanh']->value['ProvinceID'];?>
-"> <button class="btn btn-teal" >Xóa</button> </a>	</td>	
-                                            
+						
+                                  <td ><div id="<?php echo $_smarty_tpl->tpl_vars['quanhuyen']->value['districtid'];?>
+" class="editable_textarea"> <?php echo $_smarty_tpl->tpl_vars['quanhuyen']->value['districtname'];?>
+</div></td>
+                                  <td>  <a href="danhsachquanhuyen.php?provinceid=<?php echo $_smarty_tpl->tpl_vars['quanhuyen']->value['ProvinceID'];?>
+"><?php echo $_smarty_tpl->tpl_vars['quanhuyen']->value['ProvinceName'];?>
+   </a>      </td>     
+				 <td><button class="btn btn-teal" onclick="xoa(<?php echo $_smarty_tpl->tpl_vars['quanhuyen']->value['districtid'];?>
+)" >Xóa</button> 	</td>	
+                                      
                                     
                                     </tr>
                   
-                  
-                
                  <?php } ?>  
                  <?php }?>
-                                               <tr class="gradeA odd">
-							<td class=" sorting_1">Gecko</td>
-							<td>Firefox 1.0</td>
-							<td>Win 98+ / OSX.2+</td>
-							<td class="center">1.7</td>
-							<td class="center">A</td>
-						</tr>
-                                                <tr class="gradeA even">
-							<td class=" sorting_1">Gecko</td>
-							<td>Firefox 1.5</td>
-							<td>Win 98+ / OSX.2+</td>
-							<td class="center">1.8</td>
-							<td class="center">A</td>
-						</tr></tbody>
+                                        </tbody>
                         
                         </table>
                         <div class="dataTables_info" id="example_info">Showing 1 to 10 of 57 entries</div>
@@ -270,9 +310,9 @@ $_smarty_tpl->tpl_vars['tinhthanh']->_loop = true;
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-08 13:49:01
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-16 05:40:13
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5072d9cd7272c9_09444098')) {function content_5072d9cd7272c9_09444098($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_507cf33dea5fb1_00140984')) {function content_507cf33dea5fb1_00140984($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -285,9 +325,9 @@ $_smarty_tpl->tpl_vars['tinhthanh']->_loop = true;
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-08 13:49:01
+  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-16 05:40:14
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5072d9cd85f584_13924095')) {function content_5072d9cd85f584_13924095($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_507cf33e1fdc04_12745723')) {function content_507cf33e1fdc04_12745723($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!-- BEGIN: load jquery -->
 <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /js/jquery-1.6.4.min.js" type="text/javascript"></script>
@@ -329,6 +369,8 @@ $_smarty_tpl->tpl_vars['tinhthanh']->_loop = true;
          
     $(document).ready(function () 
     {
+     
+     
         setupLeftMenu();
        setSidebarHeight();
            

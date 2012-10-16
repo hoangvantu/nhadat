@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:26
+<?php /* Smarty version Smarty-3.1.11, created on 2012-10-16 06:51:12
          compiled from "..\smarty\templates\styleAdmin\blueadmin\themtindang.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3124350705d8c445422-77186520%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,13 +7,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7954bc6e35673394399013fac15f5a4a88060e79' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\themtindang.tpl',
-      1 => 1349741038,
+      1 => 1350344476,
       2 => 'file',
     ),
     '5c9b732e7a183b501f3719781b8bd998024ce21e' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\layout.tpl',
-      1 => 1349697201,
+      1 => 1350362906,
       2 => 'file',
     ),
     '8a48e3331a7d9f9f03f5e1db17b60f3bf0d666b7' => 
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0fc3d3f5d0caae3f65ebc50f770b3e2d52a1d326' => 
     array (
       0 => '..\\smarty\\templates\\styleAdmin\\blueadmin\\headjava.tpl',
-      1 => 1349704098,
+      1 => 1350363007,
       2 => 'file',
     ),
   ),
@@ -38,6 +38,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'page_title' => 0,
+    'name' => 0,
+    'quyenhan' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -53,7 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php /*  Call merged included template "headcss.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headcss.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '3124350705d8c445422-77186520');
-content_5073e0df83ae34_82814185($_smarty_tpl);
+content_507d03e08cbbf4_10784454($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl" */?>
  
 
@@ -78,7 +80,7 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headcss.tpl
             <?php /*  Call merged included template "headjava.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("headjava.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '3124350705d8c445422-77186520');
-content_5073e0dfbfd991_13355452($_smarty_tpl);
+content_507d03e0c85df1_70580310($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tpl" */?>
  
 
@@ -91,6 +93,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
 /galeria/dump.js"></script>
      <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /galeria/galleria-1.2.8.min.js"></script>
+          <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
+/jquery-1.6.4.min.js"></script>
+
  
     <script type="text/javascript">
   var dataimage = [
@@ -251,11 +256,12 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
 }); 
        
       $(".province").change(function(data)
-         {
-            $(".district").empty();
+         {  $(".district").html("");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
             $.getJSON('../ajax_request.php' ,{action:'getquan',provinceid:$(this).val()},function(data){
                $.each(data, function(index) {
                // alert(data[index].districtid);
+              
                $(".district").append("<option value=\""+data[index].districtid+"\">"+data[index].districtname+"</option>");
           });
 
@@ -304,9 +310,10 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
 /img/img-profile.jpg" alt="Profile Pic" /></div>
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
-                            <li>Hello Admin</li>
+                            <li>Hello <?php if (isset($_smarty_tpl->tpl_vars['name']->value)){?><?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+<?php }?></li>
                             <li><a href="#">Config</a></li>
-                            <li><a href="#">Logout</a></li>
+                            <li><a href="logout.php">Logout</a></li>
                         </ul>
                         <br />
                         <span class="small grey">Last Login: 3 hours ago</span>
@@ -352,45 +359,42 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
                             <ul class="submenu">
                                 <li><a class="active">Thay đổi mật khẩu</a> </li>
                                 <li><a>Thay đổi thông tin cá nhân</a> </li>
-                                <li><a >Submenu 3</a> </li>
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
+                                
                             </ul>
                         </li>
+                     <?php if (isset($_smarty_tpl->tpl_vars['quyenhan']->value)){?>
+                      <?php if ($_smarty_tpl->tpl_vars['quyenhan']->value==0){?>
                         <li><a class="menuitem">Quản lý thành viên</a>
                             <ul class="submenu">
                                 <li><a  href="danhsachthanhvien.php">Danh sách thành viên</a> </li>
                                 <li><a href="themthanhvien.php">Thêm thành viên</a> </li>
-                                <li><a>Submenu 3</a> </li>
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
+                               
                             </ul>
                         </li>
+                     <?php }?>
+                     <?php }?>
                         <li><a class="menuitem">Quản lý tin đăng</a>
                             <ul class="submenu">
                                 <li><a href="danhsachtindang.php">Danh sách tin đăng</a> </li>
                                 <li><a href="themtindang.php">Thêm tin đăng</a> </li>
-                                <li><a>Submenu 3</a> </li>
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
+                               
                             </ul>
                         </li>
-                        <li><a class="menuitem">Quản lý tin tức</a>
-                            <ul class="submenu">
-                                <li><a>Danh sách tin tức</a> </li>
-                                <li><a>Submenu 2</a> </li>
-                                <li><a>Submenu 3</a> </li>		
-                                <li><a>Submenu 4</a> </li>
-                                <li><a>Submenu 5</a> </li>
-                            </ul>
-                        </li>
+                       
                       <li><a class="menuitem">Quản lý danh mục</a>
                             <ul class="submenu">
                                 <li><a href="danhsachtinhthanh.php">Danh sách tỉnh thành</a> </li>
-                                <li><a href="danhsachquanhuyen.php">Danh sách quận huyện</a> </li>
+                               
                                 <li><a href="danhsachnhucau.php">Danh sách nhu cầu</a> </li>		
                                 <li><a href="danhsachkhunggia.php">Danh sách khung giá</a> </li>
                                 <li><a href="danhsachloainha.php">Danh sách loại nhà</a> </li>
+                            </ul>
+                        </li>
+                        <li><a class="menuitem">Hộp thư</a>
+                            <ul class="submenu">
+                                <li><a href="tinnhanden.php">Tin nhắn đến</a> </li>
+                                <li><a href="tinnhandi.php">Tin nhắn đã gửi</a> </li>		
+                                 <li><a href="guitinnhan.php">Gửi tin nhắn</a> </li>		
                             </ul>
                         </li>
                     </ul>
@@ -417,12 +421,84 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
    <table class="form">
     <tbody>
      <tr>
+      <td><label>Tỉnh</label></td>
+      <td>
+       <select name="slprovince" class="province" >
+        <?php if (isset($_smarty_tpl->tpl_vars['danhsachtinh']->value)){?>
+         <?php  $_smarty_tpl->tpl_vars['tinh'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tinh']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['danhsachtinh']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['tinh']->key => $_smarty_tpl->tpl_vars['tinh']->value){
+$_smarty_tpl->tpl_vars['tinh']->_loop = true;
+?>
+          <option value="<?php echo $_smarty_tpl->tpl_vars['tinh']->value['ProvinceID'];?>
+"><?php echo $_smarty_tpl->tpl_vars['tinh']->value['ProvinceName'];?>
+</option>
+         <?php } ?>
+        <?php }?>
+       </select>
+
+
+      </td>
+     </tr>
+     <tr>
+      <td><label>Quận/Huyện</label></td>
+      <td>
+       <select name="sldistrict" class="district" required title="Bạn chưa chọn quận huyện" >
+       
+
+       </select>
+      </td>
+
+     </tr>
+     <tr>
+      <td><label>Loại nhà</label></td>
+      <td>
+       <select  name="slloainha" required title="Bạn chưa chọn loại nhà"  >
+         <option value=""></option>
+        <?php if (isset($_smarty_tpl->tpl_vars['danhsachloainha']->value)){?>
+         <?php  $_smarty_tpl->tpl_vars['loainha'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['loainha']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['danhsachloainha']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['loainha']->key => $_smarty_tpl->tpl_vars['loainha']->value){
+$_smarty_tpl->tpl_vars['loainha']->_loop = true;
+?>
+          <option value="<?php echo $_smarty_tpl->tpl_vars['loainha']->value['LoainhaID'];?>
+"><?php echo $_smarty_tpl->tpl_vars['loainha']->value['TenLoaiNha'];?>
+</option>
+         <?php } ?>
+        <?php }?>
+       </select>
+
+
+      </td>
+     </tr>
+     <tr>
+      <td><label>Khung giá</label></td>
+      <td>
+       <select required  name="slkhunggia" required title="Bạn chưa chọn khung giá" >
+         <option value=""></option>
+        <?php if (isset($_smarty_tpl->tpl_vars['danhsachkhunggia']->value)){?>
+         <?php  $_smarty_tpl->tpl_vars['khunggia'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['khunggia']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['danhsachkhunggia']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['khunggia']->key => $_smarty_tpl->tpl_vars['khunggia']->value){
+$_smarty_tpl->tpl_vars['khunggia']->_loop = true;
+?>
+          <option value="<?php echo $_smarty_tpl->tpl_vars['khunggia']->value['khunggiaid'];?>
+"><?php echo $_smarty_tpl->tpl_vars['khunggia']->value['KhungGiaName'];?>
+</option>
+         <?php } ?>
+        <?php }?>
+       </select>
+
+
+      </td>
+     </tr>
+     <tr>
       <td class="col1">
        <label>
         Tiêu đề</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtTitle"  id="grumble">
+       <input type="text" name="txtTitle" class="large" id="grumble" required title="Tiêu đề không được bỏ trông"/ >
       </td>
      </tr>
      <tr>
@@ -431,16 +507,16 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
         Số điện thoại</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtphone" id="grumble">
+       <input type="text" name="txtphone" id="grumble" pattern="[0-9]{10,11}" title="Số điện thoại bao gồm 10 hoặc 11 chữ số" required/>
       </td>
      </tr>
      <tr>
       <td>  <label>Nội dung</label></td>
-      <td> <textarea name="txtContent" cols="50" rows="15">This is some content that will be editable with TinyMCE.</textarea></td>
+      <td> <textarea name="txtContent" cols="50" rows="15"  required="required">1</textarea></td>
 
      </tr>
       <tr>
-      <td class="col1">
+      <td class="col1"  required>
        <label>
        Video URL<label>
       </td>
@@ -468,7 +544,7 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
       </td>
      </tr>
      <tr>
-      <td>111
+      <td>
       </td>
       <td>
     
@@ -481,6 +557,7 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
       
 
     // Load the classic theme
+    
     Galleria.loadTheme('<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /galeria/galleria.classic.min.js');
     
@@ -500,83 +577,14 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "headjava.tp
 
       </td>
      </tr>
-     <tr>
-      <td><label>Tỉnh</label></td>
-      <td>
-       <select name="slprovince" class="province" >
-        <?php if (isset($_smarty_tpl->tpl_vars['danhsachtinh']->value)){?>
-         <?php  $_smarty_tpl->tpl_vars['tinh'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tinh']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['danhsachtinh']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['tinh']->key => $_smarty_tpl->tpl_vars['tinh']->value){
-$_smarty_tpl->tpl_vars['tinh']->_loop = true;
-?>
-          <option value="<?php echo $_smarty_tpl->tpl_vars['tinh']->value['ProvinceID'];?>
-"><?php echo $_smarty_tpl->tpl_vars['tinh']->value['ProvinceName'];?>
-</option>
-         <?php } ?>
-        <?php }?>
-       </select>
-
-
-      </td>
-     </tr>
-     <tr>
-      <td><label>Quận/Huyện</label></td>
-      <td>
-       <select name="sldistrict" class="district">
-       
-
-       </select>
-      </td>
-
-     </tr>
-     <tr>
-      <td><label>Loại nhà</label></td>
-      <td>
-       <select  name="slloainha" >
-        <?php if (isset($_smarty_tpl->tpl_vars['danhsachloainha']->value)){?>
-         <?php  $_smarty_tpl->tpl_vars['loainha'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['loainha']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['danhsachloainha']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['loainha']->key => $_smarty_tpl->tpl_vars['loainha']->value){
-$_smarty_tpl->tpl_vars['loainha']->_loop = true;
-?>
-          <option value="<?php echo $_smarty_tpl->tpl_vars['loainha']->value['LoainhaID'];?>
-"><?php echo $_smarty_tpl->tpl_vars['loainha']->value['TenLoaiNha'];?>
-</option>
-         <?php } ?>
-        <?php }?>
-       </select>
-
-
-      </td>
-     </tr>
-     <tr>
-      <td><label>Khung giá</label></td>
-      <td>
-       <select  name="slkhunggia" ">
-        <?php if (isset($_smarty_tpl->tpl_vars['danhsachkhunggia']->value)){?>
-         <?php  $_smarty_tpl->tpl_vars['khunggia'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['khunggia']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['danhsachkhunggia']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['khunggia']->key => $_smarty_tpl->tpl_vars['khunggia']->value){
-$_smarty_tpl->tpl_vars['khunggia']->_loop = true;
-?>
-          <option value="<?php echo $_smarty_tpl->tpl_vars['khunggia']->value['khunggiaid'];?>
-"><?php echo $_smarty_tpl->tpl_vars['khunggia']->value['KhungGiaName'];?>
-</option>
-         <?php } ?>
-        <?php }?>
-       </select>
-
-
-      </td>
-     </tr>
+     
       <tr>
       <td class="col1">
        <label>
          Địa chỉ</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtdiachi" id="grumble">
+       <input type="text" name="txtdiachi" id="grumble" required="required">
       </td>
      </tr>
      <tr>
@@ -585,7 +593,7 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
        Giá nhà (viết bằng chữ)</label>
       </td>
       <td class="col2">
-       <input type="text" name="txtgianha" id="grumble">
+       <input type="text" name="txtgianha" id="grumble" required="required">
       </td>
      </tr>
      <tr>
@@ -611,7 +619,8 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
       
       </td>
       <td class="col2">
-      <button type="submit" value="Submit" >Gửi tin</button>
+       
+      <button type="submit" value="Submit" > <input type="submit"  /> </button>
       </td>
      </tr>
 
@@ -621,7 +630,21 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
   </form>
 
     
-		
+		 <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'hongvnt'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
        
 		
 			
@@ -646,9 +669,9 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
  
  
  </body>
- </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:27
+ </html><?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-16 06:51:12
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headcss.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5073e0df83ae34_82814185')) {function content_5073e0df83ae34_82814185($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_507d03e08cbbf4_10784454')) {function content_507d03e08cbbf4_10784454($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?> <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
@@ -661,9 +684,9 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
 /css/nav.css" media="screen" />
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-09 08:31:27
+  <?php }} ?><?php /* Smarty version Smarty-3.1.11, created on 2012-10-16 06:51:12
          compiled from "..\smarty\templates\styleAdmin\blueadmin\headjava.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5073e0dfbfd991_13355452')) {function content_5073e0dfbfd991_13355452($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
+<?php if ($_valid && !is_callable('content_507d03e0c85df1_70580310')) {function content_507d03e0c85df1_70580310($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include 'C:\\wamp\\www\\nhadat\\includes\\smarty\\plugins\\modifier.replace.php';
 ?><!-- BEGIN: load jquery -->
 <script src="<?php echo smarty_modifier_replace(dirname($_smarty_tpl->source->filepath),'\\','/');?>
 /js/jquery-1.6.4.min.js" type="text/javascript"></script>
@@ -705,6 +728,8 @@ $_smarty_tpl->tpl_vars['khunggia']->_loop = true;
          
     $(document).ready(function () 
     {
+     
+     
         setupLeftMenu();
        setSidebarHeight();
            

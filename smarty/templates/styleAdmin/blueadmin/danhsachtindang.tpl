@@ -34,20 +34,7 @@
                 
                  {/foreach}  
                  {/if}
-                                               <tr class="gradeA odd">
-							<td class=" sorting_1">Gecko</td>
-							<td>Firefox 1.0</td>
-							<td>Win 98+ / OSX.2+</td>
-							<td class="center">1.7</td>
-							<td class="center">A</td>
-						</tr>
-                                                <tr class="gradeA even">
-							<td class=" sorting_1">Gecko</td>
-							<td>Firefox 1.5</td>
-							<td>Win 98+ / OSX.2+</td>
-							<td class="center">1.8</td>
-							<td class="center">A</td>
-						</tr></tbody>
+                                         </tbody>
                         
                         </table>
                         <div class="dataTables_info" id="example_info">Showing 1 to 10 of 57 entries</div>

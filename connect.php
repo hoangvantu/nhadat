@@ -102,15 +102,16 @@ class dbmanager {
   */
  function user_change_pass($userid, $oldpass, $newpass) {
   if ($user = $this->user_getinfo($userid)) {
-   if ($user['Password'] == $oldpass) {
+   if (($user['Password'] == $oldpass)||$_SESSION['permission']==0) {
     $sql = "UPDATE  `nhadat`.`user` SET  `Password` =  '$newpass' WHERE  `user`.`UserID` =$userid;";
     if ($this->querry($sql) == false) {
-     return 'Mất kết nối đến CSDL hoặc lý do không xác định';
+     
+     return 'Sửa mật khẩu chưa thành công hoặc mật khẩu bạn vừa cung cấp trùng với mật khẩu cũ';
     }
     else
      return TRUE;
    }
-
+   
    else {
     return 'Bạn điền sai mật khẩu cũ ';
    }

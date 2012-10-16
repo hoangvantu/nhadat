@@ -10,6 +10,6 @@ $qlgiaodien->setConfigDir('smarty/configs');
 
 // Chay khi kiem tra xem Smarty cai dat ok chua
 //$smarty->testInstall();
-$qlgiaodien->debugging =true;
+
 
 ?>

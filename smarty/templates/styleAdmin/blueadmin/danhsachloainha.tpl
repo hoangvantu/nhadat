@@ -1,15 +1,58 @@
 {extends file="layout.tpl"}
 {block name="headjava" append}
+
+<script src="{$smarty.current_dir|replace:'\\':'/'}/jquery.jeditable.js" type="text/javascript"></script>
 {literal}
  <script type="text/javascript">
+  
+    $(function() { 
+ $(".editable_textarea").editable("ajaxloainha.php?action=edittenloainha", { 
+      indicator : "<img src='img/indicator.gif'>",
+      type   : 'textarea',
+      submitdata: { _method: "put" },
+      select : true,
+      submit : 'OK',
+      cancel : 'cancel',
+      cssclass : "editable"
+  });
+ });
+  
+  
+  
 function themmoi()
 {
  if(!$(".newprovince").get(0)) 
-  {
+$(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên </td><td><input type=\"text\"/></td><td><button onclick=\"them()\">Thêm</button></td></tr>");
+}
  
-$(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh thành</td><td><input type=\"text\"/></td><td><select name=\"slprovince\"></select></td><td><button onclick=\"them()\">Thêm</button></td><</tr>");
-  } 
-   }
+ function them()
+  {
+  // alert($(".newprovince td:eq(1) input").val());
+   var newprovince = $(".newprovince td:eq(1) input").val();
+    var newprovinceid;
+    $.post("ajaxloainha.php?action=addloainha", { loainhaname: newprovince},
+   function(data) {
+    newprovinceid=data;
+   
+      $(".newprovince").html("");
+   $(".newprovince").remove();
+    $(".bangdanhsach").append("<tr class=\"gradeA odd td"+newprovinceid+" \"><td>"+newprovinceid+"</td><td><a href=\"danhsachquanhuyen.php?provinceid="+newprovinceid+"\">"+newprovince+"</a></td>  <td>  <button class=\"btn btn-teal\" type=\"Submit\" onclick=\"xoa("+newprovinceid+")\">Xóa</button> </td>	</tr>");
+   });
+     
+   };
+    function xoa(loainhaid)
+  {
+   if( confirm("Bạn có muốn xóa không"))
+    {
+      $.post("ajaxloainha.php?action=delete", { loainhaid: loainhaid},
+   function(data) {
+       
+       $(".td"+loainhaid).html("");
+      $(".td"+loainhaid).remove();
+  
+ });
+ }}
+   
  </script>
 {/literal}
 {/block}
@@ -38,12 +81,12 @@ $(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh th�
                                     {if isset($danhsachloainha)}
                                     {foreach from=$danhsachloainha item=loainha}
              
-             <tr class="gradeA odd">
+             <tr class="gradeA odd td{$loainha.LoainhaID}">
                      <td class="center">{$loainha.LoainhaID}</td>
 							
-                                  <td ><a href="danhsachquanhuyen.php?districtid={$loainha.LoainhaID}">{$loainha.TenLoaiNha}</td>
+                                  <td ><div id="{$loainha.LoainhaID}" class="editable_textarea">{$loainha.TenLoaiNha}</div></td>
                                  
-                                  <td> <a href="?action=delete&loainhaid={$loainha.LoainhaID}"> <button class="btn btn-teal" >Xóa</button> </a>	</td>	
+                                  <td>  <button class="btn btn-teal" type="Submit" onclick="xoa({$loainha.LoainhaID})">Xóa</button> </td>	
                                             
                                     
                                     </tr>
@@ -52,20 +95,7 @@ $(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh th�
                 
                  {/foreach}  
                  {/if}
-                                               <tr class="gradeA odd">
-							<td class=" sorting_1">Gecko</td>
-							<td>Firefox 1.0</td>
-							<td>Win 98+ / OSX.2+</td>
-							<td class="center">1.7</td>
-							<td class="center">A</td>
-						</tr>
-                                                <tr class="gradeA even">
-							<td class=" sorting_1">Gecko</td>
-							<td>Firefox 1.5</td>
-							<td>Win 98+ / OSX.2+</td>
-							<td class="center">1.8</td>
-							<td class="center">A</td>
-						</tr></tbody>
+                                              </tbody>
                         
                         </table>
                         <div class="dataTables_info" id="example_info">Showing 1 to 10 of 57 entries</div>

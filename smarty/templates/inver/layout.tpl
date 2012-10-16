@@ -34,10 +34,12 @@
 	   {include file="wrap_sidebar_left.tpl"}
 	   </div> 
 		<!-- /#sidebar-left -->
+      {block name="footer"}
           <div id="footer" class="clear">
 		{include file="wrap_footer.tpl"}
 		</div>
 		 <!-- /#footer -->
+       {/block}
       </div> <!-- /#container -->
       <span class="clear"></span>
     </div> <!-- /#wrapper -->

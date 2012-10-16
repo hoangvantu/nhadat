@@ -1,15 +1,59 @@
 {extends file="layout.tpl"}
 {block name="headjava" append}
+<script src="{$smarty.current_dir|replace:'\\':'/'}/jquery.jeditable.js" type="text/javascript"></script>
 {literal}
  <script type="text/javascript">
+   $(function() { 
+ $(".editable_textarea").editable("ajaxnhucau.php?action=edittennhucau", { 
+      indicator : "<img src='img/indicator.gif'>",
+      type   : 'textarea',
+      submitdata: { _method: "put" },
+      select : true,
+      submit : 'OK',
+      cancel : 'cancel',
+      cssclass : "editable"
+  });
+ });
+  
+  
+  
+  
+  
+  
 function themmoi()
 {
  if(!$(".newprovince").get(0)) 
-  {
+$(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên </td><td><input type=\"text\"/></td><td><button onclick=\"them()\">Thêm</button></td></tr>");
+}
  
-$(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh thành</td><td><input type=\"text\"/></td><td><select name=\"slprovince\"></select></td><td><button onclick=\"them()\">Thêm</button></td><</tr>");
-  } 
-   }
+ function them()
+  {
+  // alert($(".newprovince td:eq(1) input").val());
+   var newprovince = $(".newprovince td:eq(1) input").val();
+    var newprovinceid;
+    $.post("ajaxnhucau.php?action=addnhucau", { nhucauname: newprovince},
+   function(data) {
+    newprovinceid=data;
+   
+      $(".newprovince").html("");
+   $(".newprovince").remove();
+    $(".bangdanhsach").append("<tr class=\"gradeA odd td"+newprovinceid+" \"><td>"+newprovinceid+"</td><td><a href=\"danhsachquanhuyen.php?provinceid="+newprovinceid+"\">"+newprovince+"</a></td><td> <a href=\"?action=delete&provinceid="+newprovinceid+"\"><button class=\"btn btn-teal\" >Xóa</button></td></tr>");
+   });
+     
+   };
+    function xoa(nhucauid)
+  {
+   if( confirm("Bạn có muốn xóa không"))
+    {
+      $.post("ajaxnhucau.php?action=delete", { nhucauid: nhucauid},
+   function(data) {
+       
+       $(".td"+nhucauid).html("");
+      $(".td"+nhucauid).remove();
+  
+ });
+ }}
+ 
  </script>
 {/literal}
 {/block}
@@ -24,7 +68,7 @@ $(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh th�
 
  <div class="box round first grid">
                 <h2>
-                    Danh sách quận huyện</h2>
+                    Danh sách nhu cầu</h2>
                 <div class="block">
                     
                     
@@ -38,12 +82,12 @@ $(".bangdanhsach").append("<tr class=\"newprovince\"><td>Điền tên tỉnh th�
                                     {if isset($danhsachnhucau)}
                                     {foreach from=$danhsachnhucau item=nhucau}
              
-             <tr class="gradeA odd">
+             <tr class="gradeA odd td{$nhucau.nhucauid} ">
                      <td class="center">{$nhucau.nhucauid}</td>
 							
-                                  <td ><a href="danhsachquanhuyen.php?districtid={$nhucau.nhucauid}">{$nhucau.nhucauname}</td>
+                     <td ><div id="{$nhucau.nhucauid}" class="editable_textarea">{$nhucau.nhucauname}</div></td>
                                  
-                                  <td> <a href="?action=delete&districtid={$nhucau.nhucauid}"> <button class="btn btn-teal" >Xóa</button> </a>	</td>	
+                                  <td>  <button class="btn btn-teal" onclick="xoa({$nhucau.nhucauid})" >Xóa</button>	</td>	
                                             
                                     
                                     </tr>

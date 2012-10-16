@@ -1,9 +1,5 @@
 <?php
-
-include_once('../connect.php');
-require_once '../includes/sm_config_admin.php';
-$db = new dbmanager();
-$db->connect();
+require_once 'global.php';
 if(isset($_GET['action'])&&isset($_GET['newsid']))
 {
     if(($_GET['action']=="delete")&&($_GET['newsid']!=""))
