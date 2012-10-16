@@ -197,13 +197,13 @@ $danhsachbinhthuong = $db->getAll($sql);
 
  
  
-$sql = "select * from NEWS LEFT JOIN news_image ON news.NewsID = news_image.NewsID WHERE Display=1 GROUP BY news.newsid ORDER BY RAND()  LIMIT 10";
+$sql = "select `news`.`NewsID` , `news`.`Content`, `news`.`UserID` , `news`.`Title`, `news`.`Display` ,  `news`.`ViewCount` ,  `news`.`PhoneNumber` ,  `news`.`loainhaid` ,  `news`.`nhucauid` ,  `news`.`khunggia` ,  `news`.`address` ,  `news`.`GiaNha` , `news`.`lat` ,  `news`.`lng` ,  `news`.`VideoURL` ,  `news`.`keywordid` ,  `news_image`.`ImageID` ,  `news_image`.`Image__URL` ,  `news_image`.`IMG_desc` ,  `news_image`.`thumbnail_url` from NEWS LEFT JOIN news_image ON news.NewsID = news_image.NewsID WHERE Display=1 GROUP BY news.newsid ORDER BY RAND()  LIMIT 10";
 $danhsachvip1=$db->getAll($sql);
-$sql = "select * from NEWS LEFT JOIN news_image ON news.NewsID = news_image.NewsID WHERE Display=2 GROUP BY news.newsid ORDER BY RAND()  LIMIT 10";
+$sql = "select `news`.`NewsID` , `news`.`Content`, `news`.`UserID` , `news`.`Title`, `news`.`Display` ,  `news`.`ViewCount` ,  `news`.`PhoneNumber` ,  `news`.`loainhaid` ,  `news`.`nhucauid` ,  `news`.`khunggia` ,  `news`.`address` ,  `news`.`GiaNha` , `news`.`lat` ,  `news`.`lng` ,  `news`.`VideoURL` ,  `news`.`keywordid` ,  `news_image`.`ImageID` ,  `news_image`.`Image__URL` ,  `news_image`.`IMG_desc` ,  `news_image`.`thumbnail_url` from NEWS LEFT JOIN news_image ON news.NewsID = news_image.NewsID WHERE Display=2 GROUP BY news.newsid ORDER BY RAND()  LIMIT 10";
 $danhsachvip2=$db->getAll($sql);
-$sql = "select * from NEWS LEFT JOIN news_image ON news.NewsID = news_image.NewsID WHERE Display=3 GROUP BY news.newsid ORDER BY RAND()  LIMIT 10";
+$sql = "select `news`.`NewsID` , `news`.`Content`, `news`.`UserID` , `news`.`Title`, `news`.`Display` ,  `news`.`ViewCount` ,  `news`.`PhoneNumber` ,  `news`.`loainhaid` ,  `news`.`nhucauid` ,  `news`.`khunggia` ,  `news`.`address` ,  `news`.`GiaNha` , `news`.`lat` ,  `news`.`lng` ,  `news`.`VideoURL` ,  `news`.`keywordid` ,  `news_image`.`ImageID` ,  `news_image`.`Image__URL` ,  `news_image`.`IMG_desc` ,  `news_image`.`thumbnail_url` from NEWS LEFT JOIN news_image ON news.NewsID = news_image.NewsID WHERE Display=3 GROUP BY news.newsid ORDER BY RAND()  LIMIT 10";
 $danhsachvip3=$db->getAll($sql);
-$sql= 'SELECT * FROM NEWS LEFT JOIN news_image ON news.NewsID = news_image.NewsID WHERE Display=1 GROUP BY news.newsid order by TimeAction DESC';
+$sql= 'SELECT `news`.`NewsID` , `news`.`Content`, `news`.`UserID` , `news`.`Title`, `news`.`Display` ,  `news`.`ViewCount` ,  `news`.`PhoneNumber` ,  `news`.`loainhaid` ,  `news`.`nhucauid` ,  `news`.`khunggia` ,  `news`.`address` ,  `news`.`GiaNha` , `news`.`lat` ,  `news`.`lng` ,  `news`.`VideoURL` ,  `news`.`keywordid` ,  `news_image`.`ImageID` ,  `news_image`.`Image__URL` ,  `news_image`.`IMG_desc` ,  `news_image`.`thumbnail_url` FROM NEWS LEFT JOIN news_image ON news.NewsID = news_image.NewsID WHERE Display=1 GROUP BY news.newsid order by TimeAction DESC';
 $danhsachvip1 = $db->getAll($sql);
 if($danhsachvip1)
 {
